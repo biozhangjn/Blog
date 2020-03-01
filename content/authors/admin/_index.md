@@ -1,42 +1,41 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: My research interests include Avian Physiology, Endocrinology and Metabolism.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
+  - course: Post-doc in Cell Biology
+    institution: Sichuan University
+    year: 2017
+  - course: PhD of Natural Science in Cell Biology
+    institution: Sichuan University
+    year: 2017
+  - course: BSc in National base of life science & biotechnology education
+    institution: Sichuan University
+    year: 2011
+email: "biozhangjn@gmail.com"
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
-name: Nelson Bighetti
+- Avian Physiology
+- Endocrinology and Metabolism
+- Chicken transgenesis
+name: Jiannan Zhang
 organizations:
-- name: Stanford University
+- name: Sichuan University
   url: ""
-role: Professor of Artificial Intelligence
+role: Post-doc in Cell Biology
 social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/Jiannan_scu
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.com/citations?user=qwOIhV4AAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/biozhangjn
 superuser: true
 user_groups:
 - Researchers
