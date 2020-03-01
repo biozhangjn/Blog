@@ -19,7 +19,6 @@ publishDate: "2018-12-13T00:00:00Z"
 #slides: example
 summary: In summary, we characterized two APLNRs in chickens and turtles, and three APLNRs in zebrafish. Functional study proved that chicken APLNR1 (and not APLNR2) can be activated by apelin-36 and ELA-32 potently, indicating that it is a major functional receptor common for both peptides in chickens. In sharp contrast, in turtles and zebrafish, APLNR2(s) can be activated by apelin-36 and ELA-32 potently, supporting the notion that it is the major functional receptor(s) common for both peptides, while APLNR1 is likely lost, or non-functional in these lineages. Strikingly, a novel apelin-specific receptor (APLNR3a/APLNR3b) was identified in zebrafish and tilapia. The identification and functional characterization of APLNRs in model vertebrates not only provides a clear molecular basis for interpreting the actions of APLNR in different classes of vertebrates, but also suggests a functional switch between APLNR1 and APLNR2/3 in mediating apelin and ELA actions during vertebrate evolution. 
 #tags:
-#- Source Themes
 title: "Characterization of the Apelin/Elabela Receptors (APLNR) in Chickens, Turtles, and Zebrafish: Identification of a Novel Apelin-Specific Receptor in Teleosts"
 #url_code: ""
 #url_dataset: ""

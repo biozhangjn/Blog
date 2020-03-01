@@ -23,7 +23,6 @@ publishDate: "2017-07-10T00:00:00Z"
 #slides: ""
 summary: In summary, we revealed an intricate interaction network of MC4R/MC3R with α-MSH/ACTH, AgRP and MRAP2 (/MRAP) in chickens. 
 tags:
-- Source Themes
 title: The interaction of MC3R and MC4R with MRAP2, ACTH, α-MSH and AgRP in chickens
 #url_code: '#'
 #url_dataset: '#'
