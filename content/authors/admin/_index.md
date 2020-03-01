@@ -7,7 +7,7 @@ education:
   - course: Post-doc in Cell Biology
     institution: Sichuan University
     year: 2017
-  - course: PhD of Natural Science in Cell Biology
+  - course: PhD in Natural Science
     institution: Sichuan University
     year: 2017
   - course: BSc in National base of life science & biotechnology education
