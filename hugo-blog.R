@@ -27,6 +27,7 @@ ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 
 ssh-keygen -t rsa -b 4096 -C "bio_zhang@msn.com" -f gh-pages
 
+git add .
 git commit -m "Blog update"
 git remote add origin https://github.com/biozhangjn/Blog/
 git remote -v

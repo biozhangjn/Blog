@@ -17,7 +17,7 @@ email: "biozhangjn@gmail.com"
 interests:
 - Avian Physiology
 - Endocrinology and Metabolism
-- Chicken transgenesis
+- Chicken Transgenesis
 name: Jiannan Zhang
 organizations:
 - name: Sichuan University
