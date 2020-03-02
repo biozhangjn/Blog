@@ -14,7 +14,7 @@ BiocManager::install("shiny")
 
 BiocManager::install("multtest")
 install.packages("shiny")
-install.packages('bookdown') 
+install.packages('blogdown') 
 blogdown::install_hugo()
 
 #blogdown::new_site(theme = 'gcushen/hugo-academic')
