@@ -10,5 +10,6 @@ git add .
 #提交更改的说明
 git commit -m "Blog update"
 #开始推送到Github
+git pull --rebase origin master
 git push -u origin master
 exit 0
