@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic | Jiannan Zhang</title>
+    <link>/tags/academic/</link>
+      <atom:link href="/tags/academic/index.xml" rel="self" type="application/rss+xml" />
+    <description>Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Academic</title>
+      <link>/tags/academic/</link>
+    </image>
+    
+    <item>
+      <title>Bioconda</title>
+      <link>/post/bioconda/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/bioconda/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;查看已安装的库&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;conda list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;安装和更新&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;conda install XXX   
+conda update XXX
+conda update --all  #更新所有库
+conda update conda  #更新conda
+conda updata anaconda #更新anaconda
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;环境相关&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;conda config --add channels conda-forge
+conda config --add channels bioconda
+conda create -n salmon salmon  #创建环境
+conda activate salmon  #激活环境
+conda deactivate #退出环境
+#conda remove -n salmon #删除环境，不要乱删
+conda env list  #显示所有环境
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;清理软件&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;conda clean -p      //删除多余的包
+conda clean -y -all //删除所有的安装包及cache&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Salmon代码备存</title>
+      <link>/post/salmon/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/salmon/</guid>
+      <description>&lt;p&gt;#Salmon代码备存&lt;/p&gt;
+&lt;p&gt;听说你还可以分析scRNA&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;salmon alevin -l ISR -1 Pi_F_S1_L005_R1_001.fastq.gz -2 Pi_F_S1_L005_R2_001.fastq.gz --chromium -i ~/index/ggzjn_index/ -p 10 --dumpMtx -o alevin_output/ --tgMap txp2gene.txt --expectCells 18000
+salmon alevin -l ISR -1 Pi_M_S1_L004_R1_001.fastq.gz -2 Pi_M_S1_L004_R2_001.fastq.gz --chromium -i ~/index/ggzjn_index/ -p 15 --dumpMtx -o alevin_output/ --tgMap txp2gene.txt --expectCells 18000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;数据下载-plan A&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+for fn in SRR1299{036..049};
+do
+samp=`basename ${fn}`
+echo &amp;quot;Processing sample ${samp}&amp;quot;
+ascp -QT -l 300m -P33001 -i ~/miniconda3/etc/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:/vol1/srr/SRR707/008/${fn} ./
+mv ${fn} ${fn}.sra
+done
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;数据下载-plan B&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nano srr.txt
+
+SRR1524238
+SRR1524239
+SRR1524240
+SRR1524241
+
+prefetch --option-file srr.txt -O ./
+prefetch -t ascp -a &amp;quot;/home/labwang/.aspera/connect/bin/ascp|/home/labwang/.aspera/connect/etc/asperaweb_id_dsa.openssh&amp;quot; --option-file srr.txt -O ./
+# 啊，升级了好麻烦啊！！！ 
+prefetch -t ascp -a &amp;quot;/home/labwang/.aspera/connect/bin/ascp|/home/labwang/.aspera/connect/etc/asperaweb_id_dsa.openssh&amp;quot; --option-file srr.txt
+cd /usr/local/ncbi/sra-tools/bin  然后 ./vdb-config -i 然后 巴拉巴拉~~~
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;分析&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;salmon index -t Taeniopygia_guttata.taeGut3.2.4.cdna.all.fa -i finch2_index
+
+#!/bin/bash
+for fn in SRR7072{158..175};
+do
+path=$(pwd)
+samp=`basename ${fn}`
+echo &amp;quot;Processing sample ${samp}&amp;quot;
+pfastq-dump -t 20 --split-files --gzip -O ${path}/fastq ${samp}.sra
+done
+
+#!/bin/bash
+for fn in SRR7072{158..175};
+do
+path=$(pwd)
+echo &amp;quot;Processing sample ${fn}&amp;quot;
+salmon quant -i ~/index/ggzjn_index --validateMappings -l A \
+         -1 ${path}/fastq/${fn}_1.fastq.gz \
+         -2 ${path}/fastq/${fn}_2.fastq.gz \
+         -p 20 -o ${path}/quant/${fn}_quant
+done
+
+bash /data3/PI-LV/R/DESEQ2.sh -f result-DE.txt -s samplefiles.txt -p compare_pair.txt 
+
+bash /data3/PI-LV/R/DESEQ2.sh -f result-DE.txt -s samplefiles.txt -p compare_pair.txt -F 0.5 -P 0.01
+
+library(&amp;quot;tximport&amp;quot;)
+library(readr)
+
+dir &amp;lt;- &amp;quot;D:/Users/zjn-lab/Documents/salmon&amp;quot;
+list.files(dir)
+sample &amp;lt;- paste0(&amp;quot;ERR348&amp;quot;,seq(560,588),&amp;quot;_quant&amp;quot;)
+files &amp;lt;- file.path(dir,&amp;quot;quant&amp;quot;,sample,&amp;quot;quant.sf&amp;quot;)
+names(files) &amp;lt;- paste0(&amp;quot;sample&amp;quot;,c(1:3))
+all(file.exists(files))
+head(files)
+
+tx2gene &amp;lt;- read_csv(file.path(dir, &amp;quot;tx2gene.gencode.v97.csv&amp;quot;))
+head(tx2gene)
+
+
+txi &amp;lt;- tximport(files, type = &amp;quot;salmon&amp;quot;, tx2gene = tx2gene)
+head(txi)
+names(txi)
+head(txi$abundance)
+head(txi$length)
+head(txi$counts)
+head(txi$countsFromAbundance)
+
+#write.table(txi$abundance, &amp;quot;abundance.txt&amp;quot;, sep=&amp;quot;\t&amp;quot;, quote=F)
+write.csv(txi$abundance, &amp;quot;abundance.csv&amp;quot;, quote=F)
+
+
+txi.tx &amp;lt;- tximport(files, type = &amp;quot;salmon&amp;quot;, txOut = TRUE)
+txi.sum &amp;lt;- summarizeToGene(txi.tx, tx2gene)
+all.equal(txi$counts, txi.sum$counts)
+head(txi.tx)
+names(txi.tx)
+head(txi.tx$abundance)
+head(txi.tx$length)
+head(txi.tx$counts)
+head(txi.tx$countsFromAbundance)
+
+library(DESeq2)
+
+sampleTable &amp;lt;- data.frame(condition = factor(rep(c(&amp;quot;untreated&amp;quot;, &amp;quot;treated&amp;quot;), each = 4)))
+rownames(sampleTable) &amp;lt;- colnames(txi$counts)
+dds &amp;lt;- DESeqDataSetFromTximport(txi, sampleTable, ~condition)
+dds
+sampleTable
+
+keep &amp;lt;- rowSums(counts(dds)) &amp;gt;= 10
+dds &amp;lt;- dds[keep,] 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;数据质检过滤&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+for fn in SRR1524{238..249};
+do
+path=$(pwd)
+samp=`basename ${fn}`
+echo &amp;quot;Processing sample ${samp}&amp;quot;
+fastqc -o ${path}/fastqc -t 50 ${path}/fastq/${fn}_1.fastq.gz
+fastqc -o ${path}/fastqc -t 50 ${path}/fastq/${fn}_2.fastq.gz
+done
+
+multiqc .
+
+#!/bin/bash
+for fn in SRR1524{238..249};
+do
+samp=`basename ${fn}`
+echo &amp;quot;Processing sample ${samp}&amp;quot;
+trimmomatic PE -phred33 -threads 20 ${fn}_1.fastq.gz ${fn}_2.fastq.gz ${fn}_paired_1.fastq.gz ${fn}_unpaired_1.fastq.gz ${fn}_paired_2.fastq.gz ${fn}_unpaired_2.fastq.gz ILLUMINACLIP:/home/labwang/miniconda3/share/trimmomatic-0.38-1/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+rm -r ${fn}_unpaired_1.fastq.gz
+rm -r ${fn}_unpaired_2.fastq.gz
+rm -r ${fn}_1.fastq.gz
+rm -r ${fn}_2.fastq.gz
+done
+
+去头去尾
+
+trimmomatic PE -phred33 -threads 20 ${fn}_1.fq.gz ${fn}_2.fq.gz ${fn}_paired_1.fastq.gz ${fn}_unpaired_1.fastq.gz ${fn}_paired_2.fastq.gz ${fn}_unpaired_2.fastq.gz CROP:89 HEADCROP:10 MINLEN:36&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Academic: the website builder for Hugo</title>
+      <link>/post/getting-started/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/post/getting-started/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 
+&lt;a href=&#34;#install&#34;&gt;&lt;strong&gt;Get Started&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the &lt;strong&gt;documentation&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 
+&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Ask a question&lt;/strong&gt; on the forum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👥 
+&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: 
+&lt;a href=&#34;https://twitter.com/source_themes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@source_themes&lt;/a&gt; 
+&lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; 
+&lt;a href=&#34;https://twitter.com/search?q=%23MadeWithAcademic&amp;amp;src=typd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithAcademic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💡 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating?&lt;/strong&gt; View the 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;❤ &lt;strong&gt;Support development&lt;/strong&gt; of Academic:
+&lt;ul&gt;
+&lt;li&gt;☕️ 
+&lt;a href=&#34;https://paypal.me/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Donate a coffee&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💵 
+&lt;a href=&#34;https://www.patreon.com/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Become a backer on &lt;strong&gt;Patreon&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🖼️ 
+&lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Decorate your laptop or journal with an Academic &lt;strong&gt;sticker&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👕 
+&lt;a href=&#34;https://academic.threadless.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wear the &lt;strong&gt;T-shirt&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👩‍💻 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/contribute/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Contribute&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; data-caption=&#34;Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34;&gt;
+
+
+  &lt;img src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Key features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable 
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and 
+&lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - 
+&lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, 
+&lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 15+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Academic comes with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can  choose their preferred mode - click the sun/moon icon in the top right of the 
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#custom-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;customizable&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Admin&lt;/a&gt;:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Scripts&lt;/a&gt;:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-web-browser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;one-click install using your web browser (recommended)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer using &lt;strong&gt;Git&lt;/strong&gt; with the Command Prompt/Terminal app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer by downloading the &lt;strong&gt;ZIP files&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer with &lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/get-started/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personalize and deploy your new site&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the Update Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt; to help keep track of 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;updates&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present 
+&lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

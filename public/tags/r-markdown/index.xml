@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Markdown | Jiannan Zhang</title>
+    <link>/tags/r-markdown/</link>
+      <atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+    <description>R Markdown</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>R Markdown</title>
+      <link>/tags/r-markdown/</link>
+    </image>
+    
+    <item>
+      <title>Blogdown&#43;Hugo&#43;Github&#43;Github Actions建立自动推送Blog</title>
+      <link>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</guid>
+      <description>&lt;h2 id=&#34;使用-blogdownhugogithubgithub-actions博客&#34;&gt;使用 Blogdown+Hugo+Github+Github Actions博客&lt;/h2&gt;
+&lt;p&gt;之前使用Hexo建了个人主页，但是速度越来越慢，而且部署比较繁琐，最近学习R相关知识，发现Rmarkdown、Bookdown和Blogdown全家桶超级好用，所以与时俱进也升级了方案。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Blogdown可以非常方便的使用Hugo进行操作，尤其是Rstudio高度集成，非常方便。&lt;/li&gt;
+&lt;li&gt;Hugo就不多说了，神器。&lt;/li&gt;
+&lt;li&gt;Github也不解释，之前Hexo也是利用的Github pages作为个人主页，现在加上可以实现自动部署的Github Actions则更加方便。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;整体流程建立后非常方便进行更新，速度也很快，所以非常推荐，下面简单记录下关键步骤。&lt;/p&gt;
+&lt;h2 id=&#34;一建立github-pages&#34;&gt;一、建立Github Pages&lt;/h2&gt;
+&lt;p&gt;本流程一共需要在Github账号里建立两个Repository，第一个是用于发布页面的仓库名必须为 [你的用户名].github.io，使用 master 分支，也是用于Github Pages的Repository，可以自定义域名，为了这个自定义域名可以用于Github系列网站，也就没有采用Blogdown的推荐流程。&lt;/p&gt;
+&lt;h2 id=&#34;二建立hugo文章仓库&#34;&gt;二、建立Hugo文章仓库&lt;/h2&gt;
+&lt;p&gt;为了实现自动部署，我们还需要建立一个命名随便（如MyBlog）的Repository用于储存Blog的原始文档，之后利用Github Actions自动部署推送到XXX.github.io中进行发布。&lt;/p&gt;
+&lt;h2 id=&#34;三部署github-actions-脚本&#34;&gt;三、部署Github Actions 脚本&lt;/h2&gt;
+&lt;p&gt;基本知识随便google就有了，利用别人的轮子，编辑yml文件，编写自己的workflow。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;name: CI #自动化的名称
+on:
+  push: # push的时候触发
+    branches: # 那些分支需要触发
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest # 镜像市场
+    steps:
+      - name: checkout # 步骤的名称
+        uses: actions/checkout@v1 #软件市场的名称
+        with: # 参数
+          submodules: true
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2.2.2
+        with:
+          hugo-version: &#39;0.65.3&#39;
+          extended: true
+      - name: Build
+        run: hugo --minify
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2.5.1
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          EXTERNAL_REPOSITORY: 你的用户名/你的用户名.github.io
+          PUBLISH_BRANCH: master
+          PUBLISH_DIR: ./public
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意替换&lt;strong&gt;你的用户名&lt;/strong&gt;以及&lt;strong&gt;hugo的版本号&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;四部署工作&#34;&gt;四、部署工作&lt;/h2&gt;
+&lt;p&gt;在VScode中的Powershell中输入密钥生成指令，提交到Github，实现两个仓库的关联，页面填写时注意修改名称为&lt;code&gt;ACTIONS_DEPLOY_KEY&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;ssh-keygen -t rsa -b 4096 -C &amp;quot;$(git config user.email)&amp;quot; -f gh-pages -N &amp;quot;&amp;quot;
+#   你会得到以下这两个文件:
+#   gh-pages.pub (public key) for .github.io 发布仓库
+#   gh-pages     (private key) for myBlog 储存仓库
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;五提交代码自动部署&#34;&gt;五、提交代码自动部署&lt;/h2&gt;
+&lt;p&gt;之后只需要push本地的Blog文件至储存仓库，Actions就会自动利用Hugo进行public文件编译，之后推送至github.io仓库，利用Github pages进行发布，实现全自动操作，只需要将本地文件push到储存仓库即可。&lt;/p&gt;
+&lt;p&gt;push可以写一个脚本&lt;code&gt;deploy.sh&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;#!/bin/sh
+# 哈哈，我把文件放置OneDrive里面的，算是备份吧，主要是换电脑可以非常方便的同步。
+cd D:\OneDrive\git\MyBlog\
+# 建立本地仓库
+git init
+# 关联到Github仓库
+git remote add origin git@github.com:你的用户名/Blog.git
+# 把目录下所有文件更改状况提交到暂存区
+git add .
+# 提交更改的说明
+git commit -m &amp;quot;Blog update&amp;quot;
+# 开始推送到Github
+git push -u origin master
+exit 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tips：在Hugo文件content目录下新建一个CNAME文件（无任何后缀），内容为自定义域名，这样编译时会自动将CNAME文件生成至github.io根目录，不用每次部署后重新设置自定义域名。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;六blogdown和hugo建立本地文件&#34;&gt;六、Blogdown和Hugo建立本地文件&lt;/h2&gt;
+&lt;p&gt;其实应该先写这块的，貌似这个才是重要的，不过Blogdown有一本书供参考，Hugo也是全网推荐，写多了也没有意义了，官网文档超级实用。看下面这篇
+&lt;a href=&#34;https://cosx.org/2018/01/build-blog-with-blogdown-hugo-netlify-github/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;用 R 语言的 blogdown+hugo+netlify+github 建博客&lt;/a&gt;就足够了，不过略有区别，托管网站的选择上，netlify可以替换为Github pages + Actions，更加方便，不需要第三方的程序实现自动部署。&lt;/p&gt;
+&lt;p&gt;下面是关键代码：（Git、Rstudio、R、VScode的安装 略）&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;setwd(&amp;quot;D:\\OneDrive\\git\\MyBlog\\&amp;quot;)
+options(repos=structure(c(CRAN=&amp;quot;https://mirrors.tuna.tsinghua.edu.cn/CRAN/&amp;quot;)))
+
+# 超级简单的代码-----------------------------------------
+install.packages(&#39;blogdown&#39;)
+blogdown::install_hugo()
+# 下载太慢就自己下载再安装
+#blogdown:::install_hugo_bin(&amp;quot;d:/hugo.exe&amp;quot;)
+
+# 选择主题、查看hugo版本、建立新文档、本地发布文件、本地网页预览
+blogdown::new_site(theme = &#39;gcushen/hugo-academic&#39;)
+blogdown::hugo_version()
+blogdown::new_post()
+blogdown::hugo_build()
+blogdown::serve_site()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其实使用Rstudio的话，上面代码都不用了，addins里面超级方便的按钮操作&lt;code&gt;New Post&lt;/code&gt;、&lt;code&gt;Serve site&lt;/code&gt;，同时shiny界面直接输入内容即可，非常赞的可视化操作界面。不过，我还是选择VScode + R执行blogdown代码，大爱VScode。
+设置gitignore,点击.gitignore文件，修改如下（copy Yihui大神）：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+public
+static/figures
+blogdown
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后就可以写写写，改改改了~~&lt;/p&gt;
+&lt;p&gt;至于模板的修改，个性化的改动就看个人的能力了~~&lt;/p&gt;
+&lt;h2 id=&#34;七参考资料&#34;&gt;七、参考资料&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blogdown&lt;/a&gt;  看完你就会尝试Bookdown了@@&lt;br&gt;
+
+&lt;a href=&#34;https://owovo.xyz/post/%E4%BD%BF%E7%94%A8GithubActions&amp;#43;Hugo&amp;#43;GithubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;使用 Github Actions + Hugo + Github Pages搭建博客&lt;/a&gt;&lt;br&gt;
+
+&lt;a href=&#34;https://cosx.org/2018/01/build-blog-with-blogdown-hugo-netlify-github/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;用 R 语言的 blogdown+hugo+netlify+github 建博客&lt;/a&gt;&lt;br&gt;
+
+&lt;a href=&#34;https://gaolei.xyz/2019/08/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;从零开始搭建个人博客&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bioconda</title>
+      <link>/post/bioconda/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/bioconda/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;查看已安装的库&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;conda list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;安装和更新&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;conda install XXX   
+conda update XXX
+conda update --all  #更新所有库
+conda update conda  #更新conda
+conda updata anaconda #更新anaconda
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;环境相关&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;conda config --add channels conda-forge
+conda config --add channels bioconda
+conda create -n salmon salmon  #创建环境
+conda activate salmon  #激活环境
+conda deactivate #退出环境
+#conda remove -n salmon #删除环境，不要乱删
+conda env list  #显示所有环境
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;清理软件&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;conda clean -p      //删除多余的包
+conda clean -y -all //删除所有的安装包及cache&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VScode-R</title>
+      <link>/post/vscode-r/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/vscode-r/</guid>
+      <description>&lt;h1 id=&#34;how-to-use-r-in-vscode&#34;&gt;How to use R in VScode&lt;/h1&gt;
+&lt;h2 id=&#34;安装r和vscode&#34;&gt;安装R和VScode&lt;/h2&gt;
+&lt;p&gt;额，打开Google，搜索官网，自己安装即可。不会？&lt;code&gt;Alt + F4&lt;/code&gt;，再见！&lt;/p&gt;
+&lt;h2 id=&#34;相关插件安装及设置&#34;&gt;相关插件安装及设置&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开安装好的R程序，安装&lt;code&gt;languageserver&lt;/code&gt;包，实现 R 和 编辑器的同步。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;install.packages(&amp;quot;languageserver&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开安装好的VScode程序，插件里面搜索并安装&lt;code&gt;R LSP Client&lt;/code&gt;和&lt;code&gt;R&lt;/code&gt;插件，很简单的；然后设置R在VScode中的路径，打开设置界面，在搜索框中输入 &lt;strong&gt;&lt;code&gt;r.lsp&lt;/code&gt;&lt;/strong&gt;，找到你电脑操作系统所对应的设置 ( Linux 系统选择 Rterm: Linux，Windows 系统则选择 Rterm: Windows)，然后在编辑栏中输入你的 R 可执行文件位置（如果是默认安装的 R 3.6.2 版本，位置应该是 &lt;code&gt;C:\Program Files\R\R-3.6.2\bin\x64\R.exe&lt;/code&gt;）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;难点来了，安装
+&lt;a href=&#34;https://github.com/randy3k/radian&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;radian: A 21 century R console&lt;/code&gt;&lt;/a&gt;，替换原始R界面。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;radian is an alternative console for the R program with multiline editing and rich syntax highlight.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;radian&lt;/code&gt;基于python，所以先在电脑上安装python，当然，你可以选择anaconda安装，不过，我还是觉得自己安装在window10里面也没问题，接下来就是相关核心步骤。&lt;/li&gt;
+&lt;li&gt;下载并安装合适版本的
+&lt;a href=&#34;https://www.python.org/downloads/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;pyhton&lt;/code&gt;&lt;/a&gt;，安装的时候特别要注意勾上&lt;code&gt;Add Python 3.8 to PATH&lt;/code&gt;，然后点&lt;code&gt;Install Now&lt;/code&gt;即可完成安装。&lt;/li&gt;
+&lt;li&gt;打开VScode的终端，输入&lt;code&gt;python&lt;/code&gt;，如果显示版本并进入python即安装成功，输入&lt;code&gt;exit()&lt;/code&gt;回到powershell中。然后输入&lt;code&gt;pip install -U radian&lt;/code&gt;安装&lt;code&gt;radian&lt;/code&gt;，输入&lt;code&gt;pip install jedi&lt;/code&gt;安装&lt;code&gt;jedi&lt;/code&gt;。输入&lt;code&gt;radian&lt;/code&gt;提示R版本即安装成功。&lt;/li&gt;
+&lt;li&gt;在 VSCode 中重新设置&lt;code&gt;Rterm.Windows&lt;/code&gt;为&lt;code&gt;radian.exe&lt;/code&gt;路径，&lt;br&gt;例如&lt;code&gt;C:\Users\zjn\AppData\Local\Programs\Python\Python38\Scripts\radian.exe&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;找到&lt;code&gt;Rterm.Option&lt;/code&gt;选项，在设置中关闭&lt;code&gt;--no-save&lt;/code&gt;和&lt;code&gt;no-restore&lt;/code&gt;两个选项即可，重启即可使用&lt;strong&gt;VScode&lt;/strong&gt;运行&lt;strong&gt;R&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;在 VSCode 中设置R输入快捷键，如&lt;code&gt;Alt + -&lt;/code&gt;输入&lt;code&gt;&amp;lt;-&lt;/code&gt;。打开 Keyboard Shortcuts （快捷键是 CTRL+K CTRL+S），右上点开&lt;code&gt;keybindings.json&lt;/code&gt;文件，输入下面代码即可。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;{
+    &amp;quot;key&amp;quot;: &amp;quot;alt+-&amp;quot;,
+    &amp;quot;command&amp;quot;: &amp;quot;type&amp;quot;,
+    &amp;quot;args&amp;quot;: {
+    &amp;quot;text&amp;quot;: &amp;quot;&amp;lt;-&amp;quot;
+    },
+    &amp;quot;when&amp;quot;: &amp;quot;editorTextFocus&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sspai.com/post/47386&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;在VSCode 中配置R 语言运行环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/65966331&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VSCode 愉快地使用 R&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Markdown&lt;/h1&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Including Plots&lt;/h1&gt;
+&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
+  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
+  init.angle = -50, border = NA
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: A fancy pie chart.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
