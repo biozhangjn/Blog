@@ -12,14 +12,14 @@ jobs:
         with: # 参数
           submodules: true
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.2.2
+        uses: peaceiris/actions-hugo@v2.4.6
         with:
-          hugo-version: '0.65.3'
+          hugo-version: 'latest'
           extended: true
       - name: Build
         run: hugo --minify
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2.5.1
+        uses: peaceiris/actions-gh-pages@v3
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           EXTERNAL_REPOSITORY: biozhangjn/biozhangjn.github.io
