@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd d:OneDrive/git/MyBlog
+#cd d:OneDrive/git/MyBlog
 #建立本地仓库
 git init
 #关联到Github仓库
