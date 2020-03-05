@@ -72,7 +72,7 @@ jobs:
           PUBLISH_DIR: ./public
 ```
 
-> 注意替换**你的用户名**。
+> 注意替换**你的用户名**以及**hugo的版本号**。
 
 ## 四、部署工作
 
@@ -147,10 +147,13 @@ static/figures
 blogdown
 ```
 
+然后就可以写写写，改改改了~~
+
+至于模板的修改，个性化的改动就看个人的能力了~~
 
 ## 七、参考资料
 
-[Blogdown](https://bookdown.org/yihui/blogdown/) 看完你就知道喜欢上Bookdown@@  
+[Blogdown](https://bookdown.org/yihui/blogdown/)  看完你就会尝试Bookdown了@@  
 [使用 Github Actions + Hugo + Github Pages搭建博客](https://owovo.xyz/post/%E4%BD%BF%E7%94%A8GithubActions+Hugo+GithubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html)  
 [用 R 语言的 blogdown+hugo+netlify+github 建博客](https://cosx.org/2018/01/build-blog-with-blogdown-hugo-netlify-github/)  
 [从零开始搭建个人博客](https://gaolei.xyz/2019/08/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)  
