@@ -22,7 +22,7 @@ name: Jiannan Zhang
 organizations:
 - name: Sichuan University
   url: ""
-role: Post-doc in Cell Biology
+role: Postdoctoral Researcher
 social:
 - icon: envelope
   icon_pack: fas

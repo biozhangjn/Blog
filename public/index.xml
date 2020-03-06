@@ -184,17 +184,19 @@ public
 static/figures
 blogdown
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;然后就可以写写写，改改改了~~&lt;/p&gt;
+&lt;p&gt;然后就可以改改改，写写写了~~&lt;/p&gt;
 &lt;p&gt;至于模板的修改，个性化的改动就看个人的能力了~~&lt;/p&gt;
 &lt;h2 id=&#34;七参考资料&#34;&gt;七、参考资料&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blogdown&lt;/a&gt;  看完你就会尝试Bookdown了@@&lt;br&gt;
-
-&lt;a href=&#34;https://owovo.xyz/post/%E4%BD%BF%E7%94%A8GithubActions&amp;#43;Hugo&amp;#43;GithubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;使用 Github Actions + Hugo + Github Pages搭建博客&lt;/a&gt;&lt;br&gt;
-
-&lt;a href=&#34;https://cosx.org/2018/01/build-blog-with-blogdown-hugo-netlify-github/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;用 R 语言的 blogdown+hugo+netlify+github 建博客&lt;/a&gt;&lt;br&gt;
-
-&lt;a href=&#34;https://gaolei.xyz/2019/08/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;从零开始搭建个人博客&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blogdown&lt;/a&gt;  看完你就会尝试Bookdown了@@&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://owovo.xyz/post/%E4%BD%BF%E7%94%A8GithubActions&amp;#43;Hugo&amp;#43;GithubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;使用 Github Actions + Hugo + Github Pages搭建博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://cosx.org/2018/01/build-blog-with-blogdown-hugo-netlify-github/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;用 R 语言的 blogdown+hugo+netlify+github 建博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://gaolei.xyz/2019/08/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;从零开始搭建个人博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
