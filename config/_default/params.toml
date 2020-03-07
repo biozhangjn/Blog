@@ -110,6 +110,8 @@ contact_links = [
   #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
   #{icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
+  #Icon pack “ai” includes the following academic icons:cv, google-scholar, arxiv, orcid, researchgate, mendeley，
+  {icon = "envelope", icon_pack = "fas", name = "biozhangjn@gmail.com", link = "biozhangjn@gmail.com"},
   ]
 
 ############################
