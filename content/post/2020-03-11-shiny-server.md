@@ -39,7 +39,7 @@ sudo gdebi shiny-server-1.5.13.944-amd64.deb
 ### 软件参数调试
 
 ``` R
-#打开配置文件，nano是示例，现在直接VScode打开编辑即可。  
+#打开配置文件，直接在VScode中打开编辑即可。  
 大赞VScode！！！！！！VScode YES！！！！！
 
 /etc/shiny-server/shiny-server.conf
