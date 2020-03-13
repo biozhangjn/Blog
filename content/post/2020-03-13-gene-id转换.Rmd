@@ -112,7 +112,7 @@ protein
 
 ``` {r, echo=FALSE, message=FALSE}
 #同时也能输出FASTA文件到本地
-exportFASTA(protein,file="./test.fasta")
+# exportFASTA(protein,file="./test.fasta")
 
 # type支持多种类型
 # The type of identifier used. Supported types are hugo, ensembl, embl, entrezgene, refseq, ensemblTrans and unigene. Alternatively one can also use a filter to specify the type. Possible filters are given by the listFilters function
