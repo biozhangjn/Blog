@@ -87,7 +87,7 @@ sudo systemctl restart shiny-server;
 sudo vim /etc/shiny-server/shiny-server.conf
 ```
 
-### 服务器相关代码，官网文档，不要再打开~
+### 服务器相关代码，官网文档，不用再去翻官网了~~
 
 To start or stop the server manually, you can use the following commands.
 
