@@ -1,6 +1,9 @@
 #!/bin/sh
 
 #cd d:OneDrive/git/MyBlog
+git config --global user.name "biozhangjn"
+
+git config --global user.email "biozhangjn@gmail.com"
 #建立本地仓库
 git init
 #关联到Github仓库
