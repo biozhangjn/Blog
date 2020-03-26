@@ -10,6 +10,12 @@
 #git config --global --unset credential.helper
 #git config --system --unset credential.helper
 
+#为每个项目单独配置 user.name 和 user.email
+
+#git config user.name "biozhangjn"
+#git config user.email "biozhangjn@gmail.com"
+
+
 #建立本地仓库
 git init
 #关联到Github仓库
