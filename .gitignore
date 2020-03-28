@@ -2,7 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
-public
+public/
 static/figures
 blogdown
 id_rsa_github.pub
