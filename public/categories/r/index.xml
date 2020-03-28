@@ -17,53 +17,47 @@
       <link>/post/gene-id%E8%BD%AC%E6%8D%A2/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/gene-id%E8%BD%AC%E6%8D%A2/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;为什么要在r中进行id转换&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;为什么要在R中进行ID转换&lt;/h3&gt;
-&lt;p&gt;在转录组数据或者其他分析中，好吧，其实是因为我做的物种是家鸡，根本就没有人和鼠那样有着非常完善和时刻更新的数据库做为支持，我经常会遇见GeneID转换，同源基因转换的问题，之前一直利用&lt;code&gt;Ensembl&lt;/code&gt;主页里面的&lt;code&gt;biomart&lt;/code&gt;进行数据下载，然后在excel里面利用vlookup进行操作，哎，费时费力，而且不能高度自动化和重复化&lt;del&gt;（传统湿实验室人员的基本操作思维）&lt;/del&gt;，现在已经开始将大部分操作都在R里面进行了，刚好学习了&lt;code&gt;biomaRt&lt;/code&gt;包可以完美替代之前的操作流程，下面就是相关笔记及备注：&lt;/p&gt;
+      <description>&lt;h3 id=&#34;为什么要在r中进行id转换&#34;&gt;为什么要在R中进行ID转换&lt;/h3&gt;
+&lt;p&gt;在转录组数据或者其他分析中，好吧，其实是因为我做的物种是家鸡，根本就没有人和鼠那样有着非常完善和时刻更新的数据库做为支持，我经常会遇见GeneID转换，同源基因转换的问题，之前一直利用&lt;code&gt;Ensembl&lt;/code&gt;主页里面的&lt;code&gt;biomart&lt;/code&gt;进行数据下载，然后在excel里面利用vlookup进行操作，哎，费时费力，而且不能高度自动化和重复化~~（传统湿实验室人员的基本操作思维）~~，现在已经开始将大部分操作都在R里面进行了，刚好学习了&lt;code&gt;biomaRt&lt;/code&gt;包可以完美替代之前的操作流程，下面就是相关笔记及备注：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;好吧，这是第一篇Rmd笔记，Rmarkdown真的超级好用啊！&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;div id=&#34;安装所需的软件包&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;安装所需的软件包&lt;/h3&gt;
+&lt;h3 id=&#34;安装所需的软件包&#34;&gt;安装所需的软件包&lt;/h3&gt;
 &lt;p&gt;下面的R包也包括Y叔的&lt;code&gt;clusterProfiler&lt;/code&gt;了，里面也有ID转换的板块，也是非常实用的，一并汇总了。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;if (!requireNamespace(&amp;quot;BiocManager&amp;quot;, quietly = TRUE))
   install.packages(&amp;quot;BiocManager&amp;quot;)
 
-BiocManager::install(&amp;quot;biomaRt&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;biomart示例&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;code&gt;biomaRt&lt;/code&gt;示例&lt;/h3&gt;
-&lt;p&gt;首先还是推荐看&lt;a href=&#34;https://www.bioconductor.org/packages/devel/bioc/vignettes/biomaRt/inst/doc/biomaRt.html&#34;&gt;官方文档&lt;/a&gt;，没有什么攻略比官方文档更靠谱了，除非懒~&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(&amp;quot;biomaRt&amp;quot;)
+BiocManager::install(&amp;quot;biomaRt&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;biomart示例&#34;&gt;&lt;code&gt;biomaRt&lt;/code&gt;示例&lt;/h3&gt;
+&lt;p&gt;首先还是推荐看
+&lt;a href=&#34;https://www.bioconductor.org/packages/devel/bioc/vignettes/biomaRt/inst/doc/biomaRt.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方文档&lt;/a&gt;，没有什么攻略比官方文档更靠谱了，除非懒~&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&amp;quot;biomaRt&amp;quot;)
 library(org.Gg.eg.db)
 library(org.Hs.eg.db)
 library(clusterProfiler)
 library(DOSE)
 
 # 查看Marts库
-listMarts(host=&amp;quot;asia.ensembl.org&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+listMarts(host=&amp;quot;asia.ensembl.org&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##                biomart               version
 ## 1 ENSEMBL_MART_ENSEMBL      Ensembl Genes 99
 ## 2   ENSEMBL_MART_MOUSE      Mouse strains 99
 ## 3     ENSEMBL_MART_SNP  Ensembl Variation 99
-## 4 ENSEMBL_MART_FUNCGEN Ensembl Regulation 99&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;一步到位代码&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;一步到位代码&lt;/h3&gt;
+## 4 ENSEMBL_MART_FUNCGEN Ensembl Regulation 99
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;一步到位代码&#34;&gt;一步到位代码&lt;/h3&gt;
 &lt;p&gt;选择所需的数据库代码，我需要的是人和家鸡的数据库，直接定义到&lt;code&gt;dataset&lt;/code&gt;即可，有时网速很慢，添加了对应地区的&lt;code&gt;host&lt;/code&gt;。&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 定义人对应数据mart
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# 定义人对应数据mart
 human = useMart(&amp;quot;ensembl&amp;quot;,dataset=&amp;quot;hsapiens_gene_ensembl&amp;quot;,host=&amp;quot;asia.ensembl.org&amp;quot;)
 
 # 定义家鸡对应数据mart
 chicken = useMart(&amp;quot;ensembl&amp;quot;,dataset=&amp;quot;ggallus_gene_ensembl&amp;quot;,host=&amp;quot;asia.ensembl.org&amp;quot;)
 
 # 查看对应`attributes`说明
-listAttributes(chicken)[1:40,]&lt;/code&gt;&lt;/pre&gt;
+listAttributes(chicken)[1:40,]
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##                               name                                description
 ## 1                  ensembl_gene_id                             Gene stable ID
 ## 2          ensembl_gene_id_version                     Gene stable ID version
@@ -145,8 +139,10 @@ listAttributes(chicken)[1:40,]&lt;/code&gt;&lt;/pre&gt;
 ## 37 feature_page
 ## 38 feature_page
 ## 39 feature_page
-## 40 feature_page&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;listAttributes(human)[1:10,]&lt;/code&gt;&lt;/pre&gt;
+## 40 feature_page
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;listAttributes(human)[1:10,]
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##                             name                  description         page
 ## 1                ensembl_gene_id               Gene stable ID feature_page
 ## 2        ensembl_gene_id_version       Gene stable ID version feature_page
@@ -157,12 +153,14 @@ listAttributes(chicken)[1:40,]&lt;/code&gt;&lt;/pre&gt;
 ## 7                ensembl_exon_id               Exon stable ID feature_page
 ## 8                    description             Gene description feature_page
 ## 9                chromosome_name     Chromosome/scaffold name feature_page
-## 10                start_position              Gene start (bp) feature_page&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 进行ID转换
+## 10                start_position              Gene start (bp) feature_page
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# 进行ID转换
 
-hgnc_swissprot &amp;lt;- getBM(attributes=c(&amp;#39;ensembl_gene_id&amp;#39;,&amp;#39;ensembl_transcript_id&amp;#39;,&amp;#39;hgnc_symbol&amp;#39;,&amp;#39;uniprotswissprot&amp;#39;),filters = &amp;#39;ensembl_gene_id&amp;#39;, values = &amp;#39;ENSG00000139618&amp;#39;, mart = human)
+hgnc_swissprot &amp;lt;- getBM(attributes=c(&#39;ensembl_gene_id&#39;,&#39;ensembl_transcript_id&#39;,&#39;hgnc_symbol&#39;,&#39;uniprotswissprot&#39;),filters = &#39;ensembl_gene_id&#39;, values = &#39;ENSG00000139618&#39;, mart = human)
 
-hgnc_swissprot&lt;/code&gt;&lt;/pre&gt;
+hgnc_swissprot
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   ensembl_gene_id ensembl_transcript_id hgnc_symbol uniprotswissprot
 ## 1 ENSG00000139618       ENST00000671466       BRCA2                 
 ## 2 ENSG00000139618       ENST00000380152       BRCA2           P51587
@@ -172,36 +170,38 @@ hgnc_swissprot&lt;/code&gt;&lt;/pre&gt;
 ## 6 ENSG00000139618       ENST00000528762       BRCA2                 
 ## 7 ENSG00000139618       ENST00000470094       BRCA2                 
 ## 8 ENSG00000139618       ENST00000666593       BRCA2                 
-## 9 ENSG00000139618       ENST00000544455       BRCA2           P51587&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;同源基因id转换代码&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;同源基因ID转换代码&lt;/h3&gt;
+## 9 ENSG00000139618       ENST00000544455       BRCA2           P51587
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;同源基因id转换代码&#34;&gt;同源基因ID转换代码&lt;/h3&gt;
 &lt;p&gt;跨物种同源基因转换使用&lt;code&gt;getLDS&lt;/code&gt;命令即可，也是非常方便，但是有一个问题就是家鸡一个基因可能对应多个人的基因，系统会自动添加对应的旁系同源基因，所以转换后的数据使用需要小心，可能需要人工排查一下，或者人为的去掉部分数据。&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#human = useMart(&amp;quot;ensembl&amp;quot;,dataset=&amp;quot;hsapiens_gene_ensembl&amp;quot;,host=&amp;quot;asia.ensembl.org&amp;quot;)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#human = useMart(&amp;quot;ensembl&amp;quot;,dataset=&amp;quot;hsapiens_gene_ensembl&amp;quot;,host=&amp;quot;asia.ensembl.org&amp;quot;)
 #chicken = useMart(&amp;quot;ensembl&amp;quot;,dataset=&amp;quot;ggallus_gene_ensembl&amp;quot;,host=&amp;quot;asia.ensembl.org&amp;quot;)
 
 genelist_megre &amp;lt;- c(&amp;quot;ENSGALG00000001136&amp;quot;,&amp;quot;ENSGALG00000005956&amp;quot;,&amp;quot;ENSGALG00000006407&amp;quot;,&amp;quot;ENSGALG00000007728&amp;quot;,&amp;quot;ENSGALG00000009628&amp;quot;,&amp;quot;ENSGALG00000010316&amp;quot;,&amp;quot;ENSGALG00000011190&amp;quot;,&amp;quot;ENSGALG00000011687&amp;quot;,&amp;quot;ENSGALG00000011806&amp;quot;,&amp;quot;ENSGALG00000015656&amp;quot;)
 
-genelist_megre&lt;/code&gt;&lt;/pre&gt;
+genelist_megre
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;ENSGALG00000001136&amp;quot; &amp;quot;ENSGALG00000005956&amp;quot; &amp;quot;ENSGALG00000006407&amp;quot;
 ##  [4] &amp;quot;ENSGALG00000007728&amp;quot; &amp;quot;ENSGALG00000009628&amp;quot; &amp;quot;ENSGALG00000010316&amp;quot;
 ##  [7] &amp;quot;ENSGALG00000011190&amp;quot; &amp;quot;ENSGALG00000011687&amp;quot; &amp;quot;ENSGALG00000011806&amp;quot;
-## [10] &amp;quot;ENSGALG00000015656&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;genelist_megre_Hs &amp;lt;- getLDS(attributes = c(&amp;quot;ensembl_gene_id&amp;quot;,&amp;quot;entrezgene_id&amp;quot;, &amp;quot;external_gene_name&amp;quot;),      
+## [10] &amp;quot;ENSGALG00000015656&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;genelist_megre_Hs &amp;lt;- getLDS(attributes = c(&amp;quot;ensembl_gene_id&amp;quot;,&amp;quot;entrezgene_id&amp;quot;, &amp;quot;external_gene_name&amp;quot;),      
                             filters = &amp;quot;ensembl_gene_id&amp;quot;, 
                             values = genelist_megre, 
                             mart = chicken,
                             attributesL = c(&amp;quot;ensembl_gene_id&amp;quot;,&amp;quot;entrezgene_id&amp;quot;,&amp;quot;external_gene_name&amp;quot;), 
                             martL = human)
 
-genelist_megre_Hs&lt;/code&gt;&lt;/pre&gt;
+genelist_megre_Hs
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##        Gene.stable.ID NCBI.gene.ID Gene.name Gene.stable.ID.1 NCBI.gene.ID.1
 ## 1  ENSGALG00000007728       770734            ENSG00000100033           5625
 ## 2  ENSGALG00000005956       423774            ENSG00000264230         728113
 ## 3  ENSGALG00000011687    100859120            ENSG00000185567         113146
 ## 4  ENSGALG00000005956       423774            ENSG00000265190         653145
-## 5  ENSGALG00000011190    100857411     PLAC8  ENSG00000145287          51316
-## 6  ENSGALG00000011806    100859223            ENSG00000173702          56667
+## 5  ENSGALG00000011806    100859223            ENSG00000173702          56667
+## 6  ENSGALG00000011190    100857411     PLAC8  ENSG00000145287          51316
 ## 7  ENSGALG00000006407       378902            ENSG00000120889           8795
 ## 8  ENSGALG00000006407       378902            ENSG00000173535           8794
 ## 9  ENSGALG00000006407       378902            ENSG00000173530           8793
@@ -211,76 +211,86 @@ genelist_megre_Hs&lt;/code&gt;&lt;/pre&gt;
 ## 2      ANXA8L1
 ## 3       AHNAK2
 ## 4        ANXA8
-## 5        PLAC8
-## 6        MUC13
+## 5        MUC13
+## 6        PLAC8
 ## 7    TNFRSF10B
 ## 8    TNFRSF10C
 ## 9    TNFRSF10D
-## 10  AC007325.2&lt;/code&gt;&lt;/pre&gt;
+## 10  AC007325.2
+&lt;/code&gt;&lt;/pre&gt;
 &lt;blockquote&gt;
 &lt;p&gt;插一句，总算知道为什么R代码有规范了，参数主动换行，真的好看太多了。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;div id=&#34;提取蛋白dna序列并导出fasta格式文件&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;提取蛋白/DNA序列并导出FASTA格式文件&lt;/h3&gt;
+&lt;h3 id=&#34;提取蛋白dna序列并导出fasta格式文件&#34;&gt;提取蛋白/DNA序列并导出FASTA格式文件&lt;/h3&gt;
 &lt;p&gt;使用过程中发现居然还可以调取序列等信息，少量操作也就不用打开网页，快速方便完成氨基酸/核酸序列的获取，非常实用！&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;protein = getSequence(id=c(&amp;quot;GRP&amp;quot;),
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;protein = getSequence(id=c(&amp;quot;GRP&amp;quot;),
                       type=&amp;quot;external_gene_name&amp;quot;,
                       seqType=&amp;quot;peptide&amp;quot;, 
                       mart= chicken)
 
-protein&lt;/code&gt;&lt;/pre&gt;
+protein
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##                                                                                                                                                                 peptide
 ## 1              MGGGGPRRPGTLPLLALLALLAAHGGAAPLQPGGSPALTKIYPRGSHWAVGHLMGKKSTGDFPYAYEEENKIPLSASPENIKQLDDYLQREEMSKHLLQLLEGNENKSAHFSKGGLPWHTRNSWETDDSSSWKDVVEYLLQVVNMKESAPS*
 ## 2 MGGGGPRRPGTLPLLALLALLAAHGGAAPLQPGGSPALTKIYPRGSHWAVGHLMGKKSTGDFPYAYEEENKIPLSASPENIKQLDDYLQREEMSKHLLQLLEGNENKSAHFSKGGLPWHTRNSWETDDSSSWKDVSRTRCVSAFLTVTFCSKVAYQLCPTSALS*
 ##   external_gene_name
 ## 1                GRP
-## 2                GRP&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;混杂基因名称转换处理这里使用了bitr进行示例&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;混杂基因名称转换处理，这里使用了&lt;code&gt;bitr&lt;/code&gt;进行示例&lt;/h3&gt;
+## 2                GRP
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;混杂基因名称转换处理这里使用了bitr进行示例&#34;&gt;混杂基因名称转换处理，这里使用了&lt;code&gt;bitr&lt;/code&gt;进行示例&lt;/h3&gt;
 &lt;p&gt;在获得基因列表是不可避免会出现name和ID混杂在一起的情况，目前只能采用分批操作的流程进行处理，有更好方法再更新。&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;genelist &amp;lt;- c(&amp;quot;S100A6&amp;quot;,&amp;quot;S100A10&amp;quot;,&amp;quot;SNCG&amp;quot;,&amp;quot;S100A1&amp;quot;,&amp;quot;S100A11&amp;quot;,&amp;quot;ID3&amp;quot;,&amp;quot;ENSGALG00000011190&amp;quot;,&amp;quot;AKR1B10&amp;quot;,&amp;quot;CSRP1&amp;quot;,&amp;quot;SPARCL1&amp;quot;,&amp;quot;HBEGF&amp;quot;,&amp;quot;FAM107B&amp;quot;,&amp;quot;ENSGALG00000009628&amp;quot;,&amp;quot;ENSGALG00000010316&amp;quot;,&amp;quot;ENSGALG00000011190&amp;quot;,&amp;quot;ENSGALG00000011687&amp;quot;,&amp;quot;ENSGALG00000011806&amp;quot;,&amp;quot;ENSGALG00000015656&amp;quot;)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;genelist &amp;lt;- c(&amp;quot;S100A6&amp;quot;,&amp;quot;S100A10&amp;quot;,&amp;quot;SNCG&amp;quot;,&amp;quot;S100A1&amp;quot;,&amp;quot;S100A11&amp;quot;,&amp;quot;ID3&amp;quot;,&amp;quot;ENSGALG00000011190&amp;quot;,&amp;quot;AKR1B10&amp;quot;,&amp;quot;CSRP1&amp;quot;,&amp;quot;SPARCL1&amp;quot;,&amp;quot;HBEGF&amp;quot;,&amp;quot;FAM107B&amp;quot;,&amp;quot;ENSGALG00000009628&amp;quot;,&amp;quot;ENSGALG00000010316&amp;quot;,&amp;quot;ENSGALG00000011190&amp;quot;,&amp;quot;ENSGALG00000011687&amp;quot;,&amp;quot;ENSGALG00000011806&amp;quot;,&amp;quot;ENSGALG00000015656&amp;quot;)
 
-genelist&lt;/code&gt;&lt;/pre&gt;
+genelist
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;S100A6&amp;quot;             &amp;quot;S100A10&amp;quot;            &amp;quot;SNCG&amp;quot;              
 ##  [4] &amp;quot;S100A1&amp;quot;             &amp;quot;S100A11&amp;quot;            &amp;quot;ID3&amp;quot;               
 ##  [7] &amp;quot;ENSGALG00000011190&amp;quot; &amp;quot;AKR1B10&amp;quot;            &amp;quot;CSRP1&amp;quot;             
 ## [10] &amp;quot;SPARCL1&amp;quot;            &amp;quot;HBEGF&amp;quot;              &amp;quot;FAM107B&amp;quot;           
 ## [13] &amp;quot;ENSGALG00000009628&amp;quot; &amp;quot;ENSGALG00000010316&amp;quot; &amp;quot;ENSGALG00000011190&amp;quot;
-## [16] &amp;quot;ENSGALG00000011687&amp;quot; &amp;quot;ENSGALG00000011806&amp;quot; &amp;quot;ENSGALG00000015656&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 定义ENSEMBL命名的基因
+## [16] &amp;quot;ENSGALG00000011687&amp;quot; &amp;quot;ENSGALG00000011806&amp;quot; &amp;quot;ENSGALG00000015656&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# 定义ENSEMBL命名的基因
 index &amp;lt;- grep(&amp;quot;ENSGALG&amp;quot;, genelist)
 
-index&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1]  7 13 14 15 16 17 18&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 筛选ENSGALG命名的基因并转换
+index
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  7 13 14 15 16 17 18
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# 筛选ENSGALG命名的基因并转换
 genelistA &amp;lt;- genelist[index]
 geneA = bitr(genelistA, fromType=&amp;quot;ENSEMBL&amp;quot;, toType=c(&amp;quot;SYMBOL&amp;quot;, &amp;quot;ENTREZID&amp;quot;), OrgDb=&amp;quot;org.Gg.eg.db&amp;quot;)
-head(geneA)&lt;/code&gt;&lt;/pre&gt;
+head(geneA)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##              ENSEMBL SYMBOL  ENTREZID
 ## 1 ENSGALG00000011190 PLACL2 100857411
 ## 2 ENSGALG00000009628 KCTD12    425504
 ## 3 ENSGALG00000010316  FRAS1    422506
 ## 4 ENSGALG00000011687 AHNAK2 100859120
 ## 5 ENSGALG00000011806  MUC13 100859223
-## 6 ENSGALG00000015656  AKAP2 100533110&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 筛选SYMBOL命名的基因并转换
+## 6 ENSGALG00000015656  AKAP2 100533110
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# 筛选SYMBOL命名的基因并转换
 genelistB &amp;lt;- genelist[-index]
-geneB = bitr(genelistB, fromType=&amp;quot;SYMBOL&amp;quot;, toType=c(&amp;quot;ENSEMBL&amp;quot;, &amp;quot;ENTREZID&amp;quot;), OrgDb=&amp;quot;org.Gg.eg.db&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+geneB = bitr(genelistB, fromType=&amp;quot;SYMBOL&amp;quot;, toType=c(&amp;quot;ENSEMBL&amp;quot;, &amp;quot;ENTREZID&amp;quot;), OrgDb=&amp;quot;org.Gg.eg.db&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning in bitr(genelistB, fromType = &amp;quot;SYMBOL&amp;quot;, toType = c(&amp;quot;ENSEMBL&amp;quot;,
-## &amp;quot;ENTREZID&amp;quot;), : 9.09% of input gene IDs are fail to map...&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(geneB)&lt;/code&gt;&lt;/pre&gt;
+## &amp;quot;ENTREZID&amp;quot;), : 9.09% of input gene IDs are fail to map...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;head(geneB)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##    SYMBOL            ENSEMBL  ENTREZID
 ## 1  S100A6 ENSGALG00000041826    373951
 ## 2 S100A10 ENSGALG00000028774    396506
 ## 3    SNCG ENSGALG00000002015    395392
 ## 4  S100A1 ENSGALG00000034458 100858258
 ## 5 S100A11 ENSGALG00000036711    396075
-## 6     ID3 ENSGALG00000035317    395281&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gene &amp;lt;- rbind(geneA,geneB)
+## 6     ID3 ENSGALG00000035317    395281
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;gene &amp;lt;- rbind(geneA,geneB)
 
-gene&lt;/code&gt;&lt;/pre&gt;
+gene
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##               ENSEMBL  SYMBOL  ENTREZID
 ## 1  ENSGALG00000011190  PLACL2 100857411
 ## 2  ENSGALG00000009628  KCTD12    425504
@@ -297,29 +307,32 @@ gene&lt;/code&gt;&lt;/pre&gt;
 ## 8  ENSGALG00000000318   CSRP1    396176
 ## 9  ENSGALG00000010929 SPARCL1    422586
 ## 10 ENSGALG00000000949   HBEGF    395654
-## 11 ENSGALG00000033226 FAM107B    426376&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(gene)&lt;/code&gt;&lt;/pre&gt;
+## 11 ENSGALG00000033226 FAM107B    426376
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(gene)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##    ENSEMBL             SYMBOL            ENTREZID        
 ##  Length:16          Length:16          Length:16         
 ##  Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 同时可以导出到本地csv文件
-#write.csv(as.data.frame(gene),&amp;quot;./gene.csv&amp;quot;,row.names =FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;当然使用getbm也可以实现id转换但是结果会出现不少信息残缺还是推荐bitr&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;当然，使用&lt;code&gt;getBM&lt;/code&gt;也可以实现ID转换，但是结果会出现不少信息残缺，还是推荐&lt;code&gt;bitr&lt;/code&gt;&lt;/h3&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gene_A &amp;lt;- getBM(attributes=c(&amp;quot;ensembl_gene_id&amp;quot;, &amp;quot;external_gene_name&amp;quot;, &amp;quot;entrezgene_id&amp;quot;),
-                filters = &amp;#39;ensembl_gene_id&amp;#39;, 
+##  Mode  :character   Mode  :character   Mode  :character
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# 同时可以导出到本地csv文件
+#write.csv(as.data.frame(gene),&amp;quot;./gene.csv&amp;quot;,row.names =FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;当然使用getbm也可以实现id转换但是结果会出现不少信息残缺还是推荐bitr&#34;&gt;当然，使用&lt;code&gt;getBM&lt;/code&gt;也可以实现ID转换，但是结果会出现不少信息残缺，还是推荐&lt;code&gt;bitr&lt;/code&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;gene_A &amp;lt;- getBM(attributes=c(&amp;quot;ensembl_gene_id&amp;quot;, &amp;quot;external_gene_name&amp;quot;, &amp;quot;entrezgene_id&amp;quot;),
+                filters = &#39;ensembl_gene_id&#39;, 
                 values = genelistA, 
                 mart = chicken)
 
 gene_B &amp;lt;- getBM(attributes=c(&amp;quot;ensembl_gene_id&amp;quot;, &amp;quot;external_gene_name&amp;quot;, &amp;quot;entrezgene_id&amp;quot;),
-                filters = &amp;#39;external_gene_name&amp;#39;, 
+                filters = &#39;external_gene_name&#39;, 
                 values = genelistB, 
                 mart = chicken)
 
 gene_ABmegre &amp;lt;- rbind(gene_A,gene_B)
-gene_ABmegre&lt;/code&gt;&lt;/pre&gt;
+gene_ABmegre
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##       ensembl_gene_id external_gene_name entrezgene_id
 ## 1  ENSGALG00000009628                           425504
 ## 2  ENSGALG00000010316                           422506
@@ -337,23 +350,21 @@ gene_ABmegre&lt;/code&gt;&lt;/pre&gt;
 ## 14 ENSGALG00000034458             S100A1     100858258
 ## 15 ENSGALG00000010929            SPARCL1        422586
 ## 16 ENSGALG00000033226            FAM107B        426376
-## 17 ENSGALG00000035317                ID3        395281&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(gene_ABmegre)&lt;/code&gt;&lt;/pre&gt;
+## 17 ENSGALG00000035317                ID3        395281
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(gene_ABmegre)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  ensembl_gene_id    external_gene_name entrezgene_id      
 ##  Length:17          Length:17          Min.   :   373951  
 ##  Class :character   Class :character   1st Qu.:   395654  
 ##  Mode  :character   Mode  :character   Median :   422506  
 ##                                        Mean   : 29929910  
 ##                                        3rd Qu.:100533110  
-##                                        Max.   :100859223&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;小结&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;小结&lt;/h3&gt;
+##                                        Max.   :100859223
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;小结&#34;&gt;小结&lt;/h3&gt;
 &lt;p&gt;学习使人懒惰，以前要花半小时进行EXCEL文件准备和ID转换，现在也就几分钟，成功偷懒~~&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;参考资料&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;del&gt;参考资料&lt;/del&gt;&lt;/h3&gt;
-&lt;/div&gt;
+&lt;h3 id=&#34;参考资料&#34;&gt;&lt;del&gt;参考资料&lt;/del&gt;&lt;/h3&gt;
 </description>
     </item>
     
