@@ -1,5 +1,10 @@
 library(blogdown)
 library(bookdown)
+library("biomaRt")
+library(org.Gg.eg.db)
+library(org.Hs.eg.db)
+library(clusterProfiler)
+library(DOSE)
 
 languageserver
 
@@ -10,10 +15,10 @@ options(repos=structure(c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/")))
 
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-BiocManager::install("shiny")
+BiocManager::install(c("org.Hs.eg.db","clusterProfiler","DOSE"))
 
-BiocManager::install("multtest")
-install.packages("shiny")
+BiocManager::install("rvcheck")
+ninstall.packages("shiny")
 install.packages('blogdown') 
 blogdown::install_hugo()
 

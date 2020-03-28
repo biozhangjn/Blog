@@ -5,7 +5,7 @@
     <link>/publication/</link>
       <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 13 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 15 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Publications</title>
@@ -13,10 +13,34 @@
     </image>
     
     <item>
+      <title>Arginine vasotocin (AVT)/mesotocin (MT) receptors in chickens: Evidence for the possible involvement of AVT-AVPR1 signaling in the regulation of oviposition and pituitary prolactin expression</title>
+      <link>/publication/avpr/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/avpr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Characterization of the Apelin/Elabela Receptors (APLNR) in Chickens, Turtles, and Zebrafish: Identification of a Novel Apelin-Specific Receptor in Teleosts</title>
-      <link>/publication/journal-article/</link>
+      <link>/publication/aplnr/</link>
       <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/</guid>
+      <guid>/publication/aplnr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The orphan G protein-coupled receptor 25 (GPR25) is activated by Apelin and Apela in non-mammalian vertebrates</title>
+      <link>/publication/gpr25/</link>
+      <pubDate>Fri, 22 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/gpr25/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Characterization of neuromedin U (NMU), neuromedin S (NMS) and their receptors (NMUR1, NMUR2) in chickens</title>
+      <link>/publication/nmu/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/nmu/</guid>
       <description></description>
     </item>
     
@@ -25,6 +49,30 @@
       <link>/publication/mrap2/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       <guid>/publication/mrap2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Molecular characterization of neuropeptide Y (NPY) receptors (Y1, Y4 and Y6) and investigation of the tissue expression of their ligands (NPY, PYY and PP) in chickens</title>
+      <link>/publication/npy146/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>/publication/npy146/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Molecular characterization of three NPY receptors (Y2, Y5 and Y7) in chickens: Gene structure, tissue expression, promoter identification, and functional analysis</title>
+      <link>/publication/npy257/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>/publication/npy257/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identification and characterization of the free fatty acid receptor 2 (FFA2) and a novel functional FFA2-like receptor (FFA2L) for short-chain fatty acids in pigs: Evidence for the existence of a duplicated FFA2 gene (FFA2L) in some mammalian species</title>
+      <link>/publication/ffar2/</link>
+      <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/publication/ffar2/</guid>
       <description></description>
     </item>
     

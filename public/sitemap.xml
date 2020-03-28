@@ -103,6 +103,36 @@
   </url>
   
   <url>
+    <loc>/publication_types/2/</loc>
+    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/avpr/</loc>
+    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/chao-wu-can-lv-yiping-wan-xiaoxiao-li-jiannan-zhang-juan-li-yajun-wang/</loc>
+    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/writing-technical-content/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
   </url>
@@ -128,27 +158,7 @@
   </url>
   
   <url>
-    <loc>/publication_types/2/</loc>
-    <lastmod>2018-12-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article/</loc>
-    <lastmod>2018-12-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2018-12-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
+    <loc>/publication/aplnr/</loc>
     <lastmod>2018-12-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -173,6 +183,26 @@
   </url>
   
   <url>
+    <loc>/publication/gpr25/</loc>
+    <lastmod>2018-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/yiping-wan-chao-fang-junan-chen-wangan-ouyang-juan-li-yajun-wang/</loc>
+    <lastmod>2018-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/nmu/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/yiping-wan#-jiannan-zhang%23-chao-fang-junan-chen-jing-li-juan-li-chenlei-wu-yajun-wang/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/publication/mrap2/</loc>
     <lastmod>2017-07-10T00:00:00+00:00</lastmod>
   </url>
@@ -180,6 +210,26 @@
   <url>
     <loc>/authors/xin-li-yawei-zhou-lin-cui-jing-li-chenlei-wu-yiping-wan-juan-li-and-yajun-wang/</loc>
     <lastmod>2017-07-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/npy146/</loc>
+    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/shunyu-gao#-jiannan-zhang%23-chen-he-fengyan-meng-guixian-bu-guoqiang-zhu-juan-li-yajun-wang/</loc>
+    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/chen-he#-jiannan-zhang%23-shunyu-gao-fengyan-meng-guixian-bu-juan-li-yajun-wang/</loc>
+    <lastmod>2016-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/npy257/</loc>
+    <lastmod>2016-09-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -215,6 +265,16 @@
   <url>
     <loc>/tags/plot/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/ffar2/</loc>
+    <lastmod>2014-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/shaocheng-cheng-yajun-wang-xiaojie-yu-juan-li/</loc>
+    <lastmod>2014-04-01T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

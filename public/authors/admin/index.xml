@@ -14,9 +14,17 @@
     
     <item>
       <title>Characterization of the Apelin/Elabela Receptors (APLNR) in Chickens, Turtles, and Zebrafish: Identification of a Novel Apelin-Specific Receptor in Teleosts</title>
-      <link>/publication/journal-article/</link>
+      <link>/publication/aplnr/</link>
       <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/</guid>
+      <guid>/publication/aplnr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The orphan G protein-coupled receptor 25 (GPR25) is activated by Apelin and Apela in non-mammalian vertebrates</title>
+      <link>/publication/gpr25/</link>
+      <pubDate>Fri, 22 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/gpr25/</guid>
       <description></description>
     </item>
     
@@ -170,6 +178,14 @@
 &lt;p&gt;Released under the 
 &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Identification and characterization of the free fatty acid receptor 2 (FFA2) and a novel functional FFA2-like receptor (FFA2L) for short-chain fatty acids in pigs: Evidence for the existence of a duplicated FFA2 gene (FFA2L) in some mammalian species</title>
+      <link>/publication/ffar2/</link>
+      <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>/publication/ffar2/</guid>
+      <description></description>
     </item>
     
   </channel>

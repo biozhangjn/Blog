@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="In summary, we characterized two APLNRs in chickens and turtles, and three APLNRs in zebrafish.">
 
   
   <link rel="alternate" hreflang="en-us" href="/publication/aplnr/">
@@ -39,7 +39,7 @@
   
   
   
-  <meta name="theme-color" content="#2962ff">
+  <meta name="theme-color" content="#4caf50">
   
 
   
@@ -190,7 +190,7 @@
   
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CNoto Serif SC:400,700,800%7CRoboto+Mono&display=swap">
   
 
   
@@ -202,6 +202,44 @@
   
 
 
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162031575-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-162031575-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
 
 
   
@@ -221,21 +259,23 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
-  <meta property="og:site_name" content="Academic">
+  <meta property="twitter:site" content="@Jiannan_scu">
+  <meta property="twitter:creator" content="@Jiannan_scu">
+  
+  <meta property="og:site_name" content="Jiannan Zhang">
   <meta property="og:url" content="/publication/aplnr/">
-  <meta property="og:title" content="Aplnr | Academic">
-  <meta property="og:description" content=""><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
-  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
+  <meta property="og:title" content="Characterization of the Apelin/Elabela Receptors (APLNR) in Chickens, Turtles, and Zebrafish: Identification of a Novel Apelin-Specific Receptor in Teleosts | Jiannan Zhang">
+  <meta property="og:description" content="In summary, we characterized two APLNRs in chickens and turtles, and three APLNRs in zebrafish."><meta property="og:image" content="/publication/aplnr/featured.jpg">
+  <meta property="twitter:image" content="/publication/aplnr/featured.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-03-01T20:25:33&#43;08:00">
+      <meta property="article:published_time" content="2018-12-13T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-03-01T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2018-12-13T00:00:00&#43;00:00">
   
 
   
@@ -259,10 +299,14 @@
     "@type": "WebPage",
     "@id": "/publication/aplnr/"
   },
-  "headline": "Aplnr",
+  "headline": "Characterization of the Apelin/Elabela Receptors (APLNR) in Chickens, Turtles, and Zebrafish: Identification of a Novel Apelin-Specific Receptor in Teleosts",
   
-  "datePublished": "2020-03-01T20:25:33+08:00",
-  "dateModified": "2020-03-01T00:00:00Z",
+  "image": [
+    "/publication/aplnr/featured.jpg"
+  ],
+  
+  "datePublished": "2018-12-13T00:00:00Z",
+  "dateModified": "2018-12-13T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -271,13 +315,13 @@
   
   "publisher": {
     "@type": "Organization",
-    "name": "Academic",
+    "name": "Jiannan Zhang",
     "logo": {
       "@type": "ImageObject",
       "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": ""
+  "description": "In summary, we characterized two APLNRs in chickens and turtles, and three APLNRs in zebrafish."
 }
 </script>
 
@@ -295,7 +339,7 @@
 
 
 
-  <title>Aplnr | Academic</title>
+  <title>Characterization of the Apelin/Elabela Receptors (APLNR) in Chickens, Turtles, and Zebrafish: Identification of a Novel Apelin-Specific Receptor in Teleosts | Jiannan Zhang</title>
 
 </head>
 
@@ -346,7 +390,7 @@
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/">Academic</a>
+      <a class="navbar-brand" href="/">Jiannan Zhang</a>
     </div>
     
 
@@ -359,7 +403,7 @@
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/">Academic</a>
+      <a class="navbar-brand" href="/">Jiannan Zhang</a>
     </div>
     
 
@@ -369,35 +413,6 @@
 
       
       <ul class="navbar-nav d-md-inline-flex">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#hero"><span>Demo</span></a>
-        </li>
-
-        
         
 
         
@@ -452,7 +467,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
         </li>
 
         
@@ -481,7 +496,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
         </li>
 
         
@@ -580,22 +595,43 @@
 
 
 
-  
+
+
+
+
+
+
+
 
   
-  
-  
-<div class="article-container pt-3">
-  <h1>Aplnr</h1>
-
-  
-
   
     
+  
+
+
+<div class="article-container pt-3">
+  <h1>Characterization of the Apelin/Elabela Receptors (APLNR) in Chickens, Turtles, and Zebrafish: Identification of a Novel Apelin-Specific Receptor in Teleosts</h1>
+
+  
+
+  
 
 
 <div class="article-metadata">
 
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/admin/">Jiannan Zhang</a></span>, <span>Zhou, Y., Wu, C., Wan, Y., Fang, C., Li, J., &hellip; &amp; Wang, Y.</span>
+
+  </div>
   
   
 
@@ -605,7 +641,7 @@
     
       
     
-    March 2020
+    December 2018
   </span>
   
 
@@ -622,7 +658,134 @@
 
 </div>
 
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
     
+  
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://www.frontiersin.org/articles/10.3389/fendo.2018.00756/pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
+        data-filename="/publication/aplnr/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://doi.org/https://doi.org/10.3389/fendo.2018.00756" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 226px;">
+  <div style="position: relative">
+    <img src="/publication/aplnr/featured_hubb72de84a699baa8e908434686ed920a_112594_720x0_resize_q90_lanczos.jpg" alt="" class="featured-image">
+    <span class="article-header-caption">APLNR(s) in representative vertebrate species.</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract">Apelin receptor(s) (APLNR) are suggested to mediate the actions of apelin and Elabela (ELA) peptides in many physiological processes, including cardiovascular development and food intake in vertebrates. However, the functionality of APLNR has not been examined in most vertebrate groups. Here, we characterized two APLNRs APLNR1, APLNR2) in chickens and red-eared sliders, and three APLNRs in zebrafish (APLNR2a, APLNR2b, APLNR3a), which are homologous to human APLNR. Using luciferase-reporter assays or Western blot, we demonstrated that in chickens, APLNR1 (not APLNR2) expressed in HEK293 cells was potently activated by chicken apelin-36 and ELA-32 and coupled to Gi-cAMP and MAPK/ERK signaling pathways, indicating a crucial role of APLNR1 in mediating apelin/ELA actions; in red-eared sliders, APLNR2 (not APLNR1) was potently activated by apelin-36/ELA-32, suggesting that APLNR2 may mediate apelin/ELA actions; in zebrafish, both APLNR2a and APLNR2b were potently activated by apelin-36/ELA-32 and coupled to Gi-cAMP signaling pathway, as previously proposed, whereas the novel APLNR3a was specifically and potently activated by apelin. Similarly, an apelin-specific receptor (APLNR3b) sharing 57% sequence identity with zebrafish APLNR3a was identified in Nile tilapia. Collectively, our data facilitates the uncovering of the roles of APLNR signaling in different vertebrate groups and suggests a key functional switch between APLNR1 and APLNR2/3 in mediating the actions of ELA and apelin during vertebrate evolution.</p>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            
+            
+            <a href="/publication/#2">
+              Journal article
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">Frontiers in endocrinology</div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"></div>
+
+    
+
+
+
+
 
 
 
@@ -638,144 +801,9 @@
 
 
   
-</div>
-
-
-
-  <div class="article-container">
-
+  
     
-
-    
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Type</div>
-          <div class="col-12 col-md-9">
-            
-            
-            <a href="/publication/#0">
-              Uncategorized
-            </a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="d-md-none space-below"></div>
-    
-
-    
-
-    <div class="space-below"></div>
-
-    <div class="article-style"></div>
-
-    
-
-
-
-
-
-
-
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=/publication/aplnr/&amp;text=Aplnr" target="_blank" rel="noopener" class="share-btn-twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=/publication/aplnr/&amp;t=Aplnr" target="_blank" rel="noopener" class="share-btn-facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="mailto:?subject=Aplnr&amp;body=/publication/aplnr/" target="_blank" rel="noopener" class="share-btn-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/publication/aplnr/&amp;title=Aplnr" target="_blank" rel="noopener" class="share-btn-linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://web.whatsapp.com/send?text=Aplnr%20/publication/aplnr/" target="_blank" rel="noopener" class="share-btn-whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=/publication/aplnr/&amp;title=Aplnr" target="_blank" rel="noopener" class="share-btn-weibo">
-          <i class="fab fa-weibo"></i>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
+  
   
 
 
@@ -798,7 +826,7 @@
 
     <div class="media-body">
       <h5 class="card-title"><a href="/">Jiannan Zhang</a></h5>
-      <h6 class="card-subtitle">Post-doc in Cell Biology</h6>
+      <h6 class="card-subtitle">Postdoctoral Researcher</h6>
       <p class="card-text">My research interests include Avian Physiology, Endocrinology and Metabolism.</p>
       <ul class="network-icon" aria-hidden="true">
   

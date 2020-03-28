@@ -15,7 +15,7 @@ links:
   url: https://joe.bioscientifica.com/view/journals/joe/234/2/JOE-17-0131.xml
 #projects:
 #- internal-project
-publication: In *Journal of Endocrinology*
+publication: Journal of Endocrinology
 publication_short:
 publication_types:
 - "2"
