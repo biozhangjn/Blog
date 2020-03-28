@@ -21,6 +21,7 @@ image:
 projects: []
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="为什么要在r中进行id转换" class="section level3">
@@ -200,10 +201,10 @@ genelist_megre_Hs</code></pre>
 <pre><code>##        Gene.stable.ID NCBI.gene.ID Gene.name Gene.stable.ID.1 NCBI.gene.ID.1
 ## 1  ENSGALG00000007728       770734            ENSG00000100033           5625
 ## 2  ENSGALG00000005956       423774            ENSG00000264230         728113
-## 3  ENSGALG00000011806    100859223            ENSG00000173702          56667
-## 4  ENSGALG00000011190    100857411     PLAC8  ENSG00000145287          51316
-## 5  ENSGALG00000005956       423774            ENSG00000265190         653145
-## 6  ENSGALG00000011687    100859120            ENSG00000185567         113146
+## 3  ENSGALG00000011687    100859120            ENSG00000185567         113146
+## 4  ENSGALG00000005956       423774            ENSG00000265190         653145
+## 5  ENSGALG00000011190    100857411     PLAC8  ENSG00000145287          51316
+## 6  ENSGALG00000011806    100859223            ENSG00000173702          56667
 ## 7  ENSGALG00000006407       378902            ENSG00000120889           8795
 ## 8  ENSGALG00000006407       378902            ENSG00000173535           8794
 ## 9  ENSGALG00000006407       378902            ENSG00000173530           8793
@@ -211,10 +212,10 @@ genelist_megre_Hs</code></pre>
 ##    Gene.name.1
 ## 1        PRODH
 ## 2      ANXA8L1
-## 3        MUC13
-## 4        PLAC8
-## 5        ANXA8
-## 6       AHNAK2
+## 3       AHNAK2
+## 4        ANXA8
+## 5        PLAC8
+## 6        MUC13
 ## 7    TNFRSF10B
 ## 8    TNFRSF10C
 ## 9    TNFRSF10D
@@ -260,17 +261,19 @@ index</code></pre>
 genelistA &lt;- genelist[index]
 geneA = bitr(genelistA, fromType=&quot;ENSEMBL&quot;, toType=c(&quot;SYMBOL&quot;, &quot;ENTREZID&quot;), OrgDb=&quot;org.Gg.eg.db&quot;)
 head(geneA)</code></pre>
-<pre><code>##              ENSEMBL     SYMBOL  ENTREZID
-## 1 ENSGALG00000011190     PLACL2 100857411
-## 2 ENSGALG00000009628     KCTD12    425504
-## 3 ENSGALG00000010316      FRAS1    422506
-## 4 ENSGALG00000011687     AHNAK2 100859120
-## 5 ENSGALG00000011806      MUC13 100859223
-## 6 ENSGALG00000015656 PALM2AKAP2 100533110</code></pre>
+<pre><code>##              ENSEMBL SYMBOL  ENTREZID
+## 1 ENSGALG00000011190 PLACL2 100857411
+## 2 ENSGALG00000009628 KCTD12    425504
+## 3 ENSGALG00000010316  FRAS1    422506
+## 4 ENSGALG00000011687 AHNAK2 100859120
+## 5 ENSGALG00000011806  MUC13 100859223
+## 6 ENSGALG00000015656  AKAP2 100533110</code></pre>
 <pre class="r"><code># 筛选SYMBOL命名的基因并转换
 genelistB &lt;- genelist[-index]
-geneB = bitr(genelistB, fromType=&quot;SYMBOL&quot;, toType=c(&quot;ENSEMBL&quot;, &quot;ENTREZID&quot;), OrgDb=&quot;org.Gg.eg.db&quot;)
-head(geneB)</code></pre>
+geneB = bitr(genelistB, fromType=&quot;SYMBOL&quot;, toType=c(&quot;ENSEMBL&quot;, &quot;ENTREZID&quot;), OrgDb=&quot;org.Gg.eg.db&quot;)</code></pre>
+<pre><code>## Warning in bitr(genelistB, fromType = &quot;SYMBOL&quot;, toType = c(&quot;ENSEMBL&quot;,
+## &quot;ENTREZID&quot;), : 9.09% of input gene IDs are fail to map...</code></pre>
+<pre class="r"><code>head(geneB)</code></pre>
 <pre><code>##    SYMBOL            ENSEMBL  ENTREZID
 ## 1  S100A6 ENSGALG00000041826    373951
 ## 2 S100A10 ENSGALG00000028774    396506
@@ -281,27 +284,26 @@ head(geneB)</code></pre>
 <pre class="r"><code>gene &lt;- rbind(geneA,geneB)
 
 gene</code></pre>
-<pre><code>##               ENSEMBL     SYMBOL  ENTREZID
-## 1  ENSGALG00000011190     PLACL2 100857411
-## 2  ENSGALG00000009628     KCTD12    425504
-## 3  ENSGALG00000010316      FRAS1    422506
-## 4  ENSGALG00000011687     AHNAK2 100859120
-## 5  ENSGALG00000011806      MUC13 100859223
-## 6  ENSGALG00000015656 PALM2AKAP2 100533110
-## 7  ENSGALG00000041826     S100A6    373951
-## 8  ENSGALG00000028774    S100A10    396506
-## 9  ENSGALG00000002015       SNCG    395392
-## 10 ENSGALG00000034458     S100A1 100858258
-## 11 ENSGALG00000036711    S100A11    396075
-## 12 ENSGALG00000035317        ID3    395281
-## 13 ENSGALG00000013072    AKR1B10    395338
-## 14 ENSGALG00000000318      CSRP1    396176
-## 15 ENSGALG00000010929    SPARCL1    422586
-## 16 ENSGALG00000000949      HBEGF    395654
-## 17 ENSGALG00000033226    FAM107B    426376</code></pre>
+<pre><code>##               ENSEMBL  SYMBOL  ENTREZID
+## 1  ENSGALG00000011190  PLACL2 100857411
+## 2  ENSGALG00000009628  KCTD12    425504
+## 3  ENSGALG00000010316   FRAS1    422506
+## 4  ENSGALG00000011687  AHNAK2 100859120
+## 5  ENSGALG00000011806   MUC13 100859223
+## 6  ENSGALG00000015656   AKAP2 100533110
+## 12 ENSGALG00000041826  S100A6    373951
+## 21 ENSGALG00000028774 S100A10    396506
+## 31 ENSGALG00000002015    SNCG    395392
+## 41 ENSGALG00000034458  S100A1 100858258
+## 51 ENSGALG00000036711 S100A11    396075
+## 61 ENSGALG00000035317     ID3    395281
+## 8  ENSGALG00000000318   CSRP1    396176
+## 9  ENSGALG00000010929 SPARCL1    422586
+## 10 ENSGALG00000000949   HBEGF    395654
+## 11 ENSGALG00000033226 FAM107B    426376</code></pre>
 <pre class="r"><code>summary(gene)</code></pre>
 <pre><code>##    ENSEMBL             SYMBOL            ENTREZID        
-##  Length:17          Length:17          Length:17         
+##  Length:16          Length:16          Length:16         
 ##  Class :character   Class :character   Class :character  
 ##  Mode  :character   Mode  :character   Mode  :character</code></pre>
 <pre class="r"><code># 同时可以导出到本地csv文件
