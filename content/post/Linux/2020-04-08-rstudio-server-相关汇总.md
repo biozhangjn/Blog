@@ -1,8 +1,8 @@
 ---
 title: Rstudio-server 相关汇总
-author: Jiannan ZHANG
+author: zjn
 date: '2020-04-08'
-slug: Rstudio-server
+slug: rstudio-server-相关汇总
 categories:
   - Linux
 tags:
@@ -10,7 +10,7 @@ tags:
 subtitle: ''
 summary: ''
 authors: []
-lastmod: '2020-04-08T23:31:27+08:00'
+lastmod: '2020-04-08T12:53:18+08:00'
 featured: no
 image:
   caption: ''
