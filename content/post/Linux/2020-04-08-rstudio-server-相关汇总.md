@@ -79,6 +79,9 @@ echo "rsession-which-r=/usr/local/bin/R-devel" | sudo tee -a /etc/rstudio/rserve
 # 安装 firewalld 防火墙管理工具
 sudo apt-get install -y firewalld
 
+# 查看端口情况
+firewall-cmd --list-ports
+
 # 打开8181端口
 sudo firewall-cmd --zone=public --add-port=8181/tcp --permanent
 
