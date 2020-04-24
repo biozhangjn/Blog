@@ -1,0 +1,40 @@
+
+server {
+  listen  443 ssl;
+  ssl on;
+  ssl_certificate       /etc/nginx/ssl/fullchain.cer;
+  ssl_certificate_key   /etc/nginx/ssl/shiny.zhangjn.xyz.key;
+  ssl_protocols         TLSv1 TLSv1.1 TLSv1.2;
+  ssl_ciphers           HIGH:!aNULL:!MD5;
+  server_name           shiny.zhangjn.xyz;
+        location /ray { # 与 V2Ray 配置中的 path 保持一致
+        proxy_redirect off;
+        proxy_pass http://127.0.0.1:20019; #假设WebSocket监听在环回地址的10000端口上
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $http_host;
+
+        # Show realip in v2ray access.log
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+}
+
+    server{
+
+	listen 443 ssl;
+        ssl on;
+        server_name shiny.zhangjn.xyz;
+        ssl_certificate /etc/nginx/ssl/fullchain.cer;
+        ssl_certificate_key  /etc/nginx/ssl/shiny.zhangjn.xyz.key;
+
+        location / {
+                proxy_ssl_server_name on;
+
+                proxy_pass https://$host:6060; #通过域名访问frp服务
+        }
+
+
+    }
+
