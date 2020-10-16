@@ -1,0 +1,15 @@
+# IDEs
+.idea/
+
+# Hugo
+/resources/
+public/
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+public/
+static/figures
+blogdown
+id_rsa_github.pub
+id_rsa_github
