@@ -39,9 +39,9 @@ url_slides: ""
 url_video: ""
 ---
 
-{{% alert note %}}
+{{% callout note %}}
 Click on the **Slides** button above to view the built-in slides feature.
-{{% /alert %}}
+{{% /callout %}}
 
 Slides can be added in a few ways:
 
