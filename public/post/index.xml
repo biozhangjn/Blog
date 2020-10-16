@@ -5,12 +5,334 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>阿里云服务新配置代码备存</title>
+      <link>/post/linux/aliyun-code/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/post/linux/aliyun-code/</guid>
+      <description>&lt;p&gt;新添了
+&lt;a href=&#34;https://www.aliyun.com/minisite/goods?userCode=tjxor43i&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;阿里云服务器&lt;/a&gt;，超级推荐云翼计划，学生能享受的优惠真的很赞，可惜我没有机会了，只有等双11的活动了，点击链接进去即可选购~~&lt;/p&gt;
+&lt;p&gt;主要是为了解决frp走国外服务器的延迟问题，同时为实验室数据分享网址的建立练手，当然以后肯定还会有很多购新的事件，因此这里记录下相关代码和备注事项，方便以后的操作：&lt;/p&gt;
+&lt;h2 id=&#34;ssh登陆&#34;&gt;SSH登陆&lt;/h2&gt;
+&lt;p&gt;&lt;del&gt;垃圾&lt;/del&gt;
+&lt;a href=&#34;https://www.aliyun.com/minisite/goods?userCode=tjxor43i&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;阿里云&lt;/a&gt;，操作复杂，事项繁多，比Vutlr的界面复杂太多了，不过安全性上面确实可能要高一些，新手直接劝退吧，不过新手也不会上来就买CES，或者买来就是练手的，我就是新手，差点被劝退了~~~&lt;/p&gt;
+&lt;p&gt;首先重置密码，即设置新密码，为什么不能随机给个默认的，要这么麻烦，吐槽+1&amp;hellip;&amp;hellip;
+然后在安全组界面添加密钥，默认只能通过密钥登陆，安全性提高，然后记得重启CES，随便啥远程登陆进去~再次前排推荐&lt;code&gt;Visual Studio Code&lt;/code&gt;！！！&lt;/p&gt;
+&lt;h2 id=&#34;虚拟内存&#34;&gt;虚拟内存&lt;/h2&gt;
+&lt;p&gt;由于开启swap分区会导致硬盘IO性能下降，因此
+&lt;a href=&#34;https://www.aliyun.com/minisite/goods?userCode=tjxor43i&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;阿里云服务器&lt;/a&gt;初始状态未配置swap，如果某些应用需要开启swap分区，自己设置即可。&lt;del&gt;小鸡的烦恼，土豪随意&lt;/del&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;sudo dd if=/dev/zero of=swapfile bs=1024 count=2048000
+sudo mkswap -f swapfile
+chmod 0600 swapfile
+sudo swapon swapfile
+sudo cp /etc/fstab /etc/fstab.bak
+echo &#39;/swapfile none swap sw 0 0&#39; | sudo tee -a /etc/fstab #学到么？下面还有类似操作喔~
+shutdown -r now #重启看下free
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;r-shiny-and-rstudio&#34;&gt;R, Shiny and Rstudio&lt;/h2&gt;
+&lt;h3 id=&#34;r-installhttpscranr-projectorgbinlinuxubuntureadmehtml&#34;&gt;
+&lt;a href=&#34;https://cran.r-project.org/bin/linux/ubuntu/README.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R install&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+#根据系统选择合适的软件包，不确定记得去官网查看下最新记录
+sudo add-apt-repository &#39;deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/&#39;
+sudo add-apt-repository &#39;deb https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/linux/ubuntu bionic-cran35/&#39;
+sudo apt-get update
+sudo apt-get install r-base
+sudo apt-get install r-base-dev
+sudo -i R
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;rstudio-serverhttpsrstudiocomproductsrstudiodownload-serverdebian-ubuntu&#34;&gt;
+&lt;a href=&#34;https://rstudio.com/products/rstudio/download-server/debian-ubuntu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rstudio server&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;116.62.102.124&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;# 视系统不同选择有差异，这里是ubuntu 18.04
+sudo apt-get install gdebi-core
+wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5033-amd64.deb
+sudo gdebi rstudio-server-1.2.5033-amd64.deb
+
+echo &amp;quot;www-port=8787&amp;quot; | sudo tee -a  /etc/rstudio/rserver.conf #熟悉么~~
+
+#查看是否安装正确
+sudo rstudio-server verify-installation
+#启动
+sudo rstudio-server start
+#查看状态
+sudo rstudio-server status
+#停止
+sudo rstudio-server stop
+#重启
+sudo rstudio-server restart
+#查看服务端ip地址
+ifconfig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;adduser&#34;&gt;Adduser&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;sudo adduser zhangjn
+usermod -aG sudo zhangjn
+su zhangjn
+
+# test the root privileges
+sudo ls -la /root
+
+# change password
+passwd zhangjn
+
+# copy ssh file and directory structure to  new user account in  existing session
+rsync --archive --chown=zhangjn:zhangjn ~/.ssh /home/zhangjn
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;shiny-serverhttpsrstudiocomproductsshinydownload-serverubuntu&#34;&gt;
+&lt;a href=&#34;https://rstudio.com/products/shiny/download-server/ubuntu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny server&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;#  install the Shiny R package
+sudo su - \
+-c &amp;quot;R -e \&amp;quot;install.packages(&#39;shiny&#39;, repos=&#39;https://cran.rstudio.com/&#39;)\&amp;quot;&amp;quot;
+
+sudo apt-get install gdebi-core
+wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.13.944-amd64.deb
+sudo gdebi shiny-server-1.5.13.944-amd64.deb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.zhangjn.xyz/post/shiny-server/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Change user&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;nano /etc/shiny-server/shiny-server.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Restart Shiny Server Pro so that the activated version will get started.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;sudo systemctl restart shiny-server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;install-seurat-package-in-rstudio&#34;&gt;Install Seurat package in Rstudio&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;# Problem installing R packages that depends from &amp;quot;OpenSSL&amp;quot; library
+sudo apt-get install libssl-dev
+
+# Problem installing R packages that depends from &amp;quot;httr&amp;quot; library
+sudo apt-get install libcurl4-openssl-dev
+
+# Problem installing R packages that depends from &amp;quot;metap&amp;quot; library
+# install package using BiocManager
+if (!requireNamespace(&amp;quot;BiocManager&amp;quot;, quietly = TRUE))
+  install.packages(&amp;quot;BiocManager&amp;quot;)
+
+BiocManager::install(&amp;quot;multtest&amp;quot;)
+BiocManager::install(&amp;quot;metap&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;configuring-nginx-on-your-serverhttpssupportrstudiocomhcen-usarticles213733868-running-shiny-server-with-a-proxy&#34;&gt;
+&lt;a href=&#34;https://support.rstudio.com/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Configuring nginx on your server&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;
+sudo apt-get -y install nginx
+
+# make a backup of the nginx configuration
+sudo cp /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default-backup
+
+# 配置自己摸索下
+sudo nano /etc/nginx/sites-enabled/default
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;acmesh-and-ssl&#34;&gt;&lt;code&gt;acme.sh&lt;/code&gt; and &lt;code&gt;ssl&lt;/code&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;curl https://get.acme.sh | sh
+
+# You’ll need to generate an API key at https://www.namesilo.com/account_api.php 
+# Optionally you may restrict the access to an IP range there.
+# for namesilo ssl
+
+export Namesilo_Key=&amp;quot;XXXXXXXXXXXXX&amp;quot;
+
+~/.acme.sh/acme.sh --issue --dns dns_namesilo --dnssleep 2500 -d scrna.zhangjn.xyz
+
+~/.acme.sh/acme.sh --issue --dns dns_namesilo --dnssleep 2500 -d shiny.zhangjn.xyz
+
+~/.acme.sh/acme.sh  --installcert  -d  shiny.zhangjn.xyz   \
+        --key-file   /etc/nginx/ssl/shiny.zhangjn.xyz.key \
+        --fullchain-file /etc/nginx/ssl/fullchain.cer \
+        --fullchain-file /etc/nginx/ssl/ca.cer \
+        --reloadcmd  &amp;quot;systemctl restart nginx.service&amp;quot;   
+
+`TLSv1`证书会导致不安全，记得修改下。
+
+# for aliyun ssl
+
+export Ali_Key=&amp;quot;XXXXXXXXXXXXXXXX&amp;quot;
+export Ali_Secret=&amp;quot;XXXXXXXXXXXXXXXXXXXX&amp;quot;
+
+~/.acme.sh/acme.sh --issue --dns dns_ali -d avianscu.com -d scrna.avianscu.com 
+
+~/.acme.sh/acme.sh  --installcert  -d  avianscu.com   \
+        --key-file   /etc/nginx/ssl2/avianscu.com.key \
+        --fullchain-file /etc/nginx/ssl2/fullchain.cer \
+        --reloadcmd  &amp;quot;systemctl restart nginx.service&amp;quot; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;frp设置httpsgithubcomfatedierfrpblobmasterreadme_zhmd&#34;&gt;
+&lt;a href=&#34;https://github.com/fatedier/frp/blob/master/README_zh.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Frp设置&lt;/a&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# install
+wget https://github.com/fatedier/frp/releases/download/v0.22.0/frp_0.22.0_linux_amd64.tar.gz
+
+tar -zxvf frp_0.22.0_linux_amd64.tar.gz
+
+# 设置frp服务的系统自启动等操作，很方便，frps和frpc注意切换
+
+sudo nano /lib/systemd/system/frps.service
+
+# 在frps.service里写入以下内容
+[Unit]
+Description=frps service
+After=network.target syslog.target
+Wants=network.target
+[Service]
+Type=simple
+# 启动服务的命令（此处写你的frps的实际安装目录）
+ExecStart=/root/soft/frp_0.32.1_linux_amd64/frps -c /root/soft/frp_0.32.1_linux_amd64/frps/frps.ini
+[Install]
+WantedBy=multi-user.target
+
+# Ubuntu设置frp的系统控制
+sudo systemctl start frps
+sudo systemctl enable frps
+sudo systemctl restart frps
+sudo systemctl stop frps
+sudo systemctl status frps
+
+# 多个服务端连接同一个客户端，小技巧喔
+./frpc -c ./frpc1.ini
+./frpc -c ./frpc2.ini
+./frpc -c ./frpc3.ini
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rstudio-server 相关汇总</title>
+      <link>/post/linux/rstudio-server-%E7%9B%B8%E5%85%B3%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/post/linux/rstudio-server-%E7%9B%B8%E5%85%B3%E6%B1%87%E6%80%BB/</guid>
+      <description>&lt;p&gt;预期准备再入一个阿里云的CES做在线服务器，虽然买一个新的高性能服务器可能更理想，但是想着懒得维护另外一台服务器了，不如现在开始利用云服务，说不定以后有钱了在云上玩高性能服务器呢~~&lt;/p&gt;
+&lt;p&gt;下面就记录Rstudio server相关信息，持续更新~~&lt;/p&gt;
+&lt;p&gt;总的来说，信息是不断进步的，在随时关注官网等资源的同时，自己记录一些基本的操作，省去google的时间也是极好的，note就该发挥自己的作用~~&lt;/p&gt;
+&lt;h3 id=&#34;基本代码&#34;&gt;基本代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;#查看是否安装正确
+sudo rstudio-server verify-installation
+## 启动
+sudo rstudio-server start
+## 查看状态
+sudo rstudio-server status
+## 停止
+sudo rstudio-server stop
+## 重启
+sudo rstudio-server restart
+## 查看服务端ip地址
+ifconfig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;卸载软件&#34;&gt;卸载软件&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# 安装的信息还是直接去官网安装最新版本
+sudo apt-get autoremove --purge rstudio-server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;添加用户&#34;&gt;添加用户&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# 添加用户的命令是linux中的命令
+# 添加用户组
+groupadd Rstudiosrv
+# 添加用户wdmd 在指定的组Rstudiosrv内
+useradd zjn -g Rstudiosrv;
+# 设置该用户的密码
+passwd zjn
+# 删除用户和组
+userdel zjn
+groupdel Rstudiosrv
+# 显示用户信息
+id user
+cat /etc/passwd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;修改端口-and-防火墙写下来就不用翻onenote或者google了都在自己的note里面&#34;&gt;修改端口 and 防火墙，写下来就不用翻onenote或者google了，都在自己的note里面。&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# 给 RStudio 分配访问端口
+echo &amp;quot;www-port=8181&amp;quot; | sudo tee -a  /etc/rstudio/rserver.conf
+
+# 将 R 软件路径告诉 RStudio Server，看情况设置
+echo &amp;quot;rsession-which-r=/usr/local/bin/R-devel&amp;quot; | sudo tee -a /etc/rstudio/rserver.conf
+
+# 安装 firewalld 防火墙管理工具
+sudo apt-get install -y firewalld
+
+# 查看端口情况
+firewall-cmd --list-ports
+
+# 打开8181端口
+sudo firewall-cmd --zone=public --add-port=8181/tcp --permanent
+
+# 重启防火墙使配置生效
+sudo firewall-cmd --reload
+
+# 重启你懂的
+sudo rstudio-server restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;请合理利用rstudio和github的关联功能比如创建带版本控制的project&#34;&gt;请合理利用Rstudio和github的关联功能，比如创建带版本控制的project&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;服务器安装r等相关&#34;&gt;服务器安装R等相关&lt;/h3&gt;
+&lt;p&gt;安装最新的 Git 和 libgit2-dev 库，所以添加两个源&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo add-apt-repository -y ppa:jeroen/libgit2
+sudo add-apt-repository -y ppa:git-core/ppa
+
+# 移除
+sudo add-apt-repository --remove ppa:jeroen/libgit2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;解决系统依赖问题重点将r-base-dev-所需的依赖全部装上有了-build-dep-就不用一个一个去找了&#34;&gt;解决系统依赖问题，重点，将r-base-dev 所需的依赖全部装上，有了 build-dep 就不用一个一个去找了&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# Ubuntu
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get build-dep r-base-dev
+# Fedora
+sudo dnf update &amp;amp;&amp;amp; sudo dnf builddep R-devel
+# CentOS
+sudo yum update &amp;amp;&amp;amp; sudo yum install -y yum-utils &amp;amp;&amp;amp; sudo yum-builddep R-devel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其它的系统依赖，供常用的 R 包安装使用，常用的 R 包有 xml2、ssl、git2r、curl、openssl、magick、nloptr、igraph、RcppGSL。来来来，空间大的都装上~ 其实，最好还是安装错误提示缺啥安装啥比较好~&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo apt-get install -y libxml2-dev libssl-dev libgit2-dev \
+  libnlopt-dev libxmu-dev libglpk-dev libgsl-dev \
+  ghostscript imagemagick optipng subversion jags \
+  libcurl4-openssl-dev libmagick++-dev \
+  texlive-xetex texlive-lang-chinese
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.xiangyunhuang.com.cn/2019/05/r-devel-ubuntu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;从源码安装最新的开发版R&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;未完待续&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu设置虚拟内存</title>
+      <link>/post/linux/ubuntu%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/post/linux/ubuntu%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/</guid>
+      <description>&lt;p&gt;现在数据展示越来越离不开VPS/CES了，但是买的服务一般都是1G内存的（大写的穷），所以一般买了VPS习惯性的会增加虚拟内存，记下免得每次都去google。&lt;/p&gt;
+&lt;h3 id=&#34;创建虚拟映像文件&#34;&gt;创建虚拟映像文件：&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo swapon --show #查看SWAP分区
+
+sudo dd if=/dev/zero of=swapfile bs=1024 count=1024000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;虚拟内存大小一般接近物理内存就可以了。&lt;/p&gt;
+&lt;h3 id=&#34;将虚拟映像文件转换成swap文件&#34;&gt;将虚拟映像文件转换成swap文件：&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;sudo mkswap -f swapfile
+chmod 0600 swapfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;激活-swap&#34;&gt;激活 swap：&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo swapon swapfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后输入&lt;code&gt;free&lt;/code&gt;查看内存信息，就可以发现虚拟内存已经启用。&lt;/p&gt;
+&lt;p&gt;TIPS：重启之后，需要重新激活swap，建议将激活命令写入开机启动项喔~~&lt;/p&gt;
+&lt;h3 id=&#34;将激活命令写入开机启动项&#34;&gt;将激活命令写入开机启动项：&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo cp /etc/fstab /etc/fstab.bak
+
+echo &#39;/swapfile none swap sw 0 0&#39; | sudo tee -a /etc/fstab #学到么？
+
+shutdown -r now #重启看下free
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;关闭和删除原来的swapfile&#34;&gt;关闭和删除原来的swapfile：&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo swapoff  swapfile
+
+sudo rm /swapfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;over~~~&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Gene ID转换</title>
@@ -370,9 +692,9 @@ gene_ABmegre
     
     <item>
       <title>Shiny Server</title>
-      <link>/post/shiny-server/</link>
+      <link>/post/linux/shiny-server/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/shiny-server/</guid>
+      <guid>/post/linux/shiny-server/</guid>
       <description>&lt;h2 id=&#34;单细胞数据展示&#34;&gt;单细胞数据展示&lt;/h2&gt;
 &lt;p&gt;最近一段时间，实验室测了不少单细胞数据，为了方便实验室成员预览数据和调用数据，之前利用Shiny在服务器后台运行&lt;code&gt;Rscript XX.R&lt;/code&gt;进行数据在线展示，但是现在一下子增加很多数据，就开始考虑部署服务器版的Shiny Server了。未发表数据肯定不能托管，而且数据量也较大，VPS那点能力也hold不了，最后决定在自己服务器上面部署。&lt;/p&gt;
 &lt;h3 id=&#34;需求单细胞数据实验室内部展示&#34;&gt;需求：单细胞数据实验室内部展示&lt;/h3&gt;
@@ -470,9 +792,9 @@ runApp(&#39;/home/labwang/Rstudio/liver&#39;, port = 8887)
     
     <item>
       <title>Blogdown&#43;Hugo&#43;Github&#43;Github Actions建立自动推送Blog</title>
-      <link>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</link>
+      <link>/post/linux/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</guid>
+      <guid>/post/linux/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</guid>
       <description>&lt;h2 id=&#34;使用-blogdownhugogithubgithub-actions博客&#34;&gt;使用 Blogdown+Hugo+Github+Github Actions博客&lt;/h2&gt;
 &lt;p&gt;之前使用Hexo建了个人主页，但是速度越来越慢，而且部署比较繁琐，最近学习R相关知识，发现Rmarkdown、Bookdown和Blogdown全家桶超级好用，所以与时俱进也升级了方案。&lt;/p&gt;
 &lt;ul&gt;
@@ -594,9 +916,9 @@ blogdown
     
     <item>
       <title>Bioconda</title>
-      <link>/post/bioconda/</link>
+      <link>/post/linux/bioconda/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/bioconda/</guid>
+      <guid>/post/linux/bioconda/</guid>
       <description>&lt;p&gt;&lt;strong&gt;查看已安装的库&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;conda list
 &lt;/code&gt;&lt;/pre&gt;
@@ -624,9 +946,9 @@ conda clean -y -all //删除所有的安装包及cache&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Salmon代码备存</title>
-      <link>/post/salmon/</link>
+      <link>/post/linux/salmon/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/salmon/</guid>
+      <guid>/post/linux/salmon/</guid>
       <description>&lt;p&gt;#Salmon代码备存&lt;/p&gt;
 &lt;p&gt;听说你还可以分析scRNA&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;salmon alevin -l ISR -1 Pi_F_S1_L005_R1_001.fastq.gz -2 Pi_F_S1_L005_R2_001.fastq.gz --chromium -i ~/index/ggzjn_index/ -p 10 --dumpMtx -o alevin_output/ --tgMap txp2gene.txt --expectCells 18000
@@ -681,6 +1003,18 @@ salmon quant -i ~/index/ggzjn_index --validateMappings -l A \
          -1 ${path}/fastq/${fn}_1.fastq.gz \
          -2 ${path}/fastq/${fn}_2.fastq.gz \
          -p 20 -o ${path}/quant/${fn}_quant
+done
+
+#!/bin/bash
+for filename in *_*;
+do
+path=$(pwd)
+samp=`basename ${filename}`
+echo &amp;quot;Processing sample ${filename}&amp;quot;
+salmon quant -i ~/index/ggzjn_index --validateMappings -l A \
+        -1 ${path}/${samp}/${samp}_1.fq.gz \
+        -2 ${path}/${samp}/${samp}_2.fq.gz \
+        -p 10 -o ${path}/quant/${samp}_quant
 done
 
 bash /data3/PI-LV/R/DESEQ2.sh -f result-DE.txt -s samplefiles.txt -p compare_pair.txt 
@@ -762,15 +1096,31 @@ done
 
 去头去尾
 
-trimmomatic PE -phred33 -threads 20 ${fn}_1.fq.gz ${fn}_2.fq.gz ${fn}_paired_1.fastq.gz ${fn}_unpaired_1.fastq.gz ${fn}_paired_2.fastq.gz ${fn}_unpaired_2.fastq.gz CROP:89 HEADCROP:10 MINLEN:36&lt;/code&gt;&lt;/pre&gt;
+trimmomatic PE -phred33 -threads 20 ${fn}_1.fq.gz ${fn}_2.fq.gz ${fn}_paired_1.fastq.gz ${fn}_unpaired_1.fastq.gz ${fn}_paired_2.fastq.gz ${fn}_unpaired_2.fastq.gz CROP:89 HEADCROP:10 MINLEN:36
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;update&#34;&gt;update&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;#!/bin/bash
+# get all filename in specified path
+path=$(pwd)
+files=$(ls $path)
+for filename in $files
+do
+echo $filename
+path=$(pwd)
+salmon quant -i ~/index/ggzjn_index --validateMappings -l A \
+-1 ${path}/${filename}/${filename}_1.fq.gz \
+-2 ${path}/${filename}/${filename}_2.fq.gz \
+-p 10 -o /data3/lv-hy/quant/${filename}_quant
+done
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
     <item>
       <title>VScode-R</title>
-      <link>/post/vscode-r/</link>
+      <link>/post/linux/vscode-r/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/vscode-r/</guid>
+      <guid>/post/linux/vscode-r/</guid>
       <description>&lt;h1 id=&#34;how-to-use-r-in-vscode&#34;&gt;How to use R in VScode&lt;/h1&gt;
 &lt;h2 id=&#34;安装r和vscode&#34;&gt;安装R和VScode&lt;/h2&gt;
 &lt;p&gt;额，打开Google，搜索官网，自己安装即可。不会？&lt;code&gt;Alt + F4&lt;/code&gt;，再见！&lt;/p&gt;

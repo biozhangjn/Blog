@@ -28,3 +28,7 @@ git commit -m "Blog update"
 git pull --rebase origin master
 git push -u origin master
 exit 0
+
+#简历一键生成
+#cd ./CV
+#rmarkdown::render("index.Rmd")

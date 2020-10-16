@@ -5,6 +5,10 @@ library(org.Gg.eg.db)
 library(org.Hs.eg.db)
 library(clusterProfiler)
 library(DOSE)
+library(pagedown)
+
+
+install.packages("rlang")
 
 languageserver
 
@@ -27,7 +31,7 @@ blogdown::install_hugo()
 blogdown::new_post()
 blogdown::hugo_build()
 blogdown::serve_site()
-
+blogdown::stop_server()
 
 ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 
@@ -51,3 +55,8 @@ git push -u origin master
 
   gtag('config', 'UA-162031575-1');
 </script>
+
+rmarkdown::render("index.Rmd")
+  
+devtools::install_github(‘yihui/tinytex’)
+tinytex::install_tinytex()

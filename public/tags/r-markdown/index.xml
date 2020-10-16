@@ -370,9 +370,9 @@ gene_ABmegre
     
     <item>
       <title>Blogdown&#43;Hugo&#43;Github&#43;Github Actions建立自动推送Blog</title>
-      <link>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</link>
+      <link>/post/linux/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</guid>
+      <guid>/post/linux/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</guid>
       <description>&lt;h2 id=&#34;使用-blogdownhugogithubgithub-actions博客&#34;&gt;使用 Blogdown+Hugo+Github+Github Actions博客&lt;/h2&gt;
 &lt;p&gt;之前使用Hexo建了个人主页，但是速度越来越慢，而且部署比较繁琐，最近学习R相关知识，发现Rmarkdown、Bookdown和Blogdown全家桶超级好用，所以与时俱进也升级了方案。&lt;/p&gt;
 &lt;ul&gt;
@@ -494,9 +494,9 @@ blogdown
     
     <item>
       <title>Bioconda</title>
-      <link>/post/bioconda/</link>
+      <link>/post/linux/bioconda/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/bioconda/</guid>
+      <guid>/post/linux/bioconda/</guid>
       <description>&lt;p&gt;&lt;strong&gt;查看已安装的库&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;conda list
 &lt;/code&gt;&lt;/pre&gt;
@@ -524,9 +524,9 @@ conda clean -y -all //删除所有的安装包及cache&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>VScode-R</title>
-      <link>/post/vscode-r/</link>
+      <link>/post/linux/vscode-r/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/vscode-r/</guid>
+      <guid>/post/linux/vscode-r/</guid>
       <description>&lt;h1 id=&#34;how-to-use-r-in-vscode&#34;&gt;How to use R in VScode&lt;/h1&gt;
 &lt;h2 id=&#34;安装r和vscode&#34;&gt;安装R和VScode&lt;/h2&gt;
 &lt;p&gt;额，打开Google，搜索官网，自己安装即可。不会？&lt;code&gt;Alt + F4&lt;/code&gt;，再见！&lt;/p&gt;

@@ -28,27 +28,82 @@
   </url>
   
   <url>
+    <loc>/cv-master-tm/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cv/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cv-master-tm/tang_ming_cv/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/academic/</loc>
-    <lastmod>2020-03-13T13:54:04+08:00</lastmod>
+    <lastmod>2020-04-24T22:34:49+08:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-03-13T13:54:04+08:00</lastmod>
+    <lastmod>2020-04-24T22:34:49+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/gene-id%E8%BD%AC%E6%8D%A2/</loc>
-    <lastmod>2020-03-13T13:54:04+08:00</lastmod>
+    <loc>/tags/linux/</loc>
+    <lastmod>2020-04-24T22:34:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/linux/</loc>
+    <lastmod>2020-04-24T22:34:49+08:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-03-13T13:54:04+08:00</lastmod>
+    <lastmod>2020-04-24T22:34:49+08:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
+    <lastmod>2020-04-24T22:34:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/rna-seq/</loc>
+    <lastmod>2020-04-24T22:34:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-04-24T22:34:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/linux/aliyun-code/</loc>
+    <lastmod>2020-04-24T22:34:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/linux/rstudio-server-%E7%9B%B8%E5%85%B3%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2020-04-08T12:53:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/linux/ubuntu%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/</loc>
+    <lastmod>2020-04-07T23:31:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/gene-id%E8%BD%AC%E6%8D%A2/</loc>
     <lastmod>2020-03-13T13:54:04+08:00</lastmod>
   </url>
   
@@ -58,22 +113,12 @@
   </url>
   
   <url>
-    <loc>/tags/rna-seq/</loc>
-    <lastmod>2020-03-13T13:54:04+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-03-13T13:54:04+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/shiny/</loc>
     <lastmod>2020-03-11T22:44:39+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/shiny-server/</loc>
+    <loc>/post/linux/shiny-server/</loc>
     <lastmod>2020-03-11T22:44:39+08:00</lastmod>
   </url>
   
@@ -83,22 +128,22 @@
   </url>
   
   <url>
-    <loc>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</loc>
+    <loc>/post/linux/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</loc>
     <lastmod>2020-03-02T23:21:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/bioconda/</loc>
+    <loc>/post/linux/bioconda/</loc>
     <lastmod>2020-03-01T14:51:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/salmon/</loc>
+    <loc>/post/linux/salmon/</loc>
     <lastmod>2020-03-01T16:35:39+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/vscode-r/</loc>
+    <loc>/post/linux/vscode-r/</loc>
     <lastmod>2020-03-01T16:21:31+08:00</lastmod>
   </url>
   
@@ -165,11 +210,6 @@
   <url>
     <loc>/authors/zhou-y.-wu-c.-wan-y.-fang-c.-li-j.-...-wang-y./</loc>
     <lastmod>2018-12-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -275,6 +315,10 @@
   <url>
     <loc>/authors/shaocheng-cheng-yajun-wang-xiaojie-yu-juan-li/</loc>
     <lastmod>2014-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cv-master-tm/readme/</loc>
   </url>
   
 </urlset>

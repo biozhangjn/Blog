@@ -14,9 +14,9 @@
     
     <item>
       <title>Blogdown&#43;Hugo&#43;Github&#43;Github Actions建立自动推送Blog</title>
-      <link>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</link>
+      <link>/post/linux/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</guid>
+      <guid>/post/linux/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</guid>
       <description>&lt;h2 id=&#34;使用-blogdownhugogithubgithub-actions博客&#34;&gt;使用 Blogdown+Hugo+Github+Github Actions博客&lt;/h2&gt;
 &lt;p&gt;之前使用Hexo建了个人主页，但是速度越来越慢，而且部署比较繁琐，最近学习R相关知识，发现Rmarkdown、Bookdown和Blogdown全家桶超级好用，所以与时俱进也升级了方案。&lt;/p&gt;
 &lt;ul&gt;

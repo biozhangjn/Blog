@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Jiannan Zhang</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 28 Jun 2018 00:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 15 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Jiannan Zhang</title>
@@ -73,6 +73,1197 @@
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Jiannan Zhang&#39;s CV</title>
+      <link>/cv/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/cv/</guid>
+      <description>
+
+
+&lt;div id=&#34;aside&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Aside&lt;/h1&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;zjn.JPG&#34; alt=&#34;logo&#34; style=&#34;width:100.0%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;logo&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;contact&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Contact&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fa fa-envelope&#34;&gt;&lt;/i&gt; &lt;a href=&#34;mailto:biozhangjn@gmail.com&#34;&gt;biozhangjn@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fa fa-twitter&#34;&gt;&lt;/i&gt; Jiannan_scu&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.github.com/biozhangjn/&#34;&gt;github.com/biozhangjn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fa fa-link&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.zhangjn.xyz/&#34;&gt;www.zhangjn.xyz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fa fa-weixin&#34;&gt;&lt;/i&gt; qq124975496&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fa fa-phone&#34;&gt;&lt;/i&gt; (86) 13540012368&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information, please contact me via email.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;skills&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Skills&lt;/h2&gt;
+&lt;p&gt;Wet-lab&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Molecular cloning&lt;/li&gt;
+&lt;li&gt;Functional analysis&lt;/li&gt;
+&lt;li&gt;IHC/ISH/FISH/Co-IP/Chip-Seq…&lt;/li&gt;
+&lt;li&gt;Gene-editing with CRISPR/Cas9&lt;/li&gt;
+&lt;li&gt;PGCs culture and Microinjection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dry-lab&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RNA-Seq data analysis&lt;/li&gt;
+&lt;li&gt;Single-cell data analysis&lt;/li&gt;
+&lt;li&gt;Highly skilled in R and Bash.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;disclaimer&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Disclaimer&lt;/h2&gt;
+&lt;p&gt;Last updated on 2020-10-15.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;main&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Main&lt;/h1&gt;
+&lt;div id=&#34;title&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Jiannan Zhang&lt;/h2&gt;
+&lt;p&gt;Assistant Research Fellow at Sichuan University. I am also employed as a Post-doctoral Fellow in &lt;a href=&#34;http://life.scu.edu.cn/info/1048/1836.htm&#34;&gt;Wang yajun&lt;/a&gt; Lab at Sichuan University.&lt;/p&gt;
+&lt;p&gt;I am broadly interested in Avian Physiology, Endocrinology and Metabolism, and Transgenesis in chicken.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;research-experience&#34; class=&#34;section level2&#34; data-icon=&#34;laptop&#34;&gt;
+&lt;h2&gt;Research Experience&lt;/h2&gt;
+&lt;div id=&#34;assistant-research-fellow&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Assistant Research Fellow&lt;/h3&gt;
+&lt;p&gt;Sichuan University&lt;/p&gt;
+&lt;p&gt;Sichuan University&lt;/p&gt;
+&lt;p&gt;present - 2017&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2017-present, Assistant Research Fellow, The Collge of Life Sciences&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;post-doctoral-fellow&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Post-doctoral Fellow&lt;/h3&gt;
+&lt;p&gt;Sichuan University&lt;/p&gt;
+&lt;p&gt;Sichuan University&lt;/p&gt;
+&lt;p&gt;2020 - 2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;education&#34; class=&#34;section level2&#34; data-icon=&#34;graduation-cap&#34; data-concise=&#34;true&#34;&gt;
+&lt;h2&gt;Education&lt;/h2&gt;
+&lt;div id=&#34;phd.-cell-biology&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;PhD., Cell Biology&lt;/h3&gt;
+&lt;p&gt;Sichuan University&lt;/p&gt;
+&lt;p&gt;Sichuan, CN&lt;/p&gt;
+&lt;p&gt;2017 - 2011&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;b.s.-national-base-of-life-science-biotechnology-education&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;B.S., National Base of Life Science &amp;amp; Biotechnology Education&lt;/h3&gt;
+&lt;p&gt;Sichuan University&lt;/p&gt;
+&lt;p&gt;Sichuan, CN&lt;/p&gt;
+&lt;p&gt;2011 - 2007&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;teaching-experience&#34; class=&#34;section level2&#34; data-icon=&#34;chalkboard-teacher&#34;&gt;
+&lt;h2&gt;Teaching Experience&lt;/h2&gt;
+&lt;div id=&#34;发育生物学-developmental-biology&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;发育生物学 (Developmental biology)&lt;/h3&gt;
+&lt;p&gt;The Collge of Life Sciences&lt;/p&gt;
+&lt;p&gt;Sichuan University&lt;/p&gt;
+&lt;p&gt;2020 - 2019&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Undergraduate level class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;grants&#34; class=&#34;section level2&#34; data-icon=&#34;chart-line&#34;&gt;
+&lt;h2&gt;Grants&lt;/h2&gt;
+&lt;div id=&#34;垂体激素acth调控家鸡肝脏糖脂代谢的机制探究-2020t130439&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;垂体激素ACTH调控家鸡肝脏糖脂代谢的机制探究 (2020T130439)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;主持&lt;/strong&gt;, CNY ￥180,000, 中国博士后科学基金特别资助&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2021 - 2020&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;多不饱和脂肪酸调控家鸡肝脏脂肪生成的机制解析省重-2019yj0017&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;多不饱和脂肪酸调控家鸡肝脏脂肪生成的机制解析（省重） (2019YJ0017)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;主持&lt;/strong&gt;, CNY ￥100,000, 四川省科学技术厅-应用基础研究&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2021 - 2019&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;家鸡gpr120受体介导多不饱和脂肪酸对肝脏脂质代谢的调节效应探究-31802056&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;家鸡GPR120受体介导多不饱和脂肪酸对肝脏脂质代谢的调节效应探究 (31802056)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;主持&lt;/strong&gt;, CNY ￥300,000, 国家自然科学基金青年项目&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;publications&#34; class=&#34;section level2&#34; data-icon=&#34;book&#34;&gt;
+&lt;h2&gt;Publications&lt;/h2&gt;
+&lt;div id=&#34;the-asp298asn-polymorphism-of-melanocortin4-receptor-mc4r-in-pigs-evidence-for-its-potential-effects-on-mc4r-constitutive-activity-and-cell-surface-expression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/full/10.1111/age.12986&#34;&gt;The Asp298Asn polymorphism of melanocortin‐4 receptor (MC4R) in pigs: evidence for its potential effects on MC4R constitutive activity and cell surface expression&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Animal Genetics&lt;/strong&gt;&lt;/em&gt;. 2020, 51(5):694-706.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2020&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Zhang, J&lt;sup&gt;#&lt;/sup&gt;&lt;/strong&gt;; Li, J&lt;sup&gt;#&lt;/sup&gt;; Wu, C; Hu, Z; An, L; Wan, Y; Fang, C; Zhang, X; Li, J&lt;sup&gt;*&lt;/sup&gt;; Wang, Y&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;li&gt;Impact Factor = 2.841&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;melanocortin-receptor-4-mc4r-signaling-system-in-nile-tilapia&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.mdpi.com/1422-0067/21/19/7036/htm&#34;&gt;Melanocortin Receptor 4 (MC4R) Signaling System in Nile Tilapia&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;International Journal of Molecular Sciences&lt;/strong&gt;&lt;/em&gt;. 2020, 21(19):7036.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Liu, Tianqiang; Deng, Yue; Zhang, Zheng; Cao, Baolong; Li, Jing; Sun, Caiyun; Hu, Zhixing; &lt;strong&gt;Zhang, Jiannan&lt;sup&gt;*&lt;/sup&gt;&lt;/strong&gt;; Li, Juan; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;li&gt;Impact Factor = 4.556&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;characterization-of-a-novel-thyrotropin-releasing-hormone-receptor-trhr3-in-chickens&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0032579119528267&#34;&gt;Characterization of a novel thyrotropin-releasing hormone receptor, TRHR3, in chickens&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Poultry Science&lt;/strong&gt;&lt;/em&gt;. 2020, 99(3):1643-1654.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Li, Xiaoxiao&lt;sup&gt;#&lt;/sup&gt;; Li, Zhengyang&lt;sup&gt;#&lt;/sup&gt;; Deng, Yue; &lt;strong&gt;Zhang, Jiannan&lt;/strong&gt;; Li, Juan&lt;sup&gt;*&lt;/sup&gt;; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;characterization-of-the-neuropeptide-ff-npff-gene-in-chickens-evidence-for-a-single-bioactive-npaf-peptide-encoded-by-the-npff-gene-in-birds&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0739724020300023&#34;&gt;Characterization of the neuropeptide FF (NPFF) gene in chickens: evidence for a single bioactive NPAF peptide encoded by the NPFF gene in birds&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Domestic Animal Endocrinology&lt;/strong&gt;&lt;/em&gt;. 2020, :106435.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chen, J&lt;sup&gt;#&lt;/sup&gt;; Huang, S&lt;sup&gt;#&lt;/sup&gt;; &lt;strong&gt;Zhang, J&lt;/strong&gt;; Li, J&lt;sup&gt;*&lt;/sup&gt;; Wang, Y&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;arginine-vasotocin-avtmesotocin-mt-receptors-in-chickens-evidence-for-the-possible-involvement-of-avt-avpr1-signaling-in-the-regulation-of-oviposition-and-pituitary-prolactin-expression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0016648019300449&#34;&gt;Arginine vasotocin (AVT)/mesotocin (MT) receptors in chickens: Evidence for the possible involvement of AVT-AVPR1 signaling in the regulation of oviposition and pituitary prolactin expression&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;General and Comparative Endocrinology&lt;/strong&gt;&lt;/em&gt;. 2019, 281:91-104.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wu, Chao; Lv, Can; Wan, Yiping; Li, Xiaoxiao; &lt;strong&gt;Zhang, Jiannan&lt;sup&gt;*&lt;/sup&gt;&lt;/strong&gt;; Li, Juan; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;regulation-of-pituitary-cocaine-and-amphetamine-regulated-transcript-expression-and-secretion-by-hypothalamic-gonadotropin-releasing-hormone-in-chickens&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6672714/&#34;&gt;Regulation of Pituitary Cocaine-and Amphetamine-Regulated Transcript Expression and Secretion by Hypothalamic Gonadotropin-Releasing Hormone in Chickens&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Frontiers in physiology&lt;/strong&gt;&lt;/em&gt;. 2019, 10:.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mo, Chunheng; Lv, Can; Huang, Long; Li, Zhengyang; &lt;strong&gt;Zhang, Jiannan&lt;/strong&gt;; Li, Juan&lt;sup&gt;*&lt;/sup&gt;; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;endothelins-edn1-edn2-edn3-and-their-receptors-ednra-ednrb-ednrb2-in-chickens-functional-analysis-and-tissue-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0016648019300164&#34;&gt;Endothelins (EDN1, EDN2, EDN3) and their receptors (EDNRA, EDNRB, EDNRB2) in chickens: Functional analysis and tissue distribution&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;General and comparative endocrinology&lt;/strong&gt;&lt;/em&gt;. 2019, 283:113231.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Liu, Haikun; Luo, Qin; &lt;strong&gt;Zhang, Jiannan&lt;/strong&gt;; Mo, Chunheng; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;; Li, Juan&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;identification-of-a-novel-functional-corticotropin-releasing-hormone-crh2-in-chickens-and-its-roles-in-stimulating-pituitary-tshβ-expression-and-acth-secretion&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fendo.2019.00595/abstract&#34;&gt;Identification of a Novel Functional Corticotropin-Releasing Hormone (CRH2) in Chickens and Its Roles in Stimulating Pituitary TSHβ Expression and ACTH Secretion&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Frontiers in Endocrinology&lt;/strong&gt;&lt;/em&gt;. 2019, 10:595.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bu, Guixian&lt;sup&gt;#&lt;/sup&gt;; Fan, Jie&lt;sup&gt;#&lt;/sup&gt;; Yang, Ming; Lv, Can; Lin, Yin; Li, Jinxuan; Meng, Fengyan; Du, Xiaogang; Zeng, Xianyin&lt;sup&gt;*&lt;/sup&gt;; &lt;strong&gt;Zhang, Jiannan&lt;/strong&gt;; Juan Li; Yajun Wang&lt;sup&gt;*&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;characterization-of-the-apelinelabela-receptors-aplnr-in-chickens-turtles-and-zebrafish-identification-of-a-novel-apelin-specific-receptor-in-teleosts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fendo.2018.00756/full&#34;&gt;Characterization of the Apelin/Elabela Receptors (APLNR) in Chickens, Turtles, and Zebrafish: Identification of a Novel Apelin-Specific Receptor in Teleosts&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Frontiers in endocrinology&lt;/strong&gt;&lt;/em&gt;. 2018, 9:756.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Zhang, Jiannan&lt;/strong&gt;; Zhou, Yawei; Wu, Chenlei; Wan, Yiping; Fang, Chao; Li, Jing; Fang, Wenqian; Yi, Ran; Zhu, Guoqiang; Li, Juan&lt;sup&gt;*&lt;/sup&gt;; Yajun Wang&lt;sup&gt;*&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-orphan-g-protein-coupled-receptor-25-gpr25-is-activated-by-apelin-and-apela-in-non-mammalian-vertebrates&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0006291X18310271&#34;&gt;The orphan G protein-coupled receptor 25 (GPR25) is activated by Apelin and Apela in non-mammalian vertebrates&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Biochemical and Biophysical Research Communications&lt;/strong&gt;&lt;/em&gt;. 2018, 501(2):408-414.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Zhang, Jiannan&lt;sup&gt;#&lt;/sup&gt;&lt;/strong&gt;; Wan, Yiping&lt;sup&gt;#&lt;/sup&gt;; Fang, Chao; Chen, Junan; Ouyang, Wangan; Li, Juan&lt;sup&gt;*&lt;/sup&gt;; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;characterization-of-neuromedin-u-nmu-neuromedin-s-nms-and-their-receptors-nmur1-nmur2-in-chickens&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0196978117303972&#34;&gt;Characterization of neuromedin U (NMU), neuromedin S (NMS) and their receptors (NMUR1, NMUR2) in chickens&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Peptides&lt;/strong&gt;&lt;/em&gt;. 2018, 101:69-81.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wan, Yiping&lt;sup&gt;#&lt;/sup&gt;; &lt;strong&gt;Zhang, Jiannan&lt;sup&gt;#&lt;/sup&gt;&lt;/strong&gt;; Fang, Chao; Chen, Junan; Li, Jing; Li, Juan&lt;sup&gt;*&lt;/sup&gt;; Wu, Chenlei; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-interaction-of-mc3r-and-mc4r-with-mrap2-acth-α-msh-and-agrp-in-chickens&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://joe.bioscientifica.com/view/journals/joe/234/2/JOE-17-0131.xml&#34;&gt;The interaction of MC3R and MC4R with MRAP2, ACTH, α-MSH and AgRP in chickens&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Journal of Endocrinology&lt;/strong&gt;&lt;/em&gt;. 2017, 234(2):155-174.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Zhang, Jiannan&lt;/strong&gt;; Li, Xin; Zhou, Yawei; Cui, Lin; Li, Jing; Wu, Chenlei; Wan, Yiping; Li, Juan&lt;sup&gt;*&lt;/sup&gt;; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;li&gt;Impact Factor = 4.706&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;molecular-characterization-of-neuropeptide-y-npy-receptors-y1-y4-and-y6-and-investigation-of-the-tissue-expression-of-their-ligands-npy-pyy-and-pp-in-chickens&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0016648016302714&#34;&gt;Molecular characterization of neuropeptide Y (NPY) receptors (Y1, Y4 and Y6) and investigation of the tissue expression of their ligands (NPY, PYY and PP) in chickens&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;General and comparative endocrinology&lt;/strong&gt;&lt;/em&gt;. 2017, 240:46-60.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gao, Shunyu&lt;sup&gt;#&lt;/sup&gt;; &lt;strong&gt;Zhang, Jiannan&lt;sup&gt;#&lt;/sup&gt;&lt;/strong&gt;; He, Chen; Meng, Fengyan; Bu, Guixian; Zhu, Guoqiang; Li, Juan&lt;sup&gt;*&lt;/sup&gt;; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;characterization-of-melanin-concentrating-hormone-mch-and-its-receptor-in-chickens-tissue-expression-functional-analysis-and-fasting-induced-up-regulation-of-hypothalamic-mch-expression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0378111917301440&#34;&gt;Characterization of melanin-concentrating hormone (MCH) and its receptor in chickens: Tissue expression, functional analysis, and fasting-induced up-regulation of hypothalamic MCH expression&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Gene&lt;/strong&gt;&lt;/em&gt;. 2017, 615:57-67.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cui, Lin; Lv, Can; &lt;strong&gt;Zhang, Jiannan&lt;/strong&gt;; Mo, Chunheng; Lin, Dongliang; Li, Juan&lt;sup&gt;*&lt;/sup&gt;; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;molecular-characterization-of-three-npy-receptors-y2-y5-and-y7-in-chickens-gene-structure-tissue-expression-promoter-identification-and-functional-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0016648016300946&#34;&gt;Molecular characterization of three NPY receptors (Y2, Y5 and Y7) in chickens: Gene structure, tissue expression, promoter identification, and functional analysis&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;General and Comparative Endocrinology&lt;/strong&gt;&lt;/em&gt;. 2016, 236:24-34.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2016&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;He, Chen&lt;sup&gt;#&lt;/sup&gt;; &lt;strong&gt;Zhang, Jiannan&lt;sup&gt;#&lt;/sup&gt;&lt;/strong&gt;; Gao, Shunyu; Meng, Fengyan; Bu, Guixian; Li, Juan&lt;sup&gt;*&lt;/sup&gt;; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;identification-and-characterization-of-the-free-fatty-acid-receptor-2-ffa2-and-a-novel-functional-ffa2-like-receptor-ffa2l-for-short-chain-fatty-acids-in-pigs-evidence-for-the-existence-of-a-duplicated-ffa2-gene-ffa2l-in-some-mammalian-species&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0739724013001343&#34;&gt;Identification and characterization of the free fatty acid receptor 2 (FFA2) and a novel functional FFA2-like receptor (FFA2L) for short-chain fatty acids in pigs: Evidence for the existence of a duplicated FFA2 gene (FFA2L) in some mammalian species&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Domestic animal endocrinology&lt;/strong&gt;&lt;/em&gt;. 2014, 47:108-118. e1.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2014&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Zhang, J&lt;/strong&gt;; Cheng, S; Wang, Y&lt;sup&gt;*&lt;/sup&gt;; Yu, X; Li, J&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;synthesis-and-biological-evaluation-of-novel-benzamide-derivatives-as-potent-smoothened-antagonists&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0960894X14000250&#34;&gt;Synthesis and biological evaluation of novel benzamide derivatives as potent smoothened antagonists&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Bioorganic &amp;amp; medicinal chemistry letters&lt;/strong&gt;&lt;/em&gt;. 2014, 24(5):1426-1431.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wu, Tian-Ming; Wang, Dao-Cai; Xiang, Pu; &lt;strong&gt;Zhang, Jian-Nan&lt;/strong&gt;; Sang, Ya-Xiong; Lin, Hong-Jun; Chen, Jie; Xie, Gang; Song, Hang; Zhao, Ying-Lan&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glucagon-like-peptide-gcgl-is-a-novel-potential-tsh-releasing-factor-trf-in-chickens-i-evidence-for-its-potent-and-specific-action-on-stimulating-tsh-mrna-expression-and-secretion-in-the-pituitary&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://academic.oup.com/endo/article-abstract/155/11/4568/2422875&#34;&gt;Glucagon-like peptide (GCGL) is a novel potential TSH-releasing factor (TRF) in Chickens: I) Evidence for its potent and specific action on stimulating TSH mRNA expression and secretion in the pituitary&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Endocrinology&lt;/strong&gt;&lt;/em&gt;. 2014, 155(11):4568-4580.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Huang, Guian; He, Chen; Meng, Fengyan; Li, Juan; &lt;strong&gt;Zhang, Jiannan&lt;/strong&gt;; Wang, Yajun&lt;sup&gt;*&lt;/sup&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conference-presentations&#34; class=&#34;section level2&#34; data-icon=&#34;group&#34;&gt;
+&lt;h2&gt;Conference presentations&lt;/h2&gt;
+&lt;div id=&#34;黑皮质素系统在家鸡能量平衡中的作用机理解析&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;黑皮质素系统在家鸡能量平衡中的作用机理解析&lt;/h3&gt;
+&lt;p&gt;四川省细胞生物学会2017年度学术大会&lt;/p&gt;
+&lt;p&gt;Chengdu, CN&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;家鸡促甲状腺激素受体ctshr的克隆剪切变体鉴定及其功能分析&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;家鸡促甲状腺激素受体(cTSHR)的克隆、剪切变体鉴定及其功能分析&lt;/h3&gt;
+&lt;p&gt;第十六次全国动物遗传育种学术讨论会系列学术报告会&lt;/p&gt;
+&lt;p&gt;Yangzhou, CN&lt;/p&gt;
+&lt;p&gt;2011&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ming Tang&#39;s resume</title>
+      <link>/cv-master-tm/tang_ming_cv/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/cv-master-tm/tang_ming_cv/</guid>
+      <description>
+
+
+&lt;style type=&#34;text/css&#34;&gt;
+.pagedjs_page:not(:first-of-type) {
+  background: white;
+}
+
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #ffffff;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
+}
+&lt;/style&gt;
+&lt;div id=&#34;aside&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Aside&lt;/h1&gt;
+&lt;div id=&#34;contact&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Contact Info&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fa fa-envelope&#34;&gt;&lt;/i&gt; &lt;a href=&#34;mailto:tangming2005@gmail.com&#34;&gt;tangming2005@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://github.com/crazyhottommy&#34;&gt;github.com/crazyhottommy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fa fa-phone&#34;&gt;&lt;/i&gt; +1 352-226-9384&lt;/li&gt;
+&lt;li&gt;website: &lt;a href=&#34;https://divingintogeneticsandgenomics.rbind.io/&#34;&gt;divingintogeneticsandgenomics.rbind.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;For more information, please contact me via email.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;skills&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Skills&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Extensive experience with next generation sequencing data analysis and pipeline/workflow development.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Experienced in Single-cell data analysis.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Highly skilled in R, Bash and Python.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Great communication skills.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;disclaimer&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Disclaimer&lt;/h2&gt;
+&lt;p&gt;This resume was made with the R&lt;br /&gt;
+package &lt;a href=&#34;https://github.com/rstudio/pagedown&#34;&gt;&lt;strong&gt;pagedown&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Last updated on 2020-10-15.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;main&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Main&lt;/h1&gt;
+&lt;div id=&#34;title&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Ming Tang&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Senior Scientist&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Department of Data Science&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Dana-Farber Cancer Institute&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Boston, MA, 02215&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;employment&#34; class=&#34;section level2&#34; data-icon=&#34;address-book&#34;&gt;
+&lt;h2&gt;Employment&lt;/h2&gt;
+&lt;div id=&#34;postdoctoral-fellow&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Postdoctoral Fellow&lt;/h3&gt;
+&lt;p&gt;MD Anderson Cancer Center&lt;/p&gt;
+&lt;p&gt;TX, USA&lt;/p&gt;
+&lt;p&gt;2015 - 2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;research-scientist&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Research Scientist&lt;/h3&gt;
+&lt;p&gt;MD Anderson Cancer Center&lt;/p&gt;
+&lt;p&gt;TX, USA&lt;/p&gt;
+&lt;p&gt;2017 - 2018&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;senior-bioinformatics-scientist&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Senior Bioinformatics Scientist&lt;/h3&gt;
+&lt;p&gt;Harvard FAS informatics&lt;/p&gt;
+&lt;p&gt;MA, USA&lt;/p&gt;
+&lt;p&gt;2018 - 2020&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;senior-scientist&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Senior Scientist&lt;/h3&gt;
+&lt;p&gt;Dana-Farber Cancer Institute&lt;/p&gt;
+&lt;p&gt;MA, USA&lt;/p&gt;
+&lt;p&gt;2020-&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;education&#34; class=&#34;section level2&#34; data-icon=&#34;graduation-cap&#34; data-concise=&#34;true&#34;&gt;
+&lt;h2&gt;Education&lt;/h2&gt;
+&lt;div id=&#34;shanghai-jiaotong-university&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Shanghai Jiaotong University&lt;/h3&gt;
+&lt;p&gt;B.S. in Biotechnology&lt;/p&gt;
+&lt;p&gt;Shanghai, China&lt;/p&gt;
+&lt;p&gt;2008&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;university-of-florida&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;University of Florida&lt;/h3&gt;
+&lt;p&gt;Ph.D. in Genetics and Genomics&lt;/p&gt;
+&lt;p&gt;FL, USA&lt;/p&gt;
+&lt;p&gt;2014&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;honors-and-awards&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Honors and awards&lt;/h2&gt;
+&lt;div id=&#34;peoples-scholarship&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;People’s Scholarship&lt;/h3&gt;
+&lt;p&gt;Shanghai Jiaotong University&lt;/p&gt;
+&lt;p&gt;China&lt;/p&gt;
+&lt;p&gt;2006&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;national-stipend-for-academic-excellence&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;National Stipend for Academic Excellence&lt;/h3&gt;
+&lt;p&gt;Shanghai Jiao Tong University&lt;/p&gt;
+&lt;p&gt;China&lt;/p&gt;
+&lt;p&gt;2007&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;national-scholarship-for-academic-excellence&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;National Scholarship for Academic Excellence&lt;/h3&gt;
+&lt;p&gt;Shanghai Jiao Tong University&lt;/p&gt;
+&lt;p&gt;China&lt;/p&gt;
+&lt;p&gt;2007&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outstanding-international-student&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Outstanding International Student&lt;/h3&gt;
+&lt;p&gt;University of Florida&lt;/p&gt;
+&lt;p&gt;USA&lt;/p&gt;
+&lt;p&gt;2012&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;genetics-genomics-program-travel-grant&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Genetics &amp;amp; Genomics program Travel Grant&lt;/h3&gt;
+&lt;p&gt;University of Florida&lt;/p&gt;
+&lt;p&gt;USA&lt;/p&gt;
+&lt;p&gt;2013&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;next-generation-sequencing-course-certificate&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Next Generation Sequencing course certificate&lt;/h3&gt;
+&lt;p&gt;Michigan State University&lt;/p&gt;
+&lt;p&gt;USA&lt;/p&gt;
+&lt;p&gt;2014&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summer-institutes-in-statistics-for-big-data-scholarship&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Summer Institutes in Statistics for Big Data Scholarship&lt;/h3&gt;
+&lt;p&gt;University of Washington&lt;/p&gt;
+&lt;p&gt;USA&lt;/p&gt;
+&lt;p&gt;2015&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;usc-bd2k-data-science-road-trip-fellow&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;USC BD2K Data Science Road-Trip fellow&lt;/h3&gt;
+&lt;p&gt;University of Southern California&lt;/p&gt;
+&lt;p&gt;USA&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bioconductor-annual-meeting-travel-award&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bioconductor annual meeting Travel award&lt;/h3&gt;
+&lt;p&gt;Bioconductor&lt;/p&gt;
+&lt;p&gt;NYC, USA&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;top-75-bioinformatics-blogs-and-websites-for-bioinformaticians&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Top 75 Bioinformatics Blogs and Websites for Bioinformaticians&lt;/h3&gt;
+&lt;p&gt;feedspot.com&lt;/p&gt;
+&lt;p&gt;USA&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bioconductor-annual-meeting-travel-award-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bioconductor annual meeting Travel award&lt;/h3&gt;
+&lt;p&gt;Bioconductor, virtual due to COVID19, waived registration fee.&lt;/p&gt;
+&lt;p&gt;Boston, USA&lt;/p&gt;
+&lt;p&gt;2020&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;publications-for-co-first-author&#34; class=&#34;section level2&#34; data-icon=&#34;file&#34;&gt;
+&lt;h2&gt;Publications (* for co-first author)&lt;/h2&gt;
+&lt;div id=&#34;restraint-of-angiogenesis-by-zinc-finger-transcription-factor-ctcf-dependent-chromatin-insulation.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Restraint of angiogenesis by zinc finger transcription factor CTCF-dependent chromatin insulation.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Proc Natl Acad Sci USA&lt;/em&gt;. 2011 Sep 13;108(37):15231-6. PubMed PMID: 21896759&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2011&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tang M&lt;/strong&gt;, Chen B, Lin T, Li Z, Pardo C, et al.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ctcf-dependent-chromatin-insulator-as-a-built-in-attenuator-of-angiogenesis.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;CTCF-dependent chromatin insulator as a built-in attenuator of angiogenesis.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Transcription&lt;/em&gt;. 2012 Mar-Apr;3(2):73-7. PubMed PMID: 22414750; PubMed Central PMCID: PMC3337828.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2012&lt;/p&gt;
+&lt;p&gt;Lu J and &lt;strong&gt;Tang M&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-malignant-brain-tumor-mbt-domain-protein-sfmbt1-is-an-integral-histone-reader-subunit-of-the-lsd1-demethylase-complex-for-chromatin-association-and-epithelial-to-mesenchymal-transition.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The malignant brain tumor (MBT) domain protein SFMBT1 is an integral histone reader subunit of the LSD1 demethylase complex for chromatin association and epithelial-to-mesenchymal transition.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;J Biol Chem&lt;/em&gt; 2013 Sep 20;288(38):27680-91. PubMed PMID: 23928305;PubMed Central PMCID: PMC3779763.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2013&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tang M&lt;/strong&gt;, Shen H, Jin Y, Lin T, Cai Q, et al&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;trim29-suppresses-twist1-and-invasive-breast-cancer-behavior.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;TRIM29 suppresses TWIST1 and invasive breast cancer behavior.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cancer Res&lt;/em&gt;. 2014 Sep 1;74(17):4875-87. PubMed PMID: 24950909.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2014&lt;/p&gt;
+&lt;p&gt;Ai L, Kim WJ, Alpay M, &lt;strong&gt;Tang M&lt;/strong&gt;, Pardo CE, et al.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;genomic-and-proteomic-analysis-of-transcription-factor-tfii-i-reveals-insight-into-the-response-to-cellular-stress.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Genomic and proteomic analysis of transcription factor TFII-I reveals insight into the response to cellular stress.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Nucleic Acids Res&lt;/em&gt;. 2014;42(12):7625-41. PubMed &lt;a href=&#34;PMID:24875474&#34; class=&#34;uri&#34;&gt;PMID:24875474&lt;/a&gt;; PubMed Central PMCID: PMC4081084.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2014&lt;/p&gt;
+&lt;p&gt;Fan AX, Papadopoulos GL, Hossain MA, Lin IJ, Hu J, &lt;strong&gt;Tang M&lt;/strong&gt;, et al.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mof-acetylates-the-histone-demethylase-lsd1-to-suppress-epithelial-to-mesenchymal-transition.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;MOF Acetylates the Histone Demethylase LSD1 to Suppress Epithelial-to-Mesenchymal transition.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cell Reports&lt;/em&gt;. 2016.PMID: 27292636&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2016&lt;/p&gt;
+&lt;p&gt;Luo HC, Shenoy AK, Li X, Jin Y, Jin L, Cai Q, &lt;strong&gt;Tang M&lt;/strong&gt;, Liu Y, Chen H et.al.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-molecular-take-on-malignant-rhabdoid-tumors.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A Molecular Take on Malignant Rhabdoid Tumors.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Trends in Cancer&lt;/em&gt; 2016. May;2(5):217-218&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2016&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tang M&lt;/strong&gt; and Verhaak R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;suppression-of-type-i-ifn-signaling-in-tumors-mediates-resistance-to-anti-pd-1-treatment-that-can-be-overcome-by-radiotherapy.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Suppression of type I IFN signaling in tumors mediates resistance to anti-PD-1 treatment that can be overcome by radiotherapy.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cancer Res&lt;/em&gt;. 2016. Nov 7. pii: canres.3142.2015.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2016&lt;/p&gt;
+&lt;p&gt;Wang X, Schoenhals JE, Li A, Valdecanas DR, Ye H, Zhang F, Tang C, &lt;strong&gt;Tang M&lt;/strong&gt;,
+Liu CG, LiuX, Krishnan S, Allison JP, Sharma P, Hwu P, Komaki R, Overwikjk WW,
+Gomez DR, Chang JY, Hahn SM, Cortez Mam Welsh JW&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;epithelial-to-mesenchymal-transition-confers-pericyte-properties-on-cancer-cells.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Epithelial-to-mesenchymal transition confers pericyte properties on cancer cells.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Journal of Clinical Investigation&lt;/em&gt;. 2016. Nov 1;126(11):4174-4186. doi: 10.1172/JCI86623&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2016&lt;/p&gt;
+&lt;p&gt;Shenoy AK, Jin Y, Luo H, &lt;strong&gt;Tang M&lt;/strong&gt;, Pampo C, Shao R, Siemann DW, Wu L,
+Heldermon C, Law BK, Chang LJ, Lu J.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;systematic-analysis-of-telomere-length-telomerase-and-telomere-maintenance-across-31-cancer-types.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Systematic Analysis of Telomere Length, Telomerase and Telomere Maintenance across 31 cancer types.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Nature Genetics&lt;/em&gt;. 2017. &lt;a href=&#34;doi:10.1038/ng.3781&#34; class=&#34;uri&#34;&gt;doi:10.1038/ng.3781&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;p&gt;Barthel FP, Wei W, &lt;strong&gt;Tang M&lt;/strong&gt;, Martinez-Ledesma E, Hu X, Amin S, Seth S, Song X,
+Lichtenberg T, Hu J, Zhang J, Zheng S, Verhaak R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;synthetic-essentiality-of-chromatin-remodeling-factor-chd1-in-pten-deficient-cancer&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Synthetic essentiality of chromatin remodeling factor CHD1 in PTEN-deficient cancer&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Nature&lt;/em&gt;. 2017. &lt;a href=&#34;doi:10.1038/nature21357&#34; class=&#34;uri&#34;&gt;doi:10.1038/nature21357&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;p&gt;Zhao D, Lu X, Wang G, Lan Z, Liao W, Li J, Liang X Chen J, Shah S, Shang X,
+&lt;strong&gt;Tang M&lt;/strong&gt;, Deng P, Dey P, Chakravarti D, Chen P, Spring D, Navone N, Troncoso P,
+Zhang j, Wang YA, DePinho RA&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;integrative-analysis-identifies-four-molecular-and-clinical-subsets-in-uveal-melanoma&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Integrative Analysis identifies Four Molecular and Clinical Subsets in Uveal Melanoma&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cancer Cell&lt;/em&gt;. 2017.32:2:p204-220.e15&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;p&gt;Robertson AG, Shih J, Yau C, Gibb EA, Mungall KL, Hess JM, Uzunangelov V,
+Walter V, Danilova L, Lichtenberg TM, Kucherlapati M, Kimes PK, &lt;strong&gt;Tang M&lt;/strong&gt;, Penson
+A, Babur O, Bristow CA, Hoadley KA, Iype L, Chang MT, Oba J, The Cancer
+Genome Atlas (TCGA) Network, Cherniack AD, Benz C, Verhaak R, Griewank KG,
+Felau I, Zenklusen JC, Gershenwald JE, Schoenfield L, Lazar AJ, Abdel-Rahman
+M, Roman-Roman S, Stern, MH, Cebulla CM, Williams MD, Jager MJ, Coupland S,
+Esmaeli B, Kandoth C, Woodman SE&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tfii-i-interacts-with-e2f-transcription-factors-and-regulates-their-association-with-the-cooccupied-atf3-gene-locus.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;TFII-I interacts with E2F transcription factors and regulates their association with the cooccupied ATF3 gene locus.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Jounral of Cellular Biochemistry&lt;/em&gt;. 2017. &lt;a href=&#34;Doi:10.1002/jcb.26235&#34; class=&#34;uri&#34;&gt;Doi:10.1002/jcb.26235&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;p&gt;Fan A, Aryan M, Shen Y, Hossain M, &lt;strong&gt;Tang M&lt;/strong&gt;, Lu J, Strouboulis J, Bungert J.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tumorfusions-an-integrative-resource-for-reporting-cancerassociated-transcript-fusion-in-33-tumor-types.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;TumorFusions: an integrative resource for reporting cancerassociated transcript fusion in 33 tumor types.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Nucleic Acids Research&lt;/em&gt;. 2017.Doi:10.1093/nar/gkx1018/4584571&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;p&gt;Hu X, Wang Q, &lt;strong&gt;Tang M&lt;/strong&gt;, Barthel FP, Amin S, Yoshihara K, Lang FM, Lee SH, Zheng S, Verhaak R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;an-integrated-platform-for-genome-wide-mapping-of-chromatin-states-using-highthroughput-chip-sequencing-in-tumor-tissues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;An Integrated Platform for Genome-wide Mapping of Chromatin States Using Highthroughput ChIP-sequencing In Tumor Tissues&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Journal of Visualized Experiments&lt;/em&gt;. 2018.(134),e56972,&lt;a href=&#34;doi:10.3791/56972&#34; class=&#34;uri&#34;&gt;doi:10.3791/56972&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;p&gt;Terranova C, &lt;strong&gt;Tang M&lt;/strong&gt;, Orouji E, Maitituoheti M, Raman A, Amin S, Liu Z, Rai K.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-tandem-duplicator-phenotype-is-a-prevalent-genome-wide-cancer-configuration-driven-by-distinct-gene-mutations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The Tandem Duplicator Phenotype Is a Prevalent Genome-Wide Cancer Configuration Driven by Distinct Gene Mutations&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cancer Cell&lt;/em&gt;. 2018. 13;34(2)197-210.e5 &lt;a href=&#34;doi:10.1016/j.ccell.2018.06.008&#34; class=&#34;uri&#34;&gt;doi:10.1016/j.ccell.2018.06.008&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;p&gt;Menghi F, Barthel FP, Yadav V, &lt;strong&gt;Tang M&lt;/strong&gt;, Ji B, Tang Z, Cater GW, Ruan Y, Scully R,
+Verhaak R, Jonkers J, Liu E.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;positive-regulation-of-transcription-by-human-zmynd8-through-its-association-with-ptefb-complex.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Positive Regulation of Transcription by Human ZMYND8 through Its Association with PTEFb Complex.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cell Reports&lt;/em&gt;. 2018. Aug21;24(8):21441-2154.e6 &lt;a href=&#34;doi:10.1016/j.celrep.2018.07.064&#34; class=&#34;uri&#34;&gt;doi:10.1016/j.celrep.2018.07.064&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;p&gt;Ghosh K, &lt;strong&gt;Tang M&lt;/strong&gt;, Kumari N, Nandy A, Basu S, Mall DP, Rai K, Biswas D&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;histone-deacetylase-inhibitor-targets-cd123cd47-positive-cells-and-reverse-chemoresistance-phenotype-in-acute-myeloid-leukemia.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Histone deacetylase inhibitor targets CD123/CD47-positive cells and reverse chemoresistance phenotype in acute myeloid leukemia.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Leukemia&lt;/em&gt;. 2018. &lt;a href=&#34;Doi:1038/s41375-018-0279-6&#34; class=&#34;uri&#34;&gt;Doi:1038/s41375-018-0279-6&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;p&gt;Yan B, Chen Q, Shimada K, &lt;strong&gt;Tang M&lt;/strong&gt;, Li H, Gurumurthy A, Khoury JD, Xu B, Huang S, Qiu Y&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;landscape-of-egfr-dependent-and--independent-resistance-mechanisms-to-osimertinib-and-continuation-therapy-beyond-progression-in-egfr-mutant-nsclc.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Landscape of EGFR-Dependent and -Independent Resistance Mechanisms to Osimertinib and Continuation Therapy Beyond Progression in EGFR-Mutant NSCLC.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Clin Cancer Res&lt;/em&gt;. 2018 Dec 15;24(24):6195-6203. doi: 10.1158/1078-0432.CCR-18-1542.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;p&gt;Le X, Puri S, Negrao M, Nilsson M, Robichaux J, Boyle T, Hicks J, Lovinger K, Roarty E,
+Rinsurongkawong W,&lt;strong&gt;Tang M&lt;/strong&gt;, Sun H, Elamin Y, Lacerda L, Lewis J, Roth J, Swisher S, Lee J, William W, Glisson B,
+Zhang J, Papadimitrakopoulou V, Gray J, Heymach J.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;kras-irf2-axis-drives-immune-suppression-and-immune-therapy-resistance-in-colorectal-cancer.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;KRAS-IRF2 Axis Drives Immune Suppression and Immune Therapy Resistance in Colorectal Cancer.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cancer Cell&lt;/em&gt;. 2019 Apr 15;35(4):559-572.e7. doi: 10.1016/j.ccell.2019.02.008.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;p&gt;Liao W, Overman M, Boutin A, Shang X, Zhao D, Dey P, Li J, Wang G, Lan Z, Li J, &lt;strong&gt;Tang M&lt;/strong&gt;,
+Jiang S, Ma X, Chen P, Katkhuda R, Korphaisarn K, Chakravarti D, Chang A, Spring D, Chang Q, Zhang J,
+Maru D, Maeda D, Zebala J, Kopetz S, Wang Y, Depinho R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;distinct-co-acquired-alterations-and-genomic-evolution-during-tki-treatment-in-non-small-cell-lung-cancer-patients-with-or-without-acquired-t790m-mutation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Distinct Co-Acquired Alterations and Genomic Evolution During TKI Treatment in Non-Small-Cell Lung Cancer Patients With or Without Acquired T790M Mutation&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Oncogene&lt;/em&gt;. 2020 Feb;39(9):1846-1859. doi: 10.1038/s41388-019-1104-z.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;p&gt;Jin Y, Bao H, Le X, Fan X, &lt;strong&gt;Tang M&lt;/strong&gt;, Shi X, Zhao J, Yan J, Xu Y, Quek K, Elamin Y, Zhan J, Futreal A, Wistuba I, Heymach J, Lou G, Shao L, He Q, Lin C, Wu X, Shao Y, Wang X, He J, Chen Y, Stebbing J, Chen M, Zhang J, Yu X.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lats-kinasemediated-ctcf-phosphorylation-and-selective-loss-of-genomic-binding.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;LATS kinase–mediated CTCF phosphorylation and selective loss of genomic binding.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Science Advances&lt;/em&gt; . 2020 Feb 19;6(8):eaaw4651. doi: 10.1126/sciadv.aaw4651.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2020&lt;/p&gt;
+&lt;p&gt;Luo H, Yu Q, Liu Y, &lt;strong&gt;Tang M&lt;/strong&gt;, Liang M, Zhang D, Xiao T, Wu L, Tan M, Ruan Y, Bungert J, Lu J.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fast-analysis-of-scatac-seq-data-using-a-predefined-set-of-genomic-regions.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Fast analysis of scATAC-seq data using a predefined set of genomic regions.&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;F1000Research&lt;/strong&gt;. 2020, 9:199 (&lt;a href=&#34;https://doi.org/10.12688/f1000research.22731.2&#34; class=&#34;uri&#34;&gt;https://doi.org/10.12688/f1000research.22731.2&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2020&lt;/p&gt;
+&lt;p&gt;Valentina Giansanti, &lt;strong&gt;Ming Tang&lt;/strong&gt;, Davide Cittaro.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;kmt2d-deficiency-impairs-super-enhancers-to-confer-a-glycolytic-vulnerability-in-lung-cancer.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;KMT2D Deficiency Impairs Super-Enhancers to Confer a Glycolytic Vulnerability in Lung Cancer.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cancer Cell&lt;/em&gt;. 2020 Apr 13;37(4):599-617.e7. doi: 10.1016/j.ccell.2020.03.005.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2020&lt;/p&gt;
+&lt;p&gt;Alam H*, &lt;strong&gt;Tang M*&lt;/strong&gt;, Maitituoheti M, Dhar S, Kumar M, han C, Ambati C, Amin S, Gu B, Chen T, Lin Y,
+Chen J, Muller F, Putluri N, Flores E, Demayo F, Baseler L, Rai K, Lee M.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tumor-microenvironment-remodeling-enables-bypass-of-oncogenic-kras-dependency-in-pancreatic-cancer&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Tumor microenvironment remodeling enables bypass of oncogenic KRAS dependency in pancreatic cancer&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cancer Discovery&lt;/em&gt;. 2020 Apr 27. doi: 10.1158/2159-8290.CD-19-0597.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2020&lt;/p&gt;
+&lt;p&gt;Hou P, Kapoor A, Zhang Q, Li J, Wu C, Li J, Lan Z, &lt;strong&gt;Tang M&lt;/strong&gt;, Ma X, Ackroyd J, Kalluri R, Zhang J, Jiang S,
+Spring D, Wang Y, DePinho R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;preprint-for-co-first-author&#34; class=&#34;section level2&#34; data-icon=&#34;file&#34;&gt;
+&lt;h2&gt;Preprint (* for co-first author)&lt;/h2&gt;
+&lt;div id=&#34;bivalent-and-broad-chromatin-domains-regulate-pro-metastatic-drivers-in-melanoma.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bivalent and Broad Chromatin Domains Regulate Pro-metastatic Drivers in Melanoma.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;BioRxiv&lt;/em&gt; 2019 doi: &lt;a href=&#34;https://doi.org/10.1101/721480&#34; class=&#34;uri&#34;&gt;https://doi.org/10.1101/721480&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;p&gt;Terranova C*, &lt;strong&gt;Tang M*&lt;/strong&gt;, Maitituoheti M, Raman A, Schulz J, Amin S, Orouji E, Tomczak K, Sarkar S, Oba J,
+Crasy C, Wu C, Zhao D, Chen K, Haydu L, Wang W, Lazar A, Woodman S, Bernatchez C, Rai K.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluating-single-cell-cluster-stability-using-the-jaccard-similarity-index.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Evaluating single-cell cluster stability using the Jaccard similarity index.&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;BioRxiv&lt;/em&gt; 2020 doi: &lt;a href=&#34;https://doi.org/10.1101/2020.05.26.116640&#34; class=&#34;uri&#34;&gt;https://doi.org/10.1101/2020.05.26.116640&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2020&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tang M&lt;/strong&gt;, Kaymaz Y, Logeman B, Eichhorn S, Liang Z, Dulac C, Sackton T.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-chapters&#34; class=&#34;section level2&#34; data-icon=&#34;book&#34;&gt;
+&lt;h2&gt;Book Chapters&lt;/h2&gt;
+&lt;div id=&#34;genetically-altered-cancer-epigenome.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Genetically altered cancer epigenome.&lt;/h3&gt;
+&lt;p&gt;Epigenetic Gene Expression and Regulation. 2016. Elsevier, Inc. Edited by
+Suming Huang, Michael Litt, and Cynthia Ann Blakey&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2016&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tang M&lt;/strong&gt;, Luo HC and Lu J&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-biostar-handbook-a-beginners-guide-to-bioinformatics.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The biostar Handbook: A Beginner’s Guide to Bioinformatics.&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://read.biostarhandbook.com/&#34; class=&#34;uri&#34;&gt;https://read.biostarhandbook.com/&lt;/a&gt; 2017. Edited by Istvan Albert.&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;p&gt;Sebastian A, Albert R, Leipzig J, Kelkar H, &lt;strong&gt;Tang M&lt;/strong&gt;, Shen W, Coster WD&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;computational-analysis-of-epigenetic-modifications-in-melanoma-cancer&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Computational analysis of epigenetic modifications in melanoma cancer&lt;/h3&gt;
+&lt;p&gt;Computational Epigenetics and Diseases. 2017. Elsevier,Inc&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;p&gt;Rai K, &lt;strong&gt;Tang M&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;software&#34; class=&#34;section level2&#34; data-icon=&#34;laptop&#34;&gt;
+&lt;h2&gt;Software&lt;/h2&gt;
+&lt;div id=&#34;pyflow-chipseq-a-snakemake-workflow-for-processing-chip-seq-data.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;pyflow-ChIPseq, a snakemake workflow for processing ChIP-seq data.&lt;/h3&gt;
+&lt;p&gt;github link &lt;a href=&#34;https://github.com/crazyhottommy/pyflow-ChIPseq&#34; class=&#34;uri&#34;&gt;https://github.com/crazyhottommy/pyflow-ChIPseq&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pyflow-atacseq-a-snakemake-workflow-for-processing-atac-seq-data.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;pyflow-ATACseq, a snakemake workflow for processing ATAC-seq data.&lt;/h3&gt;
+&lt;p&gt;github link &lt;a href=&#34;https://github.com/crazyhottommy/pyflow-ATACseq&#34; class=&#34;uri&#34;&gt;https://github.com/crazyhottommy/pyflow-ATACseq&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pyflow-rnaseq-a-snakemake-workflow-for-processing-rna-seq-data.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;pyflow-RNAseq, a snakemake workflow for processing RNA-seq data.&lt;/h3&gt;
+&lt;p&gt;github link &lt;a href=&#34;https://github.com/crazyhottommy/pyflow-RNAseq&#34; class=&#34;uri&#34;&gt;https://github.com/crazyhottommy/pyflow-RNAseq&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pyflow-dnaseq-a-snakemake-workflow-for-processing-dna-seq-data.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;pyflow-DNAseq, a snakemake workflow for processing DNA-seq data.&lt;/h3&gt;
+&lt;p&gt;gitlab link &lt;a href=&#34;https://gitlab.com/tangming2005/snakemake_DNAseq_pipeline/tree/multiRG&#34; class=&#34;uri&#34;&gt;https://gitlab.com/tangming2005/snakemake_DNAseq_pipeline/tree/multiRG&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pyflow-rrbs-a-snakemake-workflow-for-processing-rrbs-data.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;pyflow-RRBS, a snakemake workflow for processing RRBS data.&lt;/h3&gt;
+&lt;p&gt;gitlab link &lt;a href=&#34;https://gitlab.com/tangming2005/pyflow-RRBSeq&#34; class=&#34;uri&#34;&gt;https://gitlab.com/tangming2005/pyflow-RRBSeq&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pyflow-scatacseq-a-snakemake-workflow-for-post-processing-single-cell-atac-seq-data.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;pyflow-scATACseq, a snakemake workflow for post-processing single-cell ATAC-seq data.&lt;/h3&gt;
+&lt;p&gt;github link &lt;a href=&#34;https://github.com/crazyhottommy/pyflow-scATACseq&#34; class=&#34;uri&#34;&gt;https://github.com/crazyhottommy/pyflow-scATACseq&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;scatacutils-an-r-package-for-analyzing-single-cell-atac-seq-data.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;scATACutils, an R package for analyzing single-cell ATAC-seq data.&lt;/h3&gt;
+&lt;p&gt;github link &lt;a href=&#34;https://github.com/crazyhottommy/scATACutils&#34; class=&#34;uri&#34;&gt;https://github.com/crazyhottommy/scATACutils&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;scclusteval-an-r-package-for-evaluating-single-cell-rna-seq-cluster-stability&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;scclusteval, an R package for evaluating single-cell RNA-seq cluster stability&lt;/h3&gt;
+&lt;p&gt;github link &lt;a href=&#34;https://github.com/crazyhottommy/scclusteval&#34; class=&#34;uri&#34;&gt;https://github.com/crazyhottommy/scclusteval&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;teaching-experience&#34; class=&#34;section level2&#34; data-icon=&#34;chalkboard-teacher&#34;&gt;
+&lt;h2&gt;Teaching Experience&lt;/h2&gt;
+&lt;div id=&#34;software-carpentry-2-day-workshop.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Software Carpentry 2-day workshop.&lt;/h3&gt;
+&lt;p&gt;Instructor of R and bash for the software carpentry workshop held in the University of Miami. &lt;a href=&#34;https://divingintogeneticsandgenomics.rbind.io/talk/2015-miami-carpentry/&#34; class=&#34;uri&#34;&gt;https://divingintogeneticsandgenomics.rbind.io/talk/2015-miami-carpentry/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;FL, USA&lt;/p&gt;
+&lt;p&gt;2014&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gs01-1143-introduction-to-bioinformatics-course.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;GS01 1143 Introduction to Bioinformatics course.&lt;/h3&gt;
+&lt;p&gt;I taught the ChIP-seq bioinformatics lab for the GS01 1143 Introduction to Bioinformatics course to ~30 people with diverse background in MD Anderson Cancer Center. &lt;a href=&#34;https://divingintogeneticsandgenomics.rbind.io/talk/2017-gsbs-chipseq-class/&#34; class=&#34;uri&#34;&gt;https://divingintogeneticsandgenomics.rbind.io/talk/2017-gsbs-chipseq-class/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;TX, USA&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;next-gen-sequence-analysis-workshop.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Next-Gen Sequence Analysis Workshop.&lt;/h3&gt;
+&lt;p&gt;I taught the ChIP-seq lesson for 2018 ANGUS Next-Gen Sequence Analysis Workshop held in UC Davis from 7/1/2018 to 7/14/2018, and TAed for the rest of the sessions. &lt;a href=&#34;https://divingintogeneticsandgenomics.rbind.io/talk/2018-dibsi-course/&#34; class=&#34;uri&#34;&gt;https://divingintogeneticsandgenomics.rbind.io/talk/2018-dibsi-course/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CA, USA&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;harvard-fas-informatics-nanocourse&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Harvard FAS informatics nanocourse&lt;/h3&gt;
+&lt;p&gt;In this 2-week long Harvard FAS informatics nanocourse, I co-taught snakemake for one afternoon and lead-instructed scRNAseq analysis for a full day. &lt;a href=&#34;https://divingintogeneticsandgenomics.rbind.io/talk/2019-harvard-fas-workshop/&#34; class=&#34;uri&#34;&gt;https://divingintogeneticsandgenomics.rbind.io/talk/2019-harvard-fas-workshop/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MA, USA&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;liu-lab-new-hire-bioinformatics-training&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Liu Lab new hire bioinformatics training&lt;/h3&gt;
+&lt;p&gt;I TAed a 5-week long bioinformatics training for the Liu lab new hires using materials from Harvard course STAT115/215: Introduction to Computational Biology and Bioinformatics&lt;/p&gt;
+&lt;p&gt;MA, USA&lt;/p&gt;
+&lt;p&gt;2020&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;invited-talk&#34; class=&#34;section level2&#34; data-icon=&#34;microphone-alt&#34;&gt;
+&lt;h2&gt;Invited talk&lt;/h2&gt;
+&lt;div id=&#34;from-cell-line-to-command-line-my-journey-to-bioinformatics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;From cell line to command line: my journey to bioinformatics&lt;/h3&gt;
+&lt;p&gt;I was invited to give a talk to my PhD Genetics and Genomics program at the University of Florida. I talked about my personal experience on how I started doing bioinformatics and shared tips and resources to get the students started their own journey into bioinformatics. &lt;a href=&#34;https://divingintogeneticsandgenomics.rbind.io/talk/2018-uf-talk/&#34; class=&#34;uri&#34;&gt;https://divingintogeneticsandgenomics.rbind.io/talk/2018-uf-talk/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;FL, USA&lt;/p&gt;
+&lt;p&gt;2018&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducible-research-in-bioinformatics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducible research in bioinformatics&lt;/h3&gt;
+&lt;p&gt;I was invited to give a talk on reproducible bioinformatics research to the students in the Bunker Hill Community College in Boston. &lt;a href=&#34;https://divingintogeneticsandgenomics.rbind.io/talk/2019-bunkerhill-talk/&#34; class=&#34;uri&#34;&gt;https://divingintogeneticsandgenomics.rbind.io/talk/2019-bunkerhill-talk/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MA, USA&lt;/p&gt;
+&lt;p&gt;2019&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducible-computing-for-your-own-benifit.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducible computing for your own benifit.&lt;/h3&gt;
+&lt;p&gt;I was invited to give a talk on reproducible computing at Center for Functional Cancer Epigenetics(CFCE) in Dana-Farber Cancer Institute.&lt;/p&gt;
+&lt;p&gt;MA, USA&lt;/p&gt;
+&lt;p&gt;2020&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;professional-service&#34; class=&#34;section level2&#34; data-icon=&#34;pen-alt&#34;&gt;
+&lt;h2&gt;Professional service&lt;/h2&gt;
+&lt;div id=&#34;reviewer-for-journals&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reviewer for journals&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;div class=&#34;concise&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;Clinical Cancer Research.&lt;/li&gt;
+&lt;li&gt;GigaScience.&lt;/li&gt;
+&lt;li&gt;Bioinformatics&lt;/li&gt;
+&lt;li&gt;Aging&lt;/li&gt;
+&lt;li&gt;Cancer Research&lt;/li&gt;
+&lt;li&gt;F1000 Research&lt;/li&gt;
+&lt;li&gt;Cancer Letters&lt;/li&gt;
+&lt;li&gt;Cell Reports&lt;/li&gt;
+&lt;li&gt;BMC genetics&lt;/li&gt;
+&lt;li&gt;Oncogene&lt;/li&gt;
+&lt;li&gt;PLOS ONE&lt;/li&gt;
+&lt;li&gt;Oncotarget&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;professional-membership&#34; class=&#34;section level2&#34; data-icon=&#34;suitcase&#34;&gt;
+&lt;h2&gt;Professional membership&lt;/h2&gt;
+&lt;div id=&#34;member-society-for-neuro-oncology-sno&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Member, Society for Neuro-Oncology (SNO)&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2016&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;genomics-advisory-committee-member-for-data-carpentry-usa&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Genomics Advisory committee member for Data Carpentry, USA&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;certified-instructor-software-carpentry-data-carpentry-usa&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Certified Instructor, Software Carpentry, Data Carpentry, USA&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017 -&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;member-american-society-of-clinical-oncology-asco&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Member, American Society of Clinical Oncology (ASCO)&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2017&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;member-bioinformatics-organization.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Member, Bioinformatics Organization.&lt;/h3&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;p&gt;2020&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>阿里云服务新配置代码备存</title>
+      <link>/post/linux/aliyun-code/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/post/linux/aliyun-code/</guid>
+      <description>&lt;p&gt;新添了
+&lt;a href=&#34;https://www.aliyun.com/minisite/goods?userCode=tjxor43i&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;阿里云服务器&lt;/a&gt;，超级推荐云翼计划，学生能享受的优惠真的很赞，可惜我没有机会了，只有等双11的活动了，点击链接进去即可选购~~&lt;/p&gt;
+&lt;p&gt;主要是为了解决frp走国外服务器的延迟问题，同时为实验室数据分享网址的建立练手，当然以后肯定还会有很多购新的事件，因此这里记录下相关代码和备注事项，方便以后的操作：&lt;/p&gt;
+&lt;h2 id=&#34;ssh登陆&#34;&gt;SSH登陆&lt;/h2&gt;
+&lt;p&gt;&lt;del&gt;垃圾&lt;/del&gt;
+&lt;a href=&#34;https://www.aliyun.com/minisite/goods?userCode=tjxor43i&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;阿里云&lt;/a&gt;，操作复杂，事项繁多，比Vutlr的界面复杂太多了，不过安全性上面确实可能要高一些，新手直接劝退吧，不过新手也不会上来就买CES，或者买来就是练手的，我就是新手，差点被劝退了~~~&lt;/p&gt;
+&lt;p&gt;首先重置密码，即设置新密码，为什么不能随机给个默认的，要这么麻烦，吐槽+1&amp;hellip;&amp;hellip;
+然后在安全组界面添加密钥，默认只能通过密钥登陆，安全性提高，然后记得重启CES，随便啥远程登陆进去~再次前排推荐&lt;code&gt;Visual Studio Code&lt;/code&gt;！！！&lt;/p&gt;
+&lt;h2 id=&#34;虚拟内存&#34;&gt;虚拟内存&lt;/h2&gt;
+&lt;p&gt;由于开启swap分区会导致硬盘IO性能下降，因此
+&lt;a href=&#34;https://www.aliyun.com/minisite/goods?userCode=tjxor43i&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;阿里云服务器&lt;/a&gt;初始状态未配置swap，如果某些应用需要开启swap分区，自己设置即可。&lt;del&gt;小鸡的烦恼，土豪随意&lt;/del&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;sudo dd if=/dev/zero of=swapfile bs=1024 count=2048000
+sudo mkswap -f swapfile
+chmod 0600 swapfile
+sudo swapon swapfile
+sudo cp /etc/fstab /etc/fstab.bak
+echo &#39;/swapfile none swap sw 0 0&#39; | sudo tee -a /etc/fstab #学到么？下面还有类似操作喔~
+shutdown -r now #重启看下free
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;r-shiny-and-rstudio&#34;&gt;R, Shiny and Rstudio&lt;/h2&gt;
+&lt;h3 id=&#34;r-installhttpscranr-projectorgbinlinuxubuntureadmehtml&#34;&gt;
+&lt;a href=&#34;https://cran.r-project.org/bin/linux/ubuntu/README.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R install&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+#根据系统选择合适的软件包，不确定记得去官网查看下最新记录
+sudo add-apt-repository &#39;deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/&#39;
+sudo add-apt-repository &#39;deb https://mirrors.tuna.tsinghua.edu.cn/CRAN/bin/linux/ubuntu bionic-cran35/&#39;
+sudo apt-get update
+sudo apt-get install r-base
+sudo apt-get install r-base-dev
+sudo -i R
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;rstudio-serverhttpsrstudiocomproductsrstudiodownload-serverdebian-ubuntu&#34;&gt;
+&lt;a href=&#34;https://rstudio.com/products/rstudio/download-server/debian-ubuntu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rstudio server&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;116.62.102.124&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;# 视系统不同选择有差异，这里是ubuntu 18.04
+sudo apt-get install gdebi-core
+wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5033-amd64.deb
+sudo gdebi rstudio-server-1.2.5033-amd64.deb
+
+echo &amp;quot;www-port=8787&amp;quot; | sudo tee -a  /etc/rstudio/rserver.conf #熟悉么~~
+
+#查看是否安装正确
+sudo rstudio-server verify-installation
+#启动
+sudo rstudio-server start
+#查看状态
+sudo rstudio-server status
+#停止
+sudo rstudio-server stop
+#重启
+sudo rstudio-server restart
+#查看服务端ip地址
+ifconfig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;adduser&#34;&gt;Adduser&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;sudo adduser zhangjn
+usermod -aG sudo zhangjn
+su zhangjn
+
+# test the root privileges
+sudo ls -la /root
+
+# change password
+passwd zhangjn
+
+# copy ssh file and directory structure to  new user account in  existing session
+rsync --archive --chown=zhangjn:zhangjn ~/.ssh /home/zhangjn
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;shiny-serverhttpsrstudiocomproductsshinydownload-serverubuntu&#34;&gt;
+&lt;a href=&#34;https://rstudio.com/products/shiny/download-server/ubuntu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny server&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;#  install the Shiny R package
+sudo su - \
+-c &amp;quot;R -e \&amp;quot;install.packages(&#39;shiny&#39;, repos=&#39;https://cran.rstudio.com/&#39;)\&amp;quot;&amp;quot;
+
+sudo apt-get install gdebi-core
+wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.13.944-amd64.deb
+sudo gdebi shiny-server-1.5.13.944-amd64.deb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.zhangjn.xyz/post/shiny-server/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Change user&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;nano /etc/shiny-server/shiny-server.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Restart Shiny Server Pro so that the activated version will get started.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;sudo systemctl restart shiny-server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;install-seurat-package-in-rstudio&#34;&gt;Install Seurat package in Rstudio&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;# Problem installing R packages that depends from &amp;quot;OpenSSL&amp;quot; library
+sudo apt-get install libssl-dev
+
+# Problem installing R packages that depends from &amp;quot;httr&amp;quot; library
+sudo apt-get install libcurl4-openssl-dev
+
+# Problem installing R packages that depends from &amp;quot;metap&amp;quot; library
+# install package using BiocManager
+if (!requireNamespace(&amp;quot;BiocManager&amp;quot;, quietly = TRUE))
+  install.packages(&amp;quot;BiocManager&amp;quot;)
+
+BiocManager::install(&amp;quot;multtest&amp;quot;)
+BiocManager::install(&amp;quot;metap&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;configuring-nginx-on-your-serverhttpssupportrstudiocomhcen-usarticles213733868-running-shiny-server-with-a-proxy&#34;&gt;
+&lt;a href=&#34;https://support.rstudio.com/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Configuring nginx on your server&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;
+sudo apt-get -y install nginx
+
+# make a backup of the nginx configuration
+sudo cp /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default-backup
+
+# 配置自己摸索下
+sudo nano /etc/nginx/sites-enabled/default
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;acmesh-and-ssl&#34;&gt;&lt;code&gt;acme.sh&lt;/code&gt; and &lt;code&gt;ssl&lt;/code&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;curl https://get.acme.sh | sh
+
+# You’ll need to generate an API key at https://www.namesilo.com/account_api.php 
+# Optionally you may restrict the access to an IP range there.
+# for namesilo ssl
+
+export Namesilo_Key=&amp;quot;XXXXXXXXXXXXX&amp;quot;
+
+~/.acme.sh/acme.sh --issue --dns dns_namesilo --dnssleep 2500 -d scrna.zhangjn.xyz
+
+~/.acme.sh/acme.sh --issue --dns dns_namesilo --dnssleep 2500 -d shiny.zhangjn.xyz
+
+~/.acme.sh/acme.sh  --installcert  -d  shiny.zhangjn.xyz   \
+        --key-file   /etc/nginx/ssl/shiny.zhangjn.xyz.key \
+        --fullchain-file /etc/nginx/ssl/fullchain.cer \
+        --fullchain-file /etc/nginx/ssl/ca.cer \
+        --reloadcmd  &amp;quot;systemctl restart nginx.service&amp;quot;   
+
+`TLSv1`证书会导致不安全，记得修改下。
+
+# for aliyun ssl
+
+export Ali_Key=&amp;quot;XXXXXXXXXXXXXXXX&amp;quot;
+export Ali_Secret=&amp;quot;XXXXXXXXXXXXXXXXXXXX&amp;quot;
+
+~/.acme.sh/acme.sh --issue --dns dns_ali -d avianscu.com -d scrna.avianscu.com 
+
+~/.acme.sh/acme.sh  --installcert  -d  avianscu.com   \
+        --key-file   /etc/nginx/ssl2/avianscu.com.key \
+        --fullchain-file /etc/nginx/ssl2/fullchain.cer \
+        --reloadcmd  &amp;quot;systemctl restart nginx.service&amp;quot; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;frp设置httpsgithubcomfatedierfrpblobmasterreadme_zhmd&#34;&gt;
+&lt;a href=&#34;https://github.com/fatedier/frp/blob/master/README_zh.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Frp设置&lt;/a&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# install
+wget https://github.com/fatedier/frp/releases/download/v0.22.0/frp_0.22.0_linux_amd64.tar.gz
+
+tar -zxvf frp_0.22.0_linux_amd64.tar.gz
+
+# 设置frp服务的系统自启动等操作，很方便，frps和frpc注意切换
+
+sudo nano /lib/systemd/system/frps.service
+
+# 在frps.service里写入以下内容
+[Unit]
+Description=frps service
+After=network.target syslog.target
+Wants=network.target
+[Service]
+Type=simple
+# 启动服务的命令（此处写你的frps的实际安装目录）
+ExecStart=/root/soft/frp_0.32.1_linux_amd64/frps -c /root/soft/frp_0.32.1_linux_amd64/frps/frps.ini
+[Install]
+WantedBy=multi-user.target
+
+# Ubuntu设置frp的系统控制
+sudo systemctl start frps
+sudo systemctl enable frps
+sudo systemctl restart frps
+sudo systemctl stop frps
+sudo systemctl status frps
+
+# 多个服务端连接同一个客户端，小技巧喔
+./frpc -c ./frpc1.ini
+./frpc -c ./frpc2.ini
+./frpc -c ./frpc3.ini
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rstudio-server 相关汇总</title>
+      <link>/post/linux/rstudio-server-%E7%9B%B8%E5%85%B3%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/post/linux/rstudio-server-%E7%9B%B8%E5%85%B3%E6%B1%87%E6%80%BB/</guid>
+      <description>&lt;p&gt;预期准备再入一个阿里云的CES做在线服务器，虽然买一个新的高性能服务器可能更理想，但是想着懒得维护另外一台服务器了，不如现在开始利用云服务，说不定以后有钱了在云上玩高性能服务器呢~~&lt;/p&gt;
+&lt;p&gt;下面就记录Rstudio server相关信息，持续更新~~&lt;/p&gt;
+&lt;p&gt;总的来说，信息是不断进步的，在随时关注官网等资源的同时，自己记录一些基本的操作，省去google的时间也是极好的，note就该发挥自己的作用~~&lt;/p&gt;
+&lt;h3 id=&#34;基本代码&#34;&gt;基本代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;#查看是否安装正确
+sudo rstudio-server verify-installation
+## 启动
+sudo rstudio-server start
+## 查看状态
+sudo rstudio-server status
+## 停止
+sudo rstudio-server stop
+## 重启
+sudo rstudio-server restart
+## 查看服务端ip地址
+ifconfig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;卸载软件&#34;&gt;卸载软件&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# 安装的信息还是直接去官网安装最新版本
+sudo apt-get autoremove --purge rstudio-server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;添加用户&#34;&gt;添加用户&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# 添加用户的命令是linux中的命令
+# 添加用户组
+groupadd Rstudiosrv
+# 添加用户wdmd 在指定的组Rstudiosrv内
+useradd zjn -g Rstudiosrv;
+# 设置该用户的密码
+passwd zjn
+# 删除用户和组
+userdel zjn
+groupdel Rstudiosrv
+# 显示用户信息
+id user
+cat /etc/passwd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;修改端口-and-防火墙写下来就不用翻onenote或者google了都在自己的note里面&#34;&gt;修改端口 and 防火墙，写下来就不用翻onenote或者google了，都在自己的note里面。&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# 给 RStudio 分配访问端口
+echo &amp;quot;www-port=8181&amp;quot; | sudo tee -a  /etc/rstudio/rserver.conf
+
+# 将 R 软件路径告诉 RStudio Server，看情况设置
+echo &amp;quot;rsession-which-r=/usr/local/bin/R-devel&amp;quot; | sudo tee -a /etc/rstudio/rserver.conf
+
+# 安装 firewalld 防火墙管理工具
+sudo apt-get install -y firewalld
+
+# 查看端口情况
+firewall-cmd --list-ports
+
+# 打开8181端口
+sudo firewall-cmd --zone=public --add-port=8181/tcp --permanent
+
+# 重启防火墙使配置生效
+sudo firewall-cmd --reload
+
+# 重启你懂的
+sudo rstudio-server restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;请合理利用rstudio和github的关联功能比如创建带版本控制的project&#34;&gt;请合理利用Rstudio和github的关联功能，比如创建带版本控制的project&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;服务器安装r等相关&#34;&gt;服务器安装R等相关&lt;/h3&gt;
+&lt;p&gt;安装最新的 Git 和 libgit2-dev 库，所以添加两个源&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo add-apt-repository -y ppa:jeroen/libgit2
+sudo add-apt-repository -y ppa:git-core/ppa
+
+# 移除
+sudo add-apt-repository --remove ppa:jeroen/libgit2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;解决系统依赖问题重点将r-base-dev-所需的依赖全部装上有了-build-dep-就不用一个一个去找了&#34;&gt;解决系统依赖问题，重点，将r-base-dev 所需的依赖全部装上，有了 build-dep 就不用一个一个去找了&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# Ubuntu
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get build-dep r-base-dev
+# Fedora
+sudo dnf update &amp;amp;&amp;amp; sudo dnf builddep R-devel
+# CentOS
+sudo yum update &amp;amp;&amp;amp; sudo yum install -y yum-utils &amp;amp;&amp;amp; sudo yum-builddep R-devel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其它的系统依赖，供常用的 R 包安装使用，常用的 R 包有 xml2、ssl、git2r、curl、openssl、magick、nloptr、igraph、RcppGSL。来来来，空间大的都装上~ 其实，最好还是安装错误提示缺啥安装啥比较好~&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo apt-get install -y libxml2-dev libssl-dev libgit2-dev \
+  libnlopt-dev libxmu-dev libglpk-dev libgsl-dev \
+  ghostscript imagemagick optipng subversion jags \
+  libcurl4-openssl-dev libmagick++-dev \
+  texlive-xetex texlive-lang-chinese
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.xiangyunhuang.com.cn/2019/05/r-devel-ubuntu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;从源码安装最新的开发版R&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;未完待续&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu设置虚拟内存</title>
+      <link>/post/linux/ubuntu%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/post/linux/ubuntu%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/</guid>
+      <description>&lt;p&gt;现在数据展示越来越离不开VPS/CES了，但是买的服务一般都是1G内存的（大写的穷），所以一般买了VPS习惯性的会增加虚拟内存，记下免得每次都去google。&lt;/p&gt;
+&lt;h3 id=&#34;创建虚拟映像文件&#34;&gt;创建虚拟映像文件：&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo swapon --show #查看SWAP分区
+
+sudo dd if=/dev/zero of=swapfile bs=1024 count=1024000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;虚拟内存大小一般接近物理内存就可以了。&lt;/p&gt;
+&lt;h3 id=&#34;将虚拟映像文件转换成swap文件&#34;&gt;将虚拟映像文件转换成swap文件：&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SHELL&#34;&gt;sudo mkswap -f swapfile
+chmod 0600 swapfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;激活-swap&#34;&gt;激活 swap：&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo swapon swapfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后输入&lt;code&gt;free&lt;/code&gt;查看内存信息，就可以发现虚拟内存已经启用。&lt;/p&gt;
+&lt;p&gt;TIPS：重启之后，需要重新激活swap，建议将激活命令写入开机启动项喔~~&lt;/p&gt;
+&lt;h3 id=&#34;将激活命令写入开机启动项&#34;&gt;将激活命令写入开机启动项：&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo cp /etc/fstab /etc/fstab.bak
+
+echo &#39;/swapfile none swap sw 0 0&#39; | sudo tee -a /etc/fstab #学到么？
+
+shutdown -r now #重启看下free
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;关闭和删除原来的swapfile&#34;&gt;关闭和删除原来的swapfile：&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo swapoff  swapfile
+
+sudo rm /swapfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;over~~~&lt;/p&gt;
 </description>
     </item>
     
@@ -434,9 +1625,9 @@ gene_ABmegre
     
     <item>
       <title>Shiny Server</title>
-      <link>/post/shiny-server/</link>
+      <link>/post/linux/shiny-server/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/shiny-server/</guid>
+      <guid>/post/linux/shiny-server/</guid>
       <description>&lt;h2 id=&#34;单细胞数据展示&#34;&gt;单细胞数据展示&lt;/h2&gt;
 &lt;p&gt;最近一段时间，实验室测了不少单细胞数据，为了方便实验室成员预览数据和调用数据，之前利用Shiny在服务器后台运行&lt;code&gt;Rscript XX.R&lt;/code&gt;进行数据在线展示，但是现在一下子增加很多数据，就开始考虑部署服务器版的Shiny Server了。未发表数据肯定不能托管，而且数据量也较大，VPS那点能力也hold不了，最后决定在自己服务器上面部署。&lt;/p&gt;
 &lt;h3 id=&#34;需求单细胞数据实验室内部展示&#34;&gt;需求：单细胞数据实验室内部展示&lt;/h3&gt;
@@ -534,9 +1725,9 @@ runApp(&#39;/home/labwang/Rstudio/liver&#39;, port = 8887)
     
     <item>
       <title>Blogdown&#43;Hugo&#43;Github&#43;Github Actions建立自动推送Blog</title>
-      <link>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</link>
+      <link>/post/linux/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</guid>
+      <guid>/post/linux/blogdown-hugo-github-github-actions%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81blog/</guid>
       <description>&lt;h2 id=&#34;使用-blogdownhugogithubgithub-actions博客&#34;&gt;使用 Blogdown+Hugo+Github+Github Actions博客&lt;/h2&gt;
 &lt;p&gt;之前使用Hexo建了个人主页，但是速度越来越慢，而且部署比较繁琐，最近学习R相关知识，发现Rmarkdown、Bookdown和Blogdown全家桶超级好用，所以与时俱进也升级了方案。&lt;/p&gt;
 &lt;ul&gt;
@@ -658,9 +1849,9 @@ blogdown
     
     <item>
       <title>Bioconda</title>
-      <link>/post/bioconda/</link>
+      <link>/post/linux/bioconda/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/bioconda/</guid>
+      <guid>/post/linux/bioconda/</guid>
       <description>&lt;p&gt;&lt;strong&gt;查看已安装的库&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;conda list
 &lt;/code&gt;&lt;/pre&gt;
@@ -688,9 +1879,9 @@ conda clean -y -all //删除所有的安装包及cache&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Salmon代码备存</title>
-      <link>/post/salmon/</link>
+      <link>/post/linux/salmon/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/salmon/</guid>
+      <guid>/post/linux/salmon/</guid>
       <description>&lt;p&gt;#Salmon代码备存&lt;/p&gt;
 &lt;p&gt;听说你还可以分析scRNA&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;salmon alevin -l ISR -1 Pi_F_S1_L005_R1_001.fastq.gz -2 Pi_F_S1_L005_R2_001.fastq.gz --chromium -i ~/index/ggzjn_index/ -p 10 --dumpMtx -o alevin_output/ --tgMap txp2gene.txt --expectCells 18000
@@ -745,6 +1936,18 @@ salmon quant -i ~/index/ggzjn_index --validateMappings -l A \
          -1 ${path}/fastq/${fn}_1.fastq.gz \
          -2 ${path}/fastq/${fn}_2.fastq.gz \
          -p 20 -o ${path}/quant/${fn}_quant
+done
+
+#!/bin/bash
+for filename in *_*;
+do
+path=$(pwd)
+samp=`basename ${filename}`
+echo &amp;quot;Processing sample ${filename}&amp;quot;
+salmon quant -i ~/index/ggzjn_index --validateMappings -l A \
+        -1 ${path}/${samp}/${samp}_1.fq.gz \
+        -2 ${path}/${samp}/${samp}_2.fq.gz \
+        -p 10 -o ${path}/quant/${samp}_quant
 done
 
 bash /data3/PI-LV/R/DESEQ2.sh -f result-DE.txt -s samplefiles.txt -p compare_pair.txt 
@@ -826,15 +2029,31 @@ done
 
 去头去尾
 
-trimmomatic PE -phred33 -threads 20 ${fn}_1.fq.gz ${fn}_2.fq.gz ${fn}_paired_1.fastq.gz ${fn}_unpaired_1.fastq.gz ${fn}_paired_2.fastq.gz ${fn}_unpaired_2.fastq.gz CROP:89 HEADCROP:10 MINLEN:36&lt;/code&gt;&lt;/pre&gt;
+trimmomatic PE -phred33 -threads 20 ${fn}_1.fq.gz ${fn}_2.fq.gz ${fn}_paired_1.fastq.gz ${fn}_unpaired_1.fastq.gz ${fn}_paired_2.fastq.gz ${fn}_unpaired_2.fastq.gz CROP:89 HEADCROP:10 MINLEN:36
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;update&#34;&gt;update&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;#!/bin/bash
+# get all filename in specified path
+path=$(pwd)
+files=$(ls $path)
+for filename in $files
+do
+echo $filename
+path=$(pwd)
+salmon quant -i ~/index/ggzjn_index --validateMappings -l A \
+-1 ${path}/${filename}/${filename}_1.fq.gz \
+-2 ${path}/${filename}/${filename}_2.fq.gz \
+-p 10 -o /data3/lv-hy/quant/${filename}_quant
+done
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
     <item>
       <title>VScode-R</title>
-      <link>/post/vscode-r/</link>
+      <link>/post/linux/vscode-r/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/vscode-r/</guid>
+      <guid>/post/linux/vscode-r/</guid>
       <description>&lt;h1 id=&#34;how-to-use-r-in-vscode&#34;&gt;How to use R in VScode&lt;/h1&gt;
 &lt;h2 id=&#34;安装r和vscode&#34;&gt;安装R和VScode&lt;/h2&gt;
 &lt;p&gt;额，打开Google，搜索官网，自己安装即可。不会？&lt;code&gt;Alt + F4&lt;/code&gt;，再见！&lt;/p&gt;
@@ -1551,6 +2770,29 @@ Figure 1: A fancy pie chart.
       <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
       <guid>/publication/ffar2/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/cv-master-tm/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/cv-master-tm/readme/</guid>
+      <description>&lt;h1 id=&#34;cv&#34;&gt;CV&lt;/h1&gt;
+&lt;p&gt;My CV template using pagedown.&lt;/p&gt;
+&lt;p&gt;Inside the &lt;code&gt;Rmd&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{css,&#34;&gt;.pagedjs_page:not(:first-of-type) {
+  background: white;
+}
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #ffffff;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This trunk is to make only the first page has a side-bar and the rest of the page fill in the whole page.
+see &lt;a href=&#34;https://community.rstudio.com/t/pagedown-html-resume-with-aside-on-first-page-only/46351&#34;&gt;https://community.rstudio.com/t/pagedown-html-resume-with-aside-on-first-page-only/46351&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>
