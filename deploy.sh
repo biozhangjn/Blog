@@ -28,3 +28,5 @@ git commit -m "Blog update"
 git pull --rebase origin master
 git push -u origin master
 exit 0
+
+#https://github.com/marketplace/actions/build-deploy-with-latest-hugo
