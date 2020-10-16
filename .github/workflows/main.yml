@@ -14,16 +14,16 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v2.4.13
         with:
-          hugo-version: '0.76.5'
-
+          hugo-version: '0.58.2'
+                  
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.7.2
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           EXTERNAL_REPOSITORY: biozhangjn/biozhangjn.github.io
