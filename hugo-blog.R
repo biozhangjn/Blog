@@ -37,12 +37,12 @@ ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 
 ssh-keygen -t rsa -b 4096 -C "bio_zhang@msn.com" -f gh-pages
 
-git init
-git add .
-git commit -m 'Blog update'
-git remote add origin git@github.com:biozhangjn/Blog.git
-git pull --rebase origin master
-git push -u origin master
+#git init
+#git add .
+#git commit -m 'Blog update'
+#git remote add origin git@github.com:biozhangjn/Blog.git
+#git pull --rebase origin master
+#git push -u origin master
 
 
 
@@ -56,7 +56,4 @@ git push -u origin master
   gtag('config', 'UA-162031575-1');
 </script>
 
-rmarkdown::render("index.Rmd")
-  
-devtools::install_github(‘yihui/tinytex’)
-tinytex::install_tinytex()
+#rmarkdown::render("index.Rmd")

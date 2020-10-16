@@ -1,29 +1,27 @@
-name: CI 	#自动化的名称
-on: 
-  push: 	# push的时候触发工作流
-    branches: 	#触发的分支 
+name: CI #自动化的名称
+on:
+  push: # push的时候触发
+    branches: # 那些分支需要触发
       - master
-
-jobs:	#开始工作流
+jobs:
   build:
-    runs-on: ubuntu-latest	#使用Ubuntu镜像
+    runs-on: ubuntu-latest # 镜像市场
     steps:
-    - name: Checkout	#步骤名称
-      uses: actions/checkout@master   #使用的软件名称和对应版本
-      with:	#软件内指定的参数
+      - name: checkout # 步骤的名称
+        uses: actions/checkout@master #软件市场的名称
+        with: # 参数
           submodules: true
-    - name: Setup Hugo	#安装Hugo
-      uses: peaceiris/actions-hugo@v2.4.11
-      with:
-          hugo-version: 'latest'
-          extended: true  
-    - name: Build
-      run: hugo --minify	#运行Hugo以生成静态网站文件
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3.6.1
-      with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   #自动部署所需要的SSL KEY
-          external_repository: biozhangjn/biozhangjn.github.io   #部署到指定`repository`
-          publish_branch: master   #部署指定`repository`的分支
-          publish_dir: ./public	   #需要部署的文件夹
-          cname: www.zhangjn.xyz     #部署之后希望重定向的域名
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2.4.11
+        with:
+          hugo-version: '0.76.5'
+          extended: true
+      - name: Build
+        run: hugo --minify
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.6.1
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          EXTERNAL_REPOSITORY: biozhangjn/biozhangjn.github.io
+          PUBLISH_BRANCH: master
+          PUBLISH_DIR: ./public
