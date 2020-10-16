@@ -38,7 +38,7 @@ social:
   link: https://scholar.google.com/citations?user=qwOIhV4AAAAJ
 - icon: cv
   icon_pack: ai
-  link: http://nextcloud.avianscu.com:1314/s/mQtRXBxbGBiKrz9
+  link: "files/cv.pdf"
 user_groups:
 - Researchers
 - Visitors

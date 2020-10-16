@@ -4,6 +4,11 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
+  name = "Home"
+  url = "#about"
+  weight = 10
+  
+[[main]]
   name = "Posts"
   url = "#posts"
   weight = 30
@@ -24,13 +29,13 @@
   #weight = 50
 
 [[main]]
-  name = "CV"
-  url = "https://drive.google.com/file/d/123WnktjeJLHZtfrvyr4_thMnTEw9z4Is/view?usp=sharing"
-  weight = 60
+  name = "Contact"
+  url = "#contact"
+  weight = 70
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# [[main]]
-#    name = "CV"
-#    url = "files/cv.pdf"
-#    weight = 70
+[[main]]
+    name = "CV"
+    url = "files/cv.pdf"
+    weight = 60
