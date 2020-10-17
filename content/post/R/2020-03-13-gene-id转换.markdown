@@ -54,11 +54,11 @@ listMarts(host="asia.ensembl.org")
 ```
 
 ```
-##                biomart               version
-## 1 ENSEMBL_MART_ENSEMBL      Ensembl Genes 99
-## 2   ENSEMBL_MART_MOUSE      Mouse strains 99
-## 3     ENSEMBL_MART_SNP  Ensembl Variation 99
-## 4 ENSEMBL_MART_FUNCGEN Ensembl Regulation 99
+##                biomart                version
+## 1 ENSEMBL_MART_ENSEMBL      Ensembl Genes 101
+## 2   ENSEMBL_MART_MOUSE      Mouse strains 101
+## 3     ENSEMBL_MART_SNP  Ensembl Variation 101
+## 4 ENSEMBL_MART_FUNCGEN Ensembl Regulation 101
 ```
 
 ### 一步到位代码
@@ -184,21 +184,38 @@ listAttributes(human)[1:10,]
 # 进行ID转换
 
 hgnc_swissprot <- getBM(attributes=c('ensembl_gene_id','ensembl_transcript_id','hgnc_symbol','uniprotswissprot'),filters = 'ensembl_gene_id', values = 'ENSG00000139618', mart = human)
+```
 
+```
+## Warning: `select_()` is deprecated as of dplyr 0.7.0.
+## Please use `select()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.
+```
+
+```
+## Warning: `filter_()` is deprecated as of dplyr 0.7.0.
+## Please use `filter()` instead.
+## See vignette('programming') for more help
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.
+```
+
+```r
 hgnc_swissprot
 ```
 
 ```
 ##   ensembl_gene_id ensembl_transcript_id hgnc_symbol uniprotswissprot
 ## 1 ENSG00000139618       ENST00000671466       BRCA2                 
-## 2 ENSG00000139618       ENST00000380152       BRCA2           P51587
+## 2 ENSG00000139618       ENST00000544455       BRCA2           P51587
 ## 3 ENSG00000139618       ENST00000530893       BRCA2                 
-## 4 ENSG00000139618       ENST00000670614       BRCA2                 
-## 5 ENSG00000139618       ENST00000665585       BRCA2                 
-## 6 ENSG00000139618       ENST00000528762       BRCA2                 
-## 7 ENSG00000139618       ENST00000470094       BRCA2                 
-## 8 ENSG00000139618       ENST00000666593       BRCA2                 
-## 9 ENSG00000139618       ENST00000544455       BRCA2           P51587
+## 4 ENSG00000139618       ENST00000380152       BRCA2           P51587
+## 5 ENSG00000139618       ENST00000670614       BRCA2                 
+## 6 ENSG00000139618       ENST00000665585       BRCA2                 
+## 7 ENSG00000139618       ENST00000528762       BRCA2                 
+## 8 ENSG00000139618       ENST00000470094       BRCA2                 
+## 9 ENSG00000139618       ENST00000666593       BRCA2
 ```
 ### 同源基因ID转换代码
 
@@ -233,28 +250,22 @@ genelist_megre_Hs
 ```
 
 ```
-##        Gene.stable.ID NCBI.gene.ID Gene.name Gene.stable.ID.1 NCBI.gene.ID.1
-## 1  ENSGALG00000007728       770734            ENSG00000100033           5625
-## 2  ENSGALG00000005956       423774            ENSG00000264230         728113
-## 3  ENSGALG00000011687    100859120            ENSG00000185567         113146
-## 4  ENSGALG00000005956       423774            ENSG00000265190         653145
-## 5  ENSGALG00000011806    100859223            ENSG00000173702          56667
-## 6  ENSGALG00000011190    100857411     PLAC8  ENSG00000145287          51316
-## 7  ENSGALG00000006407       378902            ENSG00000120889           8795
-## 8  ENSGALG00000006407       378902            ENSG00000173535           8794
-## 9  ENSGALG00000006407       378902            ENSG00000173530           8793
-## 10 ENSGALG00000007728       770734            ENSG00000277196      102724788
-##    Gene.name.1
-## 1        PRODH
-## 2      ANXA8L1
-## 3       AHNAK2
-## 4        ANXA8
-## 5        MUC13
-## 6        PLAC8
-## 7    TNFRSF10B
-## 8    TNFRSF10C
-## 9    TNFRSF10D
-## 10  AC007325.2
+##       Gene.stable.ID NCBI.gene..formerly.Entrezgene..ID Gene.name
+## 1 ENSGALG00000005956                             423774        NA
+## 2 ENSGALG00000005956                             423774        NA
+## 3 ENSGALG00000011687                          100859120        NA
+## 4 ENSGALG00000011190                          100857411        NA
+## 5 ENSGALG00000011806                          100859223        NA
+## 6 ENSGALG00000007728                             770734        NA
+## 7 ENSGALG00000007728                             770734        NA
+##   Gene.stable.ID.1 NCBI.gene..formerly.Entrezgene..ID.1 Gene.name.1
+## 1  ENSG00000264230                               728113     ANXA8L1
+## 2  ENSG00000265190                               653145       ANXA8
+## 3  ENSG00000185567                               113146      AHNAK2
+## 4  ENSG00000145287                                51316       PLAC8
+## 5  ENSG00000173702                                56667       MUC13
+## 6  ENSG00000100033                                 5625       PRODH
+## 7  ENSG00000277196                            102724788  AC007325.2
 ```
 >插一句，总算知道为什么R代码有规范了，参数主动换行，真的好看太多了。
 
@@ -322,27 +333,19 @@ head(geneA)
 ```
 
 ```
-##              ENSEMBL SYMBOL  ENTREZID
-## 1 ENSGALG00000011190 PLACL2 100857411
-## 2 ENSGALG00000009628 KCTD12    425504
-## 3 ENSGALG00000010316  FRAS1    422506
-## 4 ENSGALG00000011687 AHNAK2 100859120
-## 5 ENSGALG00000011806  MUC13 100859223
-## 6 ENSGALG00000015656  AKAP2 100533110
+##              ENSEMBL     SYMBOL  ENTREZID
+## 1 ENSGALG00000011190     PLACL2 100857411
+## 2 ENSGALG00000009628     KCTD12    425504
+## 3 ENSGALG00000010316      FRAS1    422506
+## 4 ENSGALG00000011687     AHNAK2 100859120
+## 5 ENSGALG00000011806      MUC13 100859223
+## 6 ENSGALG00000015656 PALM2AKAP2 100533110
 ```
 
 ```r
 # 筛选SYMBOL命名的基因并转换
 genelistB <- genelist[-index]
 geneB = bitr(genelistB, fromType="SYMBOL", toType=c("ENSEMBL", "ENTREZID"), OrgDb="org.Gg.eg.db")
-```
-
-```
-## Warning in bitr(genelistB, fromType = "SYMBOL", toType = c("ENSEMBL",
-## "ENTREZID"), : 9.09% of input gene IDs are fail to map...
-```
-
-```r
 head(geneB)
 ```
 
@@ -363,23 +366,24 @@ gene
 ```
 
 ```
-##               ENSEMBL  SYMBOL  ENTREZID
-## 1  ENSGALG00000011190  PLACL2 100857411
-## 2  ENSGALG00000009628  KCTD12    425504
-## 3  ENSGALG00000010316   FRAS1    422506
-## 4  ENSGALG00000011687  AHNAK2 100859120
-## 5  ENSGALG00000011806   MUC13 100859223
-## 6  ENSGALG00000015656   AKAP2 100533110
-## 12 ENSGALG00000041826  S100A6    373951
-## 21 ENSGALG00000028774 S100A10    396506
-## 31 ENSGALG00000002015    SNCG    395392
-## 41 ENSGALG00000034458  S100A1 100858258
-## 51 ENSGALG00000036711 S100A11    396075
-## 61 ENSGALG00000035317     ID3    395281
-## 8  ENSGALG00000000318   CSRP1    396176
-## 9  ENSGALG00000010929 SPARCL1    422586
-## 10 ENSGALG00000000949   HBEGF    395654
-## 11 ENSGALG00000033226 FAM107B    426376
+##               ENSEMBL     SYMBOL  ENTREZID
+## 1  ENSGALG00000011190     PLACL2 100857411
+## 2  ENSGALG00000009628     KCTD12    425504
+## 3  ENSGALG00000010316      FRAS1    422506
+## 4  ENSGALG00000011687     AHNAK2 100859120
+## 5  ENSGALG00000011806      MUC13 100859223
+## 6  ENSGALG00000015656 PALM2AKAP2 100533110
+## 7  ENSGALG00000041826     S100A6    373951
+## 8  ENSGALG00000028774    S100A10    396506
+## 9  ENSGALG00000002015       SNCG    395392
+## 10 ENSGALG00000034458     S100A1 100858258
+## 11 ENSGALG00000036711    S100A11    396075
+## 12 ENSGALG00000035317        ID3    395281
+## 13 ENSGALG00000013072    AKR1B10    395338
+## 14 ENSGALG00000000318      CSRP1    396176
+## 15 ENSGALG00000010929    SPARCL1    422586
+## 16 ENSGALG00000000949      HBEGF    395654
+## 17 ENSGALG00000033226    FAM107B    426376
 ```
 
 ```r
@@ -388,7 +392,7 @@ summary(gene)
 
 ```
 ##    ENSEMBL             SYMBOL            ENTREZID        
-##  Length:16          Length:16          Length:16         
+##  Length:17          Length:17          Length:17         
 ##  Class :character   Class :character   Class :character  
 ##  Mode  :character   Mode  :character   Mode  :character
 ```
@@ -420,7 +424,7 @@ gene_ABmegre
 ##       ensembl_gene_id external_gene_name entrezgene_id
 ## 1  ENSGALG00000009628                           425504
 ## 2  ENSGALG00000010316                           422506
-## 3  ENSGALG00000011190              PLAC8     100857411
+## 3  ENSGALG00000011190                        100857411
 ## 4  ENSGALG00000011687                        100859120
 ## 5  ENSGALG00000011806                        100859223
 ## 6  ENSGALG00000015656         PALM2AKAP2     100533110
