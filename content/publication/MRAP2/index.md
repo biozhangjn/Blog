@@ -33,7 +33,7 @@ tags:
 title: The interaction of MC3R and MC4R with MRAP2, ACTH, α-MSH and AgRP in chickens
 #url_code: '#'
 #url_dataset: '#'
-url_pdf: https://joe.bioscientifica.com/downloadpdf/journals/joe/234/2/JOE-17-0131.xml
+#url_pdf: ""
 #url_poster: '#'
 #url_project: ""
 #url_slides: ""
