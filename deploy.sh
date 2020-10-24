@@ -20,6 +20,7 @@
 git init
 #关联到Github仓库
 git remote add origin git@github.com:biozhangjn/Blog.git
+git remote add origin git@biozhangjn.github.com:biozhangjn/Blog.git
 #把目录下所有文件更改状况提交到暂存区
 git add .
 #提交更改的说明
