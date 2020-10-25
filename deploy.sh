@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#cd d:OneDrive/git/MyBlog
+#cd d:\OneDrive\git\MyBlog
 #git config --global user.name "biozhangjn"
 #git config --global user.email "biozhangjn@gmail.com"
 
