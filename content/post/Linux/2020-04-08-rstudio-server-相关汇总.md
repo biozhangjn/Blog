@@ -1,6 +1,6 @@
 ---
 title: Rstudio-server 相关汇总
-author: zjn
+author: Jiannan Zhang
 date: '2020-04-08'
 slug: rstudio-server-相关汇总
 categories:

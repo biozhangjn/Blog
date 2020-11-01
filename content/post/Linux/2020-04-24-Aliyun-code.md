@@ -1,6 +1,6 @@
 ---
 title: 阿里云服务新配置代码备存
-author: zjn
+author: Jiannan Zhang
 date: '2020-04-24'
 slug: Aliyun-code
 categories:
