@@ -88,6 +88,14 @@ services:
       - MYSQL_PASSWORD=密码
     restart: always
 
+  collabora:
+        image: collabora/code
+        container_name: collabora
+        restart: always
+        ports:
+            - 9980:9980
+        environment:
+            - extra_params=--o:ssl.enable=false
 ```
 
 ``` SHELL
@@ -97,6 +105,10 @@ docker ps -a
 docker logs nextcloud_db
 docker logs nextcloud_web
 ```
+
+## 自建`collabora`服务器
+
+哈哈，查了下资料，搞定`Docker`自建`collabora`了，神器，代码把上面的添加进去，然后打开服务器和VPS对应的端口，添加frp，然后你安装`Collabora Online`插件，接着在设置里面找到在线协作， 在`URL (and Port) of Collabora Online-server`里面配置`http://<your-ip>:9980/`，然后你的网盘就可以进行office系列操作了，SVEN这下NB了~~
 
 ## 域名信任设置
 
