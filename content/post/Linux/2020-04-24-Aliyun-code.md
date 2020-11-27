@@ -217,7 +217,8 @@ Wants=network.target
 [Service]
 Type=simple
 # 启动服务的命令（此处写你的frps的实际安装目录）
-ExecStart=/root/soft/frp_0.32.1_linux_amd64/frps -c /root/soft/frp_0.32.1_linux_amd64/frps/frps.ini
+ExecStart=/root/soft/frp_0.32.1_linux_amd64/frps -c /root/soft/frp_0.32.1_linux_amd64/frps.ini
+#ExecStart=/home/ubuntu/soft/frp_0.32.1_linux_amd64/frps -c /home/ubuntu/soft/frp_0.32.1_linux_amd64/frps.ini
 [Install]
 WantedBy=multi-user.target
 
