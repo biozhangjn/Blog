@@ -110,6 +110,39 @@ docker logs nextcloud_web
 
 哈哈，查了下资料，搞定`Docker`自建`collabora`了，神器，代码把上面的添加进去，然后打开服务器和VPS对应的端口，添加frp，然后你安装`Collabora Online`插件，接着在设置里面找到在线协作， 在`URL (and Port) of Collabora Online-server`里面配置`http://<your-ip>:9980/`，然后你的网盘就可以进行office系列操作了，SVEN这下NB了~~
 
+### 那个，内测用户反馈意见赶紧处理下~
+
+刚把网盘建立好，天花乱坠的吹嘘一通好处，让师弟成功加入，成为全新高级内测无限量空间用户，结果，打脸就是来得如此的快，这个`word`怎么网页不能协作编辑呢，`WOPI`权限是什么鬼...
+
+用户一句话，编程一整天...
+
+赶紧去`google`啊，重新安装`Docker`啥的，乱七八糟折腾了几遍，还是GG。果然用别人的轮子多好，非要自己折腾干嘛，腾讯文档不香吗？`OneDrive`不香吗？
+
+省略一番折腾的过程，最终解决了，还是要去看英文文档和解决方案，中文资料那帮人大多还是只是个过时信息的搬运工，为啥每次都不信呢，自己看[英文文档](https://fribeiro.org/post/2018-12-19-collabora-nextcloud-15/)也很easy啊，浪费那么个时间干嘛...
+
+问题的关键在于我没有`SSL`认证，还是`http`不安全链接，也没有对外网域名授权，那肯定不能访问我的`office online`服务器，所以最后的解决办法也不是去折腾`https`那些反向代理，会出人命的，我只是一个想建网盘的生物实验搬砖员，又不是搞IT的，所以直接进入`Collabora`里面去修改域名信任就好了，其实和`nextcloud`的操作类似。
+
+``` SHELL
+#以管理员身份进入Docker进行设置
+docker exec -u 0 -it 你的容器ID /bin/bash
+apt-get update #不更新安装不了nano
+apt-get install nano
+nano /etc/loolwsd/loolwsd.xml
+```
+
+然后在文档里面设置域名，记得反斜杠注释.号，保存重启Docker就ok了。
+
+``` SHELL
+File: /etc/loolwsd/loolwsd.xml
+# [...]
+    <storage desc="Backend storage">
+        <filesystem allow="false" />
+        <wopi desc="Allow/deny wopi storage. Mutually exclusive with webdav." allow="true">
+            <host desc="Regex pattern of hostname to allow or deny." allow="true">localhost</host>
+            <host desc="Regex pattern of hostname to allow or deny." allow="true">cloud\.example\.com</host>
+# [...]
+```
+
 ## 域名信任设置
 
 frp的设置就是之前一样，端口到端口的连接，同时域名和服务器IP进行绑定，但是网页提示该ip不安全，需要在config.php中加入域名信任，刚开始折腾这个还要进入容器，超级麻烦，还是这种设置好了的更方便~~
@@ -126,4 +159,4 @@ nano config.php
    ),
 ```
 
-然后就可以开启你的私人网盘之旅了，发现安装MySQL之后初始下载速度慢了不少，当时速度会慢慢升起来，回头再学习下那里出问题了...其实还折腾了下文档协作处理，但是有腾讯文档这些专业的了，目前也没时间折腾了，等待下一个学习期吧，单细胞的数据需要赶紧上传到NCBI了，还折腾这些干嘛...做正事去啦~~~
+然后就可以开启你的私人网盘之旅了，发现安装MySQL之后初始下载速度慢了不少，当然速度会慢慢升起来，回头再学习下那里出问题了，应该还有很多继续优化的策略，再说吧...其实还折腾了下文档协作处理，但是有腾讯文档这些专业的了，目前也没时间折腾了（最后还是忍不住折腾了，然后补充了相关坑），等待下一个学习期吧，单细胞的数据需要赶紧上传到NCBI了，还折腾这些干嘛...做正事去啦~~~
