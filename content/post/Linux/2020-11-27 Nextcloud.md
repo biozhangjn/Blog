@@ -104,6 +104,8 @@ docker-compose up -d
 docker ps -a
 docker logs nextcloud_db
 docker logs nextcloud_web
+docker exec -u 0 -it 容器id /bin/bash
+docker exec -it 容器id /bin/bash
 ```
 
 ## 自建`collabora`服务器
