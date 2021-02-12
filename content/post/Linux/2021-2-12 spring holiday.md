@@ -4,7 +4,9 @@ author: Jiannan Zhang
 date: '2021-2-12'
 slug: 随笔
 categories:
+ - note
 tags:
+ - note
 subtitle: ''
 summary: ''
 authors: []
