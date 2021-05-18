@@ -44,4 +44,4 @@ user_groups:
 - Visitors
 ---
 
-Jiannan Zhang is a scientific researcher. He is employed as a post-doc in [Wang yajun](http://life.scu.edu.cn/info/1048/1836.htm) Lab at Sichuan University. His research interests include Avian Physiology, Endocrinology and Metabolism, and Transgenesis in chicken.
+Jiannan Zhang (张剑南) is a scientific researcher. He is employed as a post-doc in [Wang yajun](http://life.scu.edu.cn/info/1048/1836.htm) Lab at Sichuan University (四川大学). His research interests include Avian Physiology, Endocrinology and Metabolism, and Transgenesis in chicken.
