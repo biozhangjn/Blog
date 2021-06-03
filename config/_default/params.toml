@@ -97,7 +97,7 @@ address = {street = "Sichuan University, No.24 South Section 1, Yihuan Road, ", 
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "30.629253", longitude = "104.088975"}
+coordinates = {latitude = "30.631854", longitude = "104.086234"}
 
 # Directions for visitors to locate you.
 directions = "Enter Building A and take the stairs to Office 521 on Floor 5"
