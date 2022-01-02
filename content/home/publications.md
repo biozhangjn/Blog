@@ -41,5 +41,7 @@ design:
 ---
 
 {{% callout note %}}
+Only first author or corresponding author   <br> 
+<br> 
 Quickly discover relevant content by [filtering publications](./publication/).
 {{% /callout %}}
