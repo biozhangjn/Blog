@@ -1,0 +1,11 @@
+# Font style metadata
+name = "my_font_set"
+
+# Optional Google font URL
+google_fonts = "family=Lato:wght@400;700&family=Noto+Serif+SC:wght@400;700;900"
+
+# Font families
+heading_font = "Noto Serif SC,800"
+body_font = "Noto Serif SC"
+nav_font = "Noto Serif SC"
+mono_font = "Noto Serif SC"

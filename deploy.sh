@@ -22,6 +22,7 @@ git init
 git remote add origin git@github.com:biozhangjn/Blog.git
 #git remote add origin git@biozhangjn.github.com:biozhangjn/Blog.git
 #把目录下所有文件更改状况提交到暂存区
+#git config core.autocrlf true
 git add .
 #提交更改的说明
 git commit -m "Blog update"
