@@ -1,0 +1,462 @@
+---
+title: Gene ID转换
+author: Jiannan Zhang
+date: '2020-03-13'
+slug: gene-id转换
+categories:
+  - R
+tags:
+  - R Markdown
+  - Academic
+  - RNA-seq
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-03-13T13:54:04+08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+### 为什么要在R中进行ID转换
+
+在转录组数据或者其他分析中，好吧，其实是因为我做的物种是家鸡，根本就没有人和鼠那样有着非常完善和时刻更新的数据库做为支持，我经常会遇见GeneID转换，同源基因转换的问题，之前一直利用`Ensembl`主页里面的`biomart`进行数据下载，然后在excel里面利用vlookup进行操作，哎，费时费力，而且不能高度自动化和重复化~~（传统湿实验室人员的基本操作思维）~~，现在已经开始将大部分操作都在R里面进行了，刚好学习了`biomaRt`包可以完美替代之前的操作流程，下面就是相关笔记及备注：
+
+>好吧，这是第一篇Rmd笔记，Rmarkdown真的超级好用啊！
+
+### 安装所需的软件包
+
+下面的R包也包括Y叔的`clusterProfiler`了，里面也有ID转换的板块，也是非常实用的，一并汇总了。
+
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("biomaRt")
+```
+### `biomaRt`示例
+
+首先还是推荐看[官方文档](https://www.bioconductor.org/packages/devel/bioc/vignettes/biomaRt/inst/doc/biomaRt.html)，没有什么攻略比官方文档更靠谱了，除非懒~
+
+
+```r
+library("biomaRt")
+library(org.Gg.eg.db)
+library(org.Hs.eg.db)
+library(clusterProfiler)
+library(DOSE)
+
+# 查看Marts库
+listMarts(host="asia.ensembl.org")
+```
+
+```
+##                biomart                version
+## 1 ENSEMBL_MART_ENSEMBL      Ensembl Genes 101
+## 2   ENSEMBL_MART_MOUSE      Mouse strains 101
+## 3     ENSEMBL_MART_SNP  Ensembl Variation 101
+## 4 ENSEMBL_MART_FUNCGEN Ensembl Regulation 101
+```
+
+### 一步到位代码
+
+选择所需的数据库代码，我需要的是人和家鸡的数据库，直接定义到`dataset`即可，有时网速很慢，添加了对应地区的`host`。
+
+
+```r
+# 定义人对应数据mart
+human = useMart("ensembl",dataset="hsapiens_gene_ensembl",host="asia.ensembl.org")
+
+# 定义家鸡对应数据mart
+chicken = useMart("ensembl",dataset="ggallus_gene_ensembl",host="asia.ensembl.org")
+
+# 查看对应`attributes`说明
+listAttributes(chicken)[1:40,]
+```
+
+```
+##                               name                                description
+## 1                  ensembl_gene_id                             Gene stable ID
+## 2          ensembl_gene_id_version                     Gene stable ID version
+## 3            ensembl_transcript_id                       Transcript stable ID
+## 4    ensembl_transcript_id_version               Transcript stable ID version
+## 5               ensembl_peptide_id                          Protein stable ID
+## 6       ensembl_peptide_id_version                  Protein stable ID version
+## 7                  ensembl_exon_id                             Exon stable ID
+## 8                      description                           Gene description
+## 9                  chromosome_name                   Chromosome/scaffold name
+## 10                  start_position                            Gene start (bp)
+## 11                    end_position                              Gene end (bp)
+## 12                          strand                                     Strand
+## 13                            band                             Karyotype band
+## 14                transcript_start                      Transcript start (bp)
+## 15                  transcript_end                        Transcript end (bp)
+## 16        transcription_start_site             Transcription start site (TSS)
+## 17               transcript_length Transcript length (including UTRs and CDS)
+## 18               transcript_appris                          APPRIS annotation
+## 19              external_gene_name                                  Gene name
+## 20            external_gene_source                        Source of gene name
+## 21        external_transcript_name                            Transcript name
+## 22 external_transcript_source_name                  Source of transcript name
+## 23                transcript_count                           Transcript count
+## 24      percentage_gene_gc_content                          Gene % GC content
+## 25                    gene_biotype                                  Gene type
+## 26              transcript_biotype                            Transcript type
+## 27                          source                              Source (gene)
+## 28               transcript_source                        Source (transcript)
+## 29                         version                             Version (gene)
+## 30              transcript_version                       Version (transcript)
+## 31                 peptide_version                          Version (protein)
+## 32                external_synonym                               Gene Synonym
+## 33           phenotype_description                      Phenotype description
+## 34                     source_name                                Source name
+## 35               study_external_id                   Study external reference
+## 36                     strain_name                                Strain name
+## 37                   strain_gender                              Strain gender
+## 38                         p_value                                    P value
+## 39                           go_id                          GO term accession
+## 40                       name_1006                               GO term name
+##            page
+## 1  feature_page
+## 2  feature_page
+## 3  feature_page
+## 4  feature_page
+## 5  feature_page
+## 6  feature_page
+## 7  feature_page
+## 8  feature_page
+## 9  feature_page
+## 10 feature_page
+## 11 feature_page
+## 12 feature_page
+## 13 feature_page
+## 14 feature_page
+## 15 feature_page
+## 16 feature_page
+## 17 feature_page
+## 18 feature_page
+## 19 feature_page
+## 20 feature_page
+## 21 feature_page
+## 22 feature_page
+## 23 feature_page
+## 24 feature_page
+## 25 feature_page
+## 26 feature_page
+## 27 feature_page
+## 28 feature_page
+## 29 feature_page
+## 30 feature_page
+## 31 feature_page
+## 32 feature_page
+## 33 feature_page
+## 34 feature_page
+## 35 feature_page
+## 36 feature_page
+## 37 feature_page
+## 38 feature_page
+## 39 feature_page
+## 40 feature_page
+```
+
+```r
+listAttributes(human)[1:10,]
+```
+
+```
+##                             name                  description         page
+## 1                ensembl_gene_id               Gene stable ID feature_page
+## 2        ensembl_gene_id_version       Gene stable ID version feature_page
+## 3          ensembl_transcript_id         Transcript stable ID feature_page
+## 4  ensembl_transcript_id_version Transcript stable ID version feature_page
+## 5             ensembl_peptide_id            Protein stable ID feature_page
+## 6     ensembl_peptide_id_version    Protein stable ID version feature_page
+## 7                ensembl_exon_id               Exon stable ID feature_page
+## 8                    description             Gene description feature_page
+## 9                chromosome_name     Chromosome/scaffold name feature_page
+## 10                start_position              Gene start (bp) feature_page
+```
+
+```r
+# 进行ID转换
+
+hgnc_swissprot <- getBM(attributes=c('ensembl_gene_id','ensembl_transcript_id','hgnc_symbol','uniprotswissprot'),filters = 'ensembl_gene_id', values = 'ENSG00000139618', mart = human)
+```
+
+```
+## Warning: `select_()` is deprecated as of dplyr 0.7.0.
+## Please use `select()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.
+```
+
+```
+## Warning: `filter_()` is deprecated as of dplyr 0.7.0.
+## Please use `filter()` instead.
+## See vignette('programming') for more help
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.
+```
+
+```r
+hgnc_swissprot
+```
+
+```
+##   ensembl_gene_id ensembl_transcript_id hgnc_symbol uniprotswissprot
+## 1 ENSG00000139618       ENST00000671466       BRCA2                 
+## 2 ENSG00000139618       ENST00000544455       BRCA2           P51587
+## 3 ENSG00000139618       ENST00000530893       BRCA2                 
+## 4 ENSG00000139618       ENST00000380152       BRCA2           P51587
+## 5 ENSG00000139618       ENST00000670614       BRCA2                 
+## 6 ENSG00000139618       ENST00000665585       BRCA2                 
+## 7 ENSG00000139618       ENST00000528762       BRCA2                 
+## 8 ENSG00000139618       ENST00000470094       BRCA2                 
+## 9 ENSG00000139618       ENST00000666593       BRCA2
+```
+### 同源基因ID转换代码
+
+跨物种同源基因转换使用`getLDS`命令即可，也是非常方便，但是有一个问题就是家鸡一个基因可能对应多个人的基因，系统会自动添加对应的旁系同源基因，所以转换后的数据使用需要小心，可能需要人工排查一下，或者人为的去掉部分数据。
+
+
+```r
+#human = useMart("ensembl",dataset="hsapiens_gene_ensembl",host="asia.ensembl.org")
+#chicken = useMart("ensembl",dataset="ggallus_gene_ensembl",host="asia.ensembl.org")
+
+genelist_megre <- c("ENSGALG00000001136","ENSGALG00000005956","ENSGALG00000006407","ENSGALG00000007728","ENSGALG00000009628","ENSGALG00000010316","ENSGALG00000011190","ENSGALG00000011687","ENSGALG00000011806","ENSGALG00000015656")
+
+genelist_megre
+```
+
+```
+##  [1] "ENSGALG00000001136" "ENSGALG00000005956" "ENSGALG00000006407"
+##  [4] "ENSGALG00000007728" "ENSGALG00000009628" "ENSGALG00000010316"
+##  [7] "ENSGALG00000011190" "ENSGALG00000011687" "ENSGALG00000011806"
+## [10] "ENSGALG00000015656"
+```
+
+```r
+genelist_megre_Hs <- getLDS(attributes = c("ensembl_gene_id","entrezgene_id", "external_gene_name"),      
+                            filters = "ensembl_gene_id", 
+                            values = genelist_megre, 
+                            mart = chicken,
+                            attributesL = c("ensembl_gene_id","entrezgene_id","external_gene_name"), 
+                            martL = human)
+
+genelist_megre_Hs
+```
+
+```
+##       Gene.stable.ID NCBI.gene..formerly.Entrezgene..ID Gene.name
+## 1 ENSGALG00000005956                             423774        NA
+## 2 ENSGALG00000005956                             423774        NA
+## 3 ENSGALG00000011687                          100859120        NA
+## 4 ENSGALG00000011190                          100857411        NA
+## 5 ENSGALG00000011806                          100859223        NA
+## 6 ENSGALG00000007728                             770734        NA
+## 7 ENSGALG00000007728                             770734        NA
+##   Gene.stable.ID.1 NCBI.gene..formerly.Entrezgene..ID.1 Gene.name.1
+## 1  ENSG00000264230                               728113     ANXA8L1
+## 2  ENSG00000265190                               653145       ANXA8
+## 3  ENSG00000185567                               113146      AHNAK2
+## 4  ENSG00000145287                                51316       PLAC8
+## 5  ENSG00000173702                                56667       MUC13
+## 6  ENSG00000100033                                 5625       PRODH
+## 7  ENSG00000277196                            102724788  AC007325.2
+```
+>插一句，总算知道为什么R代码有规范了，参数主动换行，真的好看太多了。
+
+### 提取蛋白/DNA序列并导出FASTA格式文件
+
+使用过程中发现居然还可以调取序列等信息，少量操作也就不用打开网页，快速方便完成氨基酸/核酸序列的获取，非常实用！
+
+
+```r
+protein = getSequence(id=c("GRP"),
+                      type="external_gene_name",
+                      seqType="peptide", 
+                      mart= chicken)
+
+protein
+```
+
+```
+##                                                                                                                                                                 peptide
+## 1              MGGGGPRRPGTLPLLALLALLAAHGGAAPLQPGGSPALTKIYPRGSHWAVGHLMGKKSTGDFPYAYEEENKIPLSASPENIKQLDDYLQREEMSKHLLQLLEGNENKSAHFSKGGLPWHTRNSWETDDSSSWKDVVEYLLQVVNMKESAPS*
+## 2 MGGGGPRRPGTLPLLALLALLAAHGGAAPLQPGGSPALTKIYPRGSHWAVGHLMGKKSTGDFPYAYEEENKIPLSASPENIKQLDDYLQREEMSKHLLQLLEGNENKSAHFSKGGLPWHTRNSWETDDSSSWKDVSRTRCVSAFLTVTFCSKVAYQLCPTSALS*
+##   external_gene_name
+## 1                GRP
+## 2                GRP
+```
+
+
+
+### 混杂基因名称转换处理，这里使用了`bitr`进行示例
+
+在获得基因列表是不可避免会出现name和ID混杂在一起的情况，目前只能采用分批操作的流程进行处理，有更好方法再更新。
+
+
+```r
+genelist <- c("S100A6","S100A10","SNCG","S100A1","S100A11","ID3","ENSGALG00000011190","AKR1B10","CSRP1","SPARCL1","HBEGF","FAM107B","ENSGALG00000009628","ENSGALG00000010316","ENSGALG00000011190","ENSGALG00000011687","ENSGALG00000011806","ENSGALG00000015656")
+
+genelist
+```
+
+```
+##  [1] "S100A6"             "S100A10"            "SNCG"              
+##  [4] "S100A1"             "S100A11"            "ID3"               
+##  [7] "ENSGALG00000011190" "AKR1B10"            "CSRP1"             
+## [10] "SPARCL1"            "HBEGF"              "FAM107B"           
+## [13] "ENSGALG00000009628" "ENSGALG00000010316" "ENSGALG00000011190"
+## [16] "ENSGALG00000011687" "ENSGALG00000011806" "ENSGALG00000015656"
+```
+
+```r
+# 定义ENSEMBL命名的基因
+index <- grep("ENSGALG", genelist)
+
+index
+```
+
+```
+## [1]  7 13 14 15 16 17 18
+```
+
+```r
+# 筛选ENSGALG命名的基因并转换
+genelistA <- genelist[index]
+geneA = bitr(genelistA, fromType="ENSEMBL", toType=c("SYMBOL", "ENTREZID"), OrgDb="org.Gg.eg.db")
+head(geneA)
+```
+
+```
+##              ENSEMBL     SYMBOL  ENTREZID
+## 1 ENSGALG00000011190     PLACL2 100857411
+## 2 ENSGALG00000009628     KCTD12    425504
+## 3 ENSGALG00000010316      FRAS1    422506
+## 4 ENSGALG00000011687     AHNAK2 100859120
+## 5 ENSGALG00000011806      MUC13 100859223
+## 6 ENSGALG00000015656 PALM2AKAP2 100533110
+```
+
+```r
+# 筛选SYMBOL命名的基因并转换
+genelistB <- genelist[-index]
+geneB = bitr(genelistB, fromType="SYMBOL", toType=c("ENSEMBL", "ENTREZID"), OrgDb="org.Gg.eg.db")
+head(geneB)
+```
+
+```
+##    SYMBOL            ENSEMBL  ENTREZID
+## 1  S100A6 ENSGALG00000041826    373951
+## 2 S100A10 ENSGALG00000028774    396506
+## 3    SNCG ENSGALG00000002015    395392
+## 4  S100A1 ENSGALG00000034458 100858258
+## 5 S100A11 ENSGALG00000036711    396075
+## 6     ID3 ENSGALG00000035317    395281
+```
+
+```r
+gene <- rbind(geneA,geneB)
+
+gene
+```
+
+```
+##               ENSEMBL     SYMBOL  ENTREZID
+## 1  ENSGALG00000011190     PLACL2 100857411
+## 2  ENSGALG00000009628     KCTD12    425504
+## 3  ENSGALG00000010316      FRAS1    422506
+## 4  ENSGALG00000011687     AHNAK2 100859120
+## 5  ENSGALG00000011806      MUC13 100859223
+## 6  ENSGALG00000015656 PALM2AKAP2 100533110
+## 7  ENSGALG00000041826     S100A6    373951
+## 8  ENSGALG00000028774    S100A10    396506
+## 9  ENSGALG00000002015       SNCG    395392
+## 10 ENSGALG00000034458     S100A1 100858258
+## 11 ENSGALG00000036711    S100A11    396075
+## 12 ENSGALG00000035317        ID3    395281
+## 13 ENSGALG00000013072    AKR1B10    395338
+## 14 ENSGALG00000000318      CSRP1    396176
+## 15 ENSGALG00000010929    SPARCL1    422586
+## 16 ENSGALG00000000949      HBEGF    395654
+## 17 ENSGALG00000033226    FAM107B    426376
+```
+
+```r
+summary(gene)
+```
+
+```
+##    ENSEMBL             SYMBOL            ENTREZID        
+##  Length:17          Length:17          Length:17         
+##  Class :character   Class :character   Class :character  
+##  Mode  :character   Mode  :character   Mode  :character
+```
+
+```r
+# 同时可以导出到本地csv文件
+#write.csv(as.data.frame(gene),"./gene.csv",row.names =FALSE)
+```
+
+### 当然，使用`getBM`也可以实现ID转换，但是结果会出现不少信息残缺，还是推荐`bitr`
+
+
+```r
+gene_A <- getBM(attributes=c("ensembl_gene_id", "external_gene_name", "entrezgene_id"),
+                filters = 'ensembl_gene_id', 
+                values = genelistA, 
+                mart = chicken)
+
+gene_B <- getBM(attributes=c("ensembl_gene_id", "external_gene_name", "entrezgene_id"),
+                filters = 'external_gene_name', 
+                values = genelistB, 
+                mart = chicken)
+
+gene_ABmegre <- rbind(gene_A,gene_B)
+gene_ABmegre
+```
+
+```
+##       ensembl_gene_id external_gene_name entrezgene_id
+## 1  ENSGALG00000009628                           425504
+## 2  ENSGALG00000010316                           422506
+## 3  ENSGALG00000011190                        100857411
+## 4  ENSGALG00000011687                        100859120
+## 5  ENSGALG00000011806                        100859223
+## 6  ENSGALG00000015656         PALM2AKAP2     100533110
+## 7  ENSGALG00000028774            S100A10        396506
+## 8  ENSGALG00000000318              CSRP1        396176
+## 9  ENSGALG00000036711            S100A11        396075
+## 10 ENSGALG00000000949              HBEGF        395654
+## 11 ENSGALG00000002015               SNCG        395392
+## 12 ENSGALG00000013072            AKR1B10        395338
+## 13 ENSGALG00000041826             S100A6        373951
+## 14 ENSGALG00000034458             S100A1     100858258
+## 15 ENSGALG00000010929            SPARCL1        422586
+## 16 ENSGALG00000033226            FAM107B        426376
+## 17 ENSGALG00000035317                ID3        395281
+```
+
+```r
+summary(gene_ABmegre)
+```
+
+```
+##  ensembl_gene_id    external_gene_name entrezgene_id      
+##  Length:17          Length:17          Min.   :   373951  
+##  Class :character   Class :character   1st Qu.:   395654  
+##  Mode  :character   Mode  :character   Median :   422506  
+##                                        Mean   : 29929910  
+##                                        3rd Qu.:100533110  
+##                                        Max.   :100859223
+```
+
+### 小结
+
+学习使人懒惰，以前要花半小时进行EXCEL文件准备和ID转换，现在也就几分钟，成功偷懒~~
+
+### ~~参考资料~~
