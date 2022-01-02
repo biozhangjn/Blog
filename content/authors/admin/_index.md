@@ -11,7 +11,7 @@ role: Associate Research Fellow
 # Organizations/Affiliations to show in About widget
 organizations:
 - name: Sichuan University
-  url: ''
+  url: 'https://www.scu.edu.cn/'
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include Avian Physiology, Endocrinology and Metabolism.
