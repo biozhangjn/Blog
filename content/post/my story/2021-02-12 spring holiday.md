@@ -2,7 +2,7 @@
 title: 2021春节小记
 author: Jiannan Zhang
 date: '2021-02-12'
-slug: 随笔
+slug:
 categories:
  - note
 tags:
