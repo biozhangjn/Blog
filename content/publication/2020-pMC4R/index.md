@@ -28,7 +28,7 @@ publication_types:
 - "2"
 publishDate: "2020-10-12T00:00:00Z"
 #slides: example
-summary: In addition, we found that pig MRAP2 can decrease surface expression, increase the ligand sensitivity and selectivity of pMC4RAsp/pMC4RAsn, and enhance the basal constitutive activity of pMC4RAsp. These findings hint that MRAP2, through interaction with MC4R, can control the energy balance of pigs. In humans, four heterozygous variants in MRAP2 gene were identified in patients with early-onset obesity (Asai et al. 2013). With large-scale sequencing of MRAP2 in 9418 people, 23 rare heterozygous variants were identified associated with increased obesity risk in both adults and children (Baron et al. 2019). These findings also imply that, as a partner of MC4R, MRAP2 may also regulate fatness, growth and body composition in pigs, which may also make it a valuable candidate gene for animal breeding or gene editing (similar to MC4R), in the future. However, further study is needed to gain insight into the association of MRAP2 polymorphism with growth and fatness in pigs and other farm animals.
+summary: In addition, we found that pig MRAP2 can decrease surface expression, increase the ligand sensitivity and selectivity of pMC4RAsp/pMC4RAsn, and enhance the basal constitutive activity of pMC4RAsp.
 #tags:
 title: "The Asp298Asn polymorphism of melanocortin‐4 receptor (MC4R) in pigs: evidence for its potential effects on MC4R constitutive activity and cell surface expression"
 #url_code: ""

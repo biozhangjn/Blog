@@ -27,7 +27,7 @@ publication_types:
 - "2"
 publishDate: "2021-05-21T00:00:00Z"
 #slides: example
-summary: In summary, we identified four endocrine and four non-endocrine cell population within the chicken pituitary and characterized their gene expression profiles, including their sexually dimorphic gene expression. We also found several inter-cellular crosstalk between the cell clusters in adult chickens (Figure 7A). Among these cell types, FS-cells can express many genes encoding growth factors and peptides and they likely act as a paracrine/autocrine signaling center to influence neighboring cells. Undoubtedly, our data sets a critical reference point to reveal the novel aspects of pituitary biology across vertebrates, and helps to figure out how the anterior pituitary, as a pivotal signal converging and output center for the brain and peripheral tissues, can orchestrate so many physiological processes (e.g., growth, reproduction, metabolism, and stress) to meet the changing physiological demands or pathological status observed in vertebrates, including birds and humans.
+summary: In summary, our data sets a critical reference point to reveal the novel aspects of pituitary biology across vertebrates, and helps to figure out how the anterior pituitary, as a pivotal signal converging and output center for the brain and peripheral tissues, can orchestrate so many physiological processes (e.g., growth, reproduction, metabolism, and stress) to meet the changing physiological demands or pathological status observed in vertebrates, including birds and humans.
 #tags:
 title: "Single-Cell RNA Sequencing Analysis of Chicken Anterior Pituitary: A Bird’s-Eye View on Vertebrate Pituitary"
 #url_code: ""
@@ -38,6 +38,8 @@ url_pdf:
 #url_slides: ""
 #url_source: "http://scrna.avianscu.com/pit/"
 #url_video: ""
+image:
+  placement: 1
 links:
 - name: Online Database
   url: http://scrna.avianscu.com/pit/
