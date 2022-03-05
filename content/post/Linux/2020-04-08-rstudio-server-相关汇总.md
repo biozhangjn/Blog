@@ -54,14 +54,21 @@ sudo apt-get autoremove --purge rstudio-server
 ``` shell
 # 添加用户的命令是linux中的命令
 # 添加用户组
-groupadd Rstudiosrv
+sudo groupadd student
 # 添加用户wdmd 在指定的组Rstudiosrv内
-useradd zjn -g Rstudiosrv;
+sudo useradd zjn -g student;
 # 设置该用户的密码
-passwd zjn
+sudo passwd zjn
+# 增加用户到sudo组
+sudo adduser zjn sudo
+# 创建hadoop用户的home目录
+sudo mkdir /home/zjn
+ # 给/home/zjn目录及子目录，设置用户权限
+sudo chown -R zjn:student /home/zjn
+
 # 删除用户和组
-userdel zjn
-groupdel Rstudiosrv
+sudo userdel zjn
+sudo groupdel Rstudiosrv
 # 显示用户信息
 id user
 cat /etc/passwd
