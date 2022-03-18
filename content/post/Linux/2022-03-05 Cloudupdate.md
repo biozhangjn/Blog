@@ -21,9 +21,7 @@ image:
 projects: []
 # Is this an unpublished draft?
 draft: false
-
 ---
-
 本来是紧张的写本子时节，其实也是，不过看的头大了，图也不想改了...但是时间越来越少了...那还写啥Blog...滚回去改本子...
 
 但是，Nextcloud成为日常最高频的软件了，已经很久很久没有更新了，还是21版本，现在都23了，所以还是需要升级换代了，今天周六，不打羽毛球了，就把这个时间利用起来更新下nextcloud...开始挖坑和填坑之旅~~
@@ -32,7 +30,7 @@ draft: false
 
 首先我直接从21升级到23版本，完全不行，跳版本更新是禁止的，需要重新修改php文件，我懒，就升级2次...其实就是不会...不学...不练...
 
-``` shell
+```shell
 
 #更新源
 sudo nano /etc/docker/daemon.json #新建文件输入下面内容
@@ -70,17 +68,17 @@ occ upgrade
 sudo docker exec -ti nextcloud_web occ upgrade
 ```
 
-走了些许弯路，进入nextcloud容器不是`/bin/bash`而是修改成`/bash/sh`，你敢信！！
+走了些许弯路，进入nextcloud容器不是 `/bin/bash`而是修改成 `/bash/sh`，你敢信！！
 
 很多APP都升级了，不少优秀的改动，所以还是要升级啊，差不多以后一年升级2次吧~
 
 ## 哎，onlyoffcie也出错了
 
-最后发现就是remot少了个e，哎...
+最后发现就是remote少了个e，哎...
 
 顺便记录下修改字体：
 
-``` shell
+```shell
 sudo docker exec -it 5fbb8bcd62fe /bin/bash #进入onlyoffice 
 cd /var/www/onlyoffice/documentserver/core-fonts #进入字体文件夹，全部删除
 
