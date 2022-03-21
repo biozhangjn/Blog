@@ -34,3 +34,4 @@ git push -u origin master
 exit 0
 
 #https://github.com/marketplace/actions/build-deploy-with-latest-hugo
+# ssh -vT biozhangjn@github.com
