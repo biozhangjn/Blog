@@ -6,7 +6,7 @@ slug: Nextcloud
 categories:
   - Linux
 tags:
-  - Linux
+  - Nextcloud
 subtitle: ''
 summary: ''
 authors: []

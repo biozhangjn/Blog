@@ -11,7 +11,7 @@ tags:
 subtitle: ''
 summary: ''
 authors: []
-lastmod: '2022-03-05T22:34:49+08:00'
+lastmod: '2022-03-05T21:14:49+08:00'
 featured: false
 image:
   caption: ''
@@ -28,7 +28,7 @@ draft: false
 
 仍然是以前的docker-compose进行升级
 
-首先我直接从21升级到23版本，完全不行，跳版本更新是禁止的，需要重新修改php文件，我懒，就升级2次...其实就是不会...不学...不练...
+首先我直接从21升级到23版本，完全不行，跳版本更新是禁止的，需要重新修改php文件，我懒，就升级2次...其实就是不会...不学...不练...(后面升级发现最好先把config文件清空，再补充，不然也会出错)
 
 ```shell
 
@@ -83,7 +83,7 @@ sudo docker exec -it 5fbb8bcd62fe /bin/bash #进入onlyoffice
 cd /var/www/onlyoffice/documentserver/core-fonts #进入字体文件夹，全部删除
 
 #容器之外操作
-sudo docker cp /data/nextcloud/fonts/ 5fbb8bcd62fe:/var/www/onlyoffice/documentserver/core-fonts/ #这样不易丢失字体
+sudo docker cp /data/nextcloud/fonts/* 5fbb8bcd62fe:/var/www/onlyoffice/documentserver/core-fonts/ #这样不易丢失字体
 
 /usr/bin/documentserver-generate-allfonts.sh #重新载入字体操作
 
