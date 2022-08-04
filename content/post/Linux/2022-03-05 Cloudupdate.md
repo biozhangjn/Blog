@@ -2,7 +2,6 @@
 title: Nextcloud update
 author: Jiannan Zhang
 date: '2022-03-05'
-slug: Nextcloud
 categories:
   - R
   - Linux
@@ -22,6 +21,7 @@ projects: []
 # Is this an unpublished draft?
 draft: false
 ---
+
 本来是紧张的写本子时节，其实也是，不过看的头大了，图也不想改了...但是时间越来越少了...那还写啥Blog...滚回去改本子...
 
 但是，Nextcloud成为日常最高频的软件了，已经很久很久没有更新了，还是21版本，现在都23了，所以还是需要升级换代了，今天周六，不打羽毛球了，就把这个时间利用起来更新下nextcloud...开始挖坑和填坑之旅~~
