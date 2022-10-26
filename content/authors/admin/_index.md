@@ -52,7 +52,7 @@ social:
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=qwOIhV4AAAAJ
-- icon: Semantic Scholar
+- icon: semantic-scholar
   icon_pack: ai
   link: https://www.semanticscholar.org/author/Jiannan-Zhang/123275275
 - icon: cv
