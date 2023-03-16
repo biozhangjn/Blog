@@ -42,7 +42,7 @@ image:
   placement: 1
 links:
 - name: Online Database
-  url: http://scrna.avianscu.com/pit/
+  url: https://scrna.avianscu.com/pit/
 ---
 {{% callout note %}}
 A web server for this single-cell RNA-seq analysis:"http://scrna.avianscu.com/pit/"
