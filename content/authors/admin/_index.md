@@ -73,7 +73,7 @@ email: "biozhangjn@gmail.com"
 highlight_name: true
 ---
 
-<p>I am Jiannan Zhang (张剑南), a scientific researcher and currently work as an <strong>Associate Professor</strong> in the College of Life Sciences at <strong>Sichuan University</strong>. I conduct my research as a member of Professor <a href="http://life.scu.edu.cn/info/1048/1836.htm">Yajun Wang</a>'s lab.</p>
+<p>I am Jiannan Zhang (张剑南), a scientific researcher and currently work as an Associate Professor in the College of Life Sciences at <strong>Sichuan University</strong>. I conduct my research as a member of Professor <a href="http://life.scu.edu.cn/info/1048/1836.htm">Yajun Wang</a>'s lab.</p>
 
 <p>My research interests are centered around <strong>Avian Physiology</strong>, <strong>Endocrinology and Metabolism</strong>, with a focus on understanding the mechanisms that regulate growth, development, and reproduction in chickens. I am particularly interested in exploring the role of hormones in modulating these processes and have conducted studies on the hormonal regulation of feed intake, nutrient utilization, and energy metabolism.</p>
 
