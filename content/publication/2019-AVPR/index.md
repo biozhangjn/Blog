@@ -5,9 +5,9 @@ authors:
 - Can Lv
 - Yiping Wan
 - Xiaoxiao Li
-- Jiannan Zhang<sup>*</sup>
+- Jiannan Zhang*
 - Juan Li
-- Yajun Wang<sup>*</sup>
+- Yajun Wang
 date: "2019-09-15T00:00:00Z"
 doi: "https://doi.org/10.1016/j.ygcen.2019.05.013"
 featured: false

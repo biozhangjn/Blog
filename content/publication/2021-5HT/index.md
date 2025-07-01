@@ -8,7 +8,7 @@ authors:
 -  Baolong Cao
 -  Yi Zou
 -  Juan Li
--  Jiannan Zhang<sup>*</sup>
+-  Jiannan Zhang*
 -  Yajun Wang
 date: "2021-06-09T00:00:00Z"
 doi: "https://doi.org/10.3390/genes12060891"

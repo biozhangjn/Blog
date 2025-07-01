@@ -8,9 +8,9 @@ authors:
 - Jing Li
 - Caiyun Sun
 - Zhixing Hu
-- Jiannan Zhang<sup>*</sup>
+- Jiannan Zhang*
 - Juan Li
-- Yajun Wang<sup>*</sup>
+- Yajun Wang*
 date: "2020-09-24T00:00:00Z"
 doi: "https://doi.org/10.3390/ijms21197036"
 featured: False

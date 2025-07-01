@@ -8,8 +8,8 @@ authors:
 - Xiao Zhang
 - Jiliang He
 - Juan Li
-- Jiannan Zhang<sup>*</sup>
-- Yajun Wang<sup>*</sup>
+- Jiannan Zhang*
+- Yajun Wang*
 date: "2024-04-02T00:00:00Z"
 doi: "10.3390/ani14071058"
 featured: true
