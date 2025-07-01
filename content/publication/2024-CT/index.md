@@ -10,9 +10,6 @@ authors:
 - Juan Li
 - Jiannan Zhang
 - Yajun Wang
-author_notes:
-# - "Equal contribution"
-# - "Equal contribution"
 date: "2024-04-02T00:00:00Z"
 doi: "10.3390/ani14071058"
 featured: true

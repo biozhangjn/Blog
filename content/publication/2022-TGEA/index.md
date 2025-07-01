@@ -8,9 +8,6 @@ authors:
 - Xiao Zhang
 - Juan Li
 - Yajun Wang
-author_notes:
-# - "Equal contribution"
-# - "Equal contribution"
 date: "2022-07-29T00:00:00Z"
 doi: "10.1101/2022.07.28.501912"
 featured: true
