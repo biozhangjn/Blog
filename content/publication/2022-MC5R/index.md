@@ -8,8 +8,8 @@ authors:
 - Chenlei Wu
 - Jing Li
 - Juan LI
-- Jiannan Zhang
-- Yajun Wang
+- Jiannan Zhang<sup>*</sup>
+- Yajun Wang<sup>*</sup>
 
 author_notes:
 - "Equal contribution"
