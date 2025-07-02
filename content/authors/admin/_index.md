@@ -27,13 +27,13 @@ education:
   courses:
   - course: Post-doc in Cell Biology
     institution: Sichuan University
-    year: 2017
+    year: 2017-2022
   - course: PhD in Natural Science
     institution: Sichuan University
-    year: 2017
+    year: 2011-2016
   - course: BSc in National base of life science & biotechnology education
     institution: Sichuan University
-    year: 2011
+    year: 2007-2011
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -79,4 +79,4 @@ highlight_name: true
 
 <p>In addition to my work in avian physiology, I am also engage in the study of <strong>Genome Editing</strong> in chickens. I aim to develop new tools and technologies to improve the efficiency and precision of genetic modifications in avian species. My ultimate goal is to contribute to a better understanding of avian biology and to develop innovative solutions for improving poultry production and welfare.</p>
 
-本课题组计划招收2026年入学硕士研究生2名，欢迎对我们研究方向感兴趣的同学邮件联系、交流。
+本课题组计划招收2026年入学硕士研究生2名，欢迎对我研究方向感兴趣的同学邮件联系、交流。
